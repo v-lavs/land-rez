@@ -12,6 +12,21 @@ body {
   overflow: hidden;
 }
 
+.overlay,
+.backdrop {
+  display: none;
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  z-index: 10;
+  background-color: #070707;
+  opacity: .35;
+}
+.overlay.show{
+  display: block;
+}
 .d-flex {
   display: flex;
   flex-wrap: wrap;
@@ -31,7 +46,8 @@ body {
   &__title {
     text-transform: uppercase;
     margin-bottom: 96px;
-    sup{
+
+    sup {
       font-size: .56em;
     }
   }

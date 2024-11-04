@@ -46,12 +46,15 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 
 //SCROLL CARD HIDE
-    const scCardsInner = document.querySelector('.scroll-cards__inner');
+    const cpHot = document.querySelector('.card-product_hot');
     const btnScScroll = document.querySelector('.btn-hot');
+    const overlay = document.querySelector('.overlay');
+
     btnScScroll.addEventListener('click', function (e) {
         e.preventDefault();
-        scCardsInner.classList.toggle('to-left');
-        btnScScroll.classList.toggle('to-left');
+        cpHot.classList.toggle('show');
+        btnScScroll.classList.toggle('show');
+        overlay.classList.toggle('show');
     });
 
 //SLIDER
@@ -74,11 +77,21 @@ document.addEventListener('DOMContentLoaded', function () {
 //SLIDER-ACCORDION
     const slides = document.querySelectorAll('.slide-purpose');
 
-    slides.forEach((slide) => {
-        slide.addEventListener('click', function () {
-            expand(slide);
+        slides.forEach((slide) => {
+            slide.addEventListener('click', function () {
+                expand(slide);
+            });
         });
-    });
+
+        function expand(target) {
+            for (let slide of target.parentNode.children) {
+                slide.classList.remove('expanded');
+            }
+            target.classList.add('expanded');
+        }
+
+
+
 
 });
 
