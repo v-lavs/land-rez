@@ -1,0 +1,87 @@
+.section-banner {
+  display: flex;
+  align-items: center;
+  position: relative;
+  //min-height: 800px;
+  min-height: 100vh;
+  color: #ffffff;
+
+  &:before {
+    position: absolute;
+    content: '';
+    display: block;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    opacity: .35;
+    background-image: linear-gradient(90deg, #46B600 0%, rgba(70, 182, 0, 0.45) 100%);
+    z-index: 1;
+  }
+
+  &__thumb {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    z-index: 0;
+  }
+
+  .background-video,
+  .banner-img {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .part_left {
+    max-width: 792px;
+    width: 100%;
+  }
+  .container{
+    position: relative;
+    z-index: 1;
+  }
+  .title_lg{
+    margin-bottom: 48px;
+  }
+}
+
+
+@media screen and (max-width: 1920px) {
+
+}
+
+@include respond-to($xxl) {
+
+}
+
+@include respond-to($xl) {
+
+}
+
+@media screen and (max-width: 1080px) {
+
+}
+
+@include respond-to($lg) {
+
+}
+
+@include respond-to($md) {
+
+}
+
+@include respond-to($sm) {
+
+}
+
+@media screen and (max-width: 460px) {
+
+}

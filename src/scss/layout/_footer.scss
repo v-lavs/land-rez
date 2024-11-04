@@ -1,0 +1,51 @@
+.footer {
+
+
+  &_bottom {
+
+
+    .container {
+
+    }
+  }
+
+  &__logo {
+
+
+    img {
+      width: 100%;
+    }
+  }
+}
+
+.copyright {
+
+
+  span {
+
+
+    &:first-child {
+      margin-left: 0;
+    }
+  }
+}
+
+.copyright a:hover,
+.copyright a:focus {
+  text-decoration: underline;
+}
+
+
+@include respond-to($lg) {
+
+}
+
+@include respond-to($md) {
+
+}
+
+@include respond-to($sm) {
+
+}
+
+

@@ -1,0 +1,27 @@
+@import 'utils/variables';
+@import 'utils/mixins';
+
+@import '../lib/swiper/swiper-bundle.min';
+
+@import 'base/reset';
+@import 'base/base';
+@import 'base/typography';
+
+@import 'components/menu';
+@import 'components/button';
+@import 'components/slider';
+@import 'components/accordion';
+@import 'components/card';
+
+@import "layout/layout";
+@import "layout/footer";
+@import "layout/header";
+@import "layout/section/product-line";
+@import "layout/section/features";
+@import "layout/section/action";
+@import "layout/section/section-banner";
+@import "layout/section/med-purpose";
+@import "layout/section/application";
+
+
+

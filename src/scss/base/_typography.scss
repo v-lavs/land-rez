@@ -1,0 +1,38 @@
+.text{
+  &_xs{
+    font-size: 15px;
+  }
+  &_md{
+    font-size: clamp(20px, 1.72vw, 30px);
+  }
+  &_lg{
+    font-size: clamp(30px, 2.87vw, 50px);
+  }
+  &_xl{
+    font-size: clamp(40px, 3.5vw, 60px);
+  }
+}
+
+.title{
+  font-size: 64px;
+  font-weight: 600;
+  line-height: 70.4px;
+  letter-spacing: -0.02em;
+  text-align: center;
+}
+.title_lg{
+  font-size: 72px;
+  font-weight: 400;
+  line-height: 1;
+}
+.title_md{
+  font-size: 68px;
+  line-height: 1.1;
+}
+.title_sm{
+  font-size: 18px;
+  line-height: 1.2;
+}
+
+
+

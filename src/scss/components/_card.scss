@@ -1,0 +1,44 @@
+.card {
+  max-width: 640px;
+  width: 100%;
+  padding: 0 20.75% 50px;
+
+  &__thumb {
+    display: flex;
+    justify-content: center;
+
+    img {
+      height: 100%;
+      width: auto;
+      transition: .35s;
+      &:hover{
+        transform: scale(1.03);
+      }
+    }
+  }
+
+  &__title {
+    text-transform: uppercase;
+    font-weight: 600;
+    margin-bottom: 5px;
+  }
+
+  &__footer {
+    padding-top: 20px;
+
+    .btn {
+      display: block;
+      width: 100%;
+      min-width: 0;
+      margin-bottom: 15px;
+    }
+
+    .btn:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+
+@include respond-to($lg) {
+
+}
