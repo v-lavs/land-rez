@@ -2,7 +2,6 @@
   display: flex;
   align-items: center;
   position: relative;
-  //min-height: 800px;
   min-height: 100vh;
   color: #ffffff;
 
@@ -50,6 +49,12 @@
   }
   .title_lg{
     margin-bottom: 48px;
+  }
+  .btn{
+    margin-right: 14px;
+    &:last-child{
+      margin-right: 0;
+    }
   }
 }
 

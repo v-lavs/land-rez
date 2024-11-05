@@ -3,12 +3,11 @@
   align-items: center;
   font-family: $main-font;
   font-weight: 500;
-  font-size: 24px;
+  font-size: 18px;
   line-height: 1;
   letter-spacing: -0.02em;
-
+  text-transform: uppercase;
   padding: 21px 48px;
-
   border-radius: 100px;
   border: 1px solid;
 
@@ -17,7 +16,7 @@
     display: block;
     width: 24px;
     height: 24px;
-    margin-right: 8px;
+    margin-right: 16px;
 
     svg {
       color: inherit;
@@ -37,7 +36,12 @@
     border-color: #ffffff;
     background-color: rgba(255, 255, 255, .15);
     color: #ffffff;
-    font-size: 20px;
+  }
+  &_stroke {
+    border-color: #ffffff;
+    background-color: transparent;
+    color: #ffffff;
+
   }
 
   //
