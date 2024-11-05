@@ -29,6 +29,23 @@ document.addEventListener('DOMContentLoaded', function () {
 //         sidebar.classList.remove('open');
 //         overlay.classList.remove('el-visible');
 //     });
+// HEADER AND DISCLAIMER SCROLL
+
+    const header = document.querySelector('.header');
+    const fixedBlock = document.querySelector('.disclaimer_main');
+
+    window.addEventListener('scroll', function() {
+        const scrollPosition = window.scrollY;
+        if (scrollPosition > 100) {
+            header.classList.add('scroll');
+            fixedBlock.classList.add('scroll');
+        } else {
+            header.classList.remove('scroll');
+            fixedBlock.classList.remove('scroll');
+        }
+    });
+
+
 
 // CHANGED BG CARD BTN HOVER
     const bgChangeButtons = document.querySelectorAll('.bg-change');
@@ -45,16 +62,22 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     });
 
-//SCROLL CARD HIDE
+//CARD-HOT HIDE
     const cpHot = document.querySelector('.card-product_hot');
     const btnScScroll = document.querySelector('.btn-hot');
     const overlay = document.querySelector('.overlay');
 
     btnScScroll.addEventListener('click', function (e) {
         e.preventDefault();
-        cpHot.classList.toggle('show');
-        btnScScroll.classList.toggle('show');
-        overlay.classList.toggle('show');
+        cpHot.classList.add('show');
+        btnScScroll.classList.add('show');
+        overlay.classList.add('show');
+    });
+    overlay.addEventListener('click', function (e) {
+        e.preventDefault();
+        cpHot.classList.remove('show');
+        btnScScroll.classList.remove('show');
+        overlay.classList.remove('show');
     });
 
 //SLIDER

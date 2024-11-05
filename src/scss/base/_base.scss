@@ -24,9 +24,11 @@ body {
   background-color: #070707;
   opacity: .35;
 }
-.overlay.show{
+
+.overlay.show {
   display: block;
 }
+
 .d-flex {
   display: flex;
   flex-wrap: wrap;
@@ -41,11 +43,11 @@ body {
 }
 
 .section {
-  padding: 132px 0;
+  padding: 88px 0 80px;
 
   &__title {
     text-transform: uppercase;
-    margin-bottom: 96px;
+    margin-bottom: 64px;
 
     sup {
       font-size: .56em;
@@ -62,24 +64,23 @@ body {
 }
 
 .disclaimer_main {
+  display: flex;
+  align-items: center;
   height: 15vh;
-  padding: 46px 0;
+  padding: 16px 0;
   border-top: 1px solid rgba(255, 255, 255, 0.35);
   background: rgba(255, 255, 255, .01);
-  -webkit-backdrop-filter: blur(12px);
-  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(24px);
+  backdrop-filter: blur(24px);
   color: #ffffff;
-  font-family: Futura PT Cond;
-  font-size: 64px;
-  font-weight: 450;
-  line-height: 73.6px;
-  letter-spacing: -0.02em;
-  text-align: left;
+
+  &.scroll {
+    color: #AAC291;
+  }
 
   svg {
     display: block;
     width: 100%;
-    height: auto;
   }
 }
 
