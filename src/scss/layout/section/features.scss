@@ -53,6 +53,9 @@
   }
 
   &__body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     position: relative;
     border-radius: 0 16px 16px 16px;
     box-shadow: 16px 8px 32px 0 rgba(0, 0, 0, .06);
@@ -73,6 +76,44 @@
   p {
     color: #000000;
     margin-bottom: 8px;
+  }
+
+  &__content {
+    .see-more {
+      font-size: 24px;
+      font-weight: 400;
+      line-height: 1.35;
+      text-align: left;
+      color: #46B600;
+      border: none;
+      border-bottom: 1px dashed #46B600;
+      background-color: transparent;
+      font-family: $main-font;
+      &.open-text {
+        height: 0;
+        opacity: 0;
+        visibility: hidden;
+      }
+    }
+
+    .hide-text {
+      font-size: 24px;
+      font-weight: 400;
+      line-height: 1.35;
+      margin-bottom: 16px;
+      color: #647362;
+      height: 0;
+      visibility: hidden;
+      opacity: 0;
+      transition: height .5s, opacity .35s;
+
+      &.open-text {
+        max-height: 100%;
+        height: auto;
+        opacity: 1;
+        visibility: visible;
+      }
+    }
   }
 }
 

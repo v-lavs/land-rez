@@ -13,23 +13,23 @@ document.addEventListener('DOMContentLoaded', function () {
     const menuLinks = document.querySelectorAll('.menu__link');
     const subMenuToggles = document.querySelectorAll('.sub-menu__toggle');
 
-    btnBurger.addEventListener('click', function(e) {
+    btnBurger.addEventListener('click', function (e) {
         e.preventDefault();
         nav.classList.add('open');
         backdrop.style.display = 'block';
         btnClose.style.display = 'block';
     });
 
-    [btnClose, backdrop, ...menuLinks].forEach(function(element) {
-        element.addEventListener('click', function() {
+    [btnClose, backdrop, ...menuLinks].forEach(function (element) {
+        element.addEventListener('click', function () {
             nav.classList.remove('open');
             backdrop.style.display = 'none';
             btnClose.style.display = 'none';
         });
     });
 
-    subMenuToggles.forEach(function(toggle) {
-        toggle.addEventListener('click', function() {
+    subMenuToggles.forEach(function (toggle) {
+        toggle.addEventListener('click', function () {
             toggle.classList.toggle('sub-menu__toggle_active');
         });
     });
@@ -40,7 +40,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const header = document.querySelector('.header');
     const fixedBlock = document.querySelector('.disclaimer_main');
 
-    window.addEventListener('scroll', function() {
+    window.addEventListener('scroll', function () {
         const scrollPosition = window.scrollY;
         if (scrollPosition > 100) {
             header.classList.add('scroll');
@@ -50,7 +50,6 @@ document.addEventListener('DOMContentLoaded', function () {
             fixedBlock.classList.remove('scroll');
         }
     });
-
 
 
 // CHANGED BG CARD BTN HOVER
@@ -103,23 +102,38 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
 
+//HIDE-SHOW TEXT
+    const btnsSeeMore = document.querySelectorAll('.see-more');
+
+    btnsSeeMore.forEach((btn) => {
+        btn.addEventListener('click', function() {
+            // Використовуємо `this` для роботи саме з поточною кнопкою
+            const hideText = this.parentElement.querySelector('.hide-text');
+
+            // Перевіряємо, чи знайдено блок із текстом, і перемикаємо його видимість
+            if (hideText) {
+                hideText.classList.toggle('open-text');
+                this.textContent = hideText.classList.contains('open-text') ? "Згорнути інформацію" : "Більше інформації";
+            }
+        });
+    });
+
+
 //SLIDER-ACCORDION
     const slides = document.querySelectorAll('.slide-purpose');
 
-        slides.forEach((slide) => {
-            slide.addEventListener('click', function () {
-                expand(slide);
-            });
+    slides.forEach((slide) => {
+        slide.addEventListener('click', function () {
+            expand(slide);
         });
+    });
 
-        function expand(target) {
-            for (let slide of target.parentNode.children) {
-                slide.classList.remove('expanded');
-            }
-            target.classList.add('expanded');
+    function expand(target) {
+        for (let slide of target.parentNode.children) {
+            slide.classList.remove('expanded');
         }
-
-
+        target.classList.add('expanded');
+    }
 
 
 });
