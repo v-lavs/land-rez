@@ -2086,6 +2086,7 @@ body {
   color: #000000;
   border-radius: 16px;
   box-shadow: 16px 8px 32px 0 rgba(0, 0, 0, 0.06);
+  cursor: pointer;
 }
 
 .slide-purpose.expanded {
