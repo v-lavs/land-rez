@@ -3,6 +3,9 @@
   position: relative;
   display: flex;
 }
+.slider-products {
+  overflow: visible;
+}
 
 .btn-hot {
   box-shadow: 0 8px 12px 0 rgba(255, 116, 54, .15);
@@ -246,8 +249,6 @@
     text-transform: uppercase;
     border: 1px solid #FF7436;
     border-radius: 100px;
-    //background: linear-gradient(#FF7436, #FF7436) padding-box,
-    //linear-gradient(45deg, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0.25)) border-box;
   }
 
   .icon {
@@ -313,4 +314,50 @@
   background-size: auto;
   background-position: center;
   border-radius: 50%;
+}
+
+@include respond-to($xl){
+  .card-product__header{
+    padding: 16px 78px 0 16px
+  }
+  .card-product__link-wrap{
+    right: 16px;
+  }
+  .card-product{
+    width: 31.75%;
+    margin-left: 20px;
+  }
+}
+
+@include respond-to($lg){
+  .slider-products {
+    overflow: hidden;
+    padding-bottom: 74px;
+    .swiper-pagination{
+      bottom: 0;
+      width: 100%;
+      text-align: center;
+    }
+    .swiper-pagination-bullet{
+      width: 55px;
+    }
+  }
+  .card-product{
+    margin: 0;
+  }
+  .card-product__header{
+    padding: 32px 94px 0 32px;
+  }
+  .card-product__link-wrap{
+    right: 32px;
+  }
+}
+
+@include respond-to($sm){
+  .card-product__header{
+    padding: 16px 78px 0 16px
+  }
+  .card-product__link-wrap{
+    right: 16px;
+  }
 }

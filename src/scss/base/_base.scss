@@ -216,7 +216,9 @@ body {
 }
 
 @include respond-to($sm) {
-
+.section{
+  padding: 48px 32px;
+}
 }
 
 

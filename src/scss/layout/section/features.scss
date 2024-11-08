@@ -117,3 +117,15 @@
   }
 }
 
+@include respond-to($md){
+  .slider-features {
+    .swiper-button-next,
+    .swiper-button-prev{
+      display: none;
+    }
+    .swiper-pagination{
+      width: 100%;
+      text-align: center;
+    }
+  }
+}

@@ -69,9 +69,7 @@
 }
 
 @include respond-to($sm) {
-
+.section-banner{
+  margin-bottom: 32px;
 }
-
-@media screen and (max-width: 460px) {
-
 }
