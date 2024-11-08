@@ -2252,6 +2252,78 @@ body {
   }
 }
 
+@media only screen and (max-width: 1023px) {
+  .section {
+    padding: 76px 0 64px;
+  }
+
+  .container {
+    max-width: 768px;
+    background-color: lightgreen;
+  }
+
+  .header .btn_close,
+  .header .btn_burger {
+    display: block;
+  }
+
+  .header__nav {
+    position: fixed;
+    left: 0;
+    max-width: 768px;
+    top: 0;
+    height: 100vh;
+    background: #ffffff;
+    padding: 0 36px 44px;
+    transform: translateX(-100%);
+    transition: .5s;
+    z-index: 600;
+    width: 100%;
+    flex-direction: column;
+  }
+
+  .header__nav.open {
+    transform: translateX(0);
+    transition: .5s;
+  }
+
+  .header__logo-wrapper {
+    padding-right: 44px;
+  }
+
+  .header_intro {
+    display: flex;
+    align-items: center;
+    position: relative;
+    padding: 20px 0;
+  }
+
+  .header_intro:after {
+    position: absolute;
+    content: '';
+    display: block;
+    background-color: #8EAE6C;
+    width: 100vw;
+    height: 1px;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 0;
+    z-index: 1;
+  }
+
+  .header_intro .btn_light-green {
+    background-color: #46B600;
+  }
+
+  .header_intro .header__logo {
+    color: #46B600;
+  }
+
+  .section-banner {
+    margin-bottom: 64px;
+  }
+}
+
 @media screen and (max-width: 1023px) {
   .menu {
     height: 100%;
@@ -2335,70 +2407,6 @@ body {
     transform: none;
     color: #20261F;
     width: 100%;
-  }
-}
-
-@media only screen and (max-width: 1023px) {
-  .container {
-    max-width: 768px;
-    background-color: lightgreen;
-  }
-
-  .header .btn_close,
-  .header .btn_burger {
-    display: block;
-  }
-
-  .header__nav {
-    position: fixed;
-    left: 0;
-    max-width: 768px;
-    top: 0;
-    height: 100vh;
-    background: #ffffff;
-    padding: 0 36px 44px;
-    transform: translateX(-100%);
-    transition: .5s;
-    z-index: 600;
-    width: 100%;
-    flex-direction: column;
-  }
-
-  .header__nav.open {
-    transform: translateX(0);
-    transition: .5s;
-  }
-
-  .header__logo-wrapper {
-    padding-right: 44px;
-  }
-
-  .header_intro {
-    display: flex;
-    align-items: center;
-    position: relative;
-    padding: 20px 0;
-  }
-
-  .header_intro:after {
-    position: absolute;
-    content: '';
-    display: block;
-    background-color: #8EAE6C;
-    width: 100vw;
-    height: 1px;
-    left: 50%;
-    transform: translateX(-50%);
-    bottom: 0;
-    z-index: 1;
-  }
-
-  .header_intro .btn_light-green {
-    background-color: #46B600;
-  }
-
-  .header_intro .header__logo {
-    color: #46B600;
   }
 }
 

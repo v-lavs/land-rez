@@ -58,16 +58,10 @@
   }
 }
 
-@include respond-to($xl) {
-
-}
-
-@media screen and (max-width: 1080px) {
-
-}
-
 @include respond-to($lg) {
-
+.section-banner{
+  margin-bottom: 64px;
+}
 }
 
 @include respond-to($md) {

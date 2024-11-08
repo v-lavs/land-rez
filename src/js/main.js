@@ -85,7 +85,7 @@ document.addEventListener('DOMContentLoaded', function () {
         overlay.classList.remove('show');
     });
 
-//SLIDER
+//SLIDER FEATURES
     if (document.querySelector('.slider-features')) {
         const sliderFeatures = new Swiper('.slider-features ', {
             spaceBetween: 24,
@@ -101,6 +101,31 @@ document.addEventListener('DOMContentLoaded', function () {
             },
         });
     }
+//SLIDER PRODUCTS
+    let sliderProducts;
+
+    function initSwiper() {
+        if (window.innerWidth <= 1023) {
+            if (!sliderProducts) {
+                sliderProducts = new Swiper('.slider-products', {
+                    spaceBetween: 24,
+                    pagination: {
+                        el: '.slider-products .swiper-pagination',
+                        clickable: true,
+                    },
+                });
+            }
+        } else {
+            if (sliderProducts) {
+                sliderProducts.destroy(true, true);
+                sliderProducts = null;
+            }
+        }
+    }
+
+    initSwiper();
+
+    window.addEventListener('resize', initSwiper);
 
 //HIDE-SHOW TEXT
     const btnsSeeMore = document.querySelectorAll('.see-more');
