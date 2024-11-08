@@ -135,6 +135,28 @@ document.addEventListener('DOMContentLoaded', function () {
         target.classList.add('expanded');
     }
 
+//ANIMATION BLOCKS SECTION ACTION
+    const blocks = document.querySelectorAll('.action__item');
+
+    window.addEventListener('scroll', () => {
+        let closestBlock = null;
+        let closestDistance = window.innerHeight;
+        blocks.forEach((block) => {
+            const rect = block.getBoundingClientRect();
+            const middleOfScreen = window.innerHeight / 2;
+            const distanceToMiddle = Math.abs(rect.top - middleOfScreen);
+
+            if (distanceToMiddle < closestDistance && rect.top < middleOfScreen) {
+                closestDistance = distanceToMiddle;
+                closestBlock = block;
+            }
+        });
+
+        blocks.forEach(b => b.classList.remove('show'));
+        if (closestBlock) {
+            closestBlock.classList.add('show');
+        }
+    });
 
 });
 
