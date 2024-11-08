@@ -48,13 +48,12 @@
   //  //  font-size: clamp(16px, 1.3vw, 20px);
   //  //}
   //}
-  //@include respond-to($xl) {
-  //  //&__item {
-  //  //  font-size: 16px;
-  //  //  margin: 0 10px;
-  //  //}
-  //}
-  @media screen and (max-width: 1080px) {
+  @include respond-to($xl) {
+    &__item {
+      margin-right: 32px;
+    }
+  }
+  @media screen and (max-width: 1023px) {
     height: 100%;
     overflow-y: auto;
     flex-direction: column;
@@ -222,7 +221,7 @@
     &:hover,
     &:focus {
       background: rgba(149, 228, 34, .15);
-      //padding-right: 0;
+
       .sub-menu__link {
         padding-left: 32px;
 
@@ -237,7 +236,7 @@
     display: none;
   }
 }
-@media screen and (max-width: 1080px){
+@media screen and (max-width: 1023px){
   .sub-menu{
     border: none;
     &:before{

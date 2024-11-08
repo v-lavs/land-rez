@@ -125,32 +125,22 @@
 
 }
 
+@include respond-to($xl) {
+  .header__logo-wrapper{
+    padding-right: 32px;
+  }
+}
 
-//@media screen and (max-width: 1920px) {
-//  .header {
-//
-//  }
-//}
-//
-//@include respond-to($xxl) {
-//
-//}
-//
-//@include respond-to($xl) {
-//
-//}
-
-@media screen and (max-width: 1080px) {
+@include respond-to($lg) {
   .header {
     .btn_close,
     .btn_burger {
       display: block;
     }
-
     &__nav {
-      position: absolute;
+      position: fixed;
       left: 0;
-      right: 0;
+      max-width: 768px;
       top: 0;
       height: 100vh;
       background: #ffffff;
@@ -168,8 +158,8 @@
       }
     }
 
-    &__logo {
-
+    &__logo-wrapper {
+      padding-right: 44px;
     }
   }
   .header_intro {

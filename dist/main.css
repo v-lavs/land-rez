@@ -1377,8 +1377,8 @@ body {
 }
 
 .container {
-  max-width: 1240px;
-  padding: 0 20px;
+  max-width: 1280px;
+  padding: 0 40px;
   width: 100%;
   margin: 0 auto;
 }
@@ -2229,7 +2229,30 @@ body {
   font-weight: 600;
 }
 
-@media screen and (max-width: 1080px) {
+@media only screen and (max-width: 1440px) {
+  .container {
+    max-width: 1280px;
+    padding: 0 37px;
+    background-color: mediumorchid;
+  }
+}
+
+@media only screen and (max-width: 1280px) {
+  .menu__item {
+    margin-right: 32px;
+  }
+
+  .container {
+    max-width: 1024px;
+    background-color: royalblue;
+  }
+
+  .header__logo-wrapper {
+    padding-right: 32px;
+  }
+}
+
+@media screen and (max-width: 1023px) {
   .menu {
     height: 100%;
     overflow-y: auto;
@@ -2313,6 +2336,13 @@ body {
     color: #20261F;
     width: 100%;
   }
+}
+
+@media only screen and (max-width: 1023px) {
+  .container {
+    max-width: 768px;
+    background-color: lightgreen;
+  }
 
   .header .btn_close,
   .header .btn_burger {
@@ -2320,9 +2350,9 @@ body {
   }
 
   .header__nav {
-    position: absolute;
+    position: fixed;
     left: 0;
-    right: 0;
+    max-width: 768px;
     top: 0;
     height: 100vh;
     background: #ffffff;
@@ -2337,6 +2367,10 @@ body {
   .header__nav.open {
     transform: translateX(0);
     transition: .5s;
+  }
+
+  .header__logo-wrapper {
+    padding-right: 44px;
   }
 
   .header_intro {
@@ -2368,7 +2402,14 @@ body {
   }
 }
 
-@media only screen and (max-width: 568px) {
+@media only screen and (max-width: 767px) {
+  .container {
+    max-width: 576px;
+    background-color: goldenrod;
+  }
+}
+
+@media only screen and (max-width: 567px) {
   .menu__item {
     font-size: 25px;
   }
