@@ -103,6 +103,7 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 //SLIDER PRODUCTS
     let sliderProducts;
+    let sliderPurpose;
 
     function initSwiper() {
         if (window.innerWidth <= 1023) {
@@ -115,10 +116,20 @@ document.addEventListener('DOMContentLoaded', function () {
                     },
                 });
             }
+            if (!sliderPurpose) {
+                sliderPurpose = new Swiper('.slider-purpose', {
+                    slidesPerView: 1,
+                    spaceBetween: 24,
+                });
+            }
         } else {
             if (sliderProducts) {
                 sliderProducts.destroy(true, true);
                 sliderProducts = null;
+            }
+            if (sliderPurpose) {
+                sliderPurpose.destroy(true, true);
+                sliderPurpose = null;
             }
         }
     }
@@ -131,11 +142,9 @@ document.addEventListener('DOMContentLoaded', function () {
     const btnsSeeMore = document.querySelectorAll('.see-more');
 
     btnsSeeMore.forEach((btn) => {
-        btn.addEventListener('click', function() {
-            // Використовуємо `this` для роботи саме з поточною кнопкою
+        btn.addEventListener('click', function () {
             const hideText = this.parentElement.querySelector('.hide-text');
 
-            // Перевіряємо, чи знайдено блок із текстом, і перемикаємо його видимість
             if (hideText) {
                 hideText.classList.toggle('open-text');
                 this.textContent = hideText.classList.contains('open-text') ? "Згорнути інформацію" : "Більше інформації";
@@ -149,7 +158,9 @@ document.addEventListener('DOMContentLoaded', function () {
 
     slides.forEach((slide) => {
         slide.addEventListener('click', function () {
-            expand(slide);
+            if (window.innerWidth >= 1024) {
+                expand(slide);
+            }
         });
     });
 
