@@ -17,6 +17,7 @@
 @include respond-to($xl) {
   .container {
     max-width: 1024px;
+    padding: 0 20px;
     background-color: royalblue;
   }
 }
@@ -24,6 +25,7 @@
 @include respond-to($lg) {
   .container {
     max-width: 768px;
+    padding: 0 37px;
     background-color: lightgreen;
   }
 }

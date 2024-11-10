@@ -1,5 +1,3 @@
-@charset "UTF-8";
-
 /**
  * Swiper 8.4.7
  * Most modern mobile touch slider and framework with hardware accelerated transitions
@@ -1700,6 +1698,7 @@ body {
   box-shadow: 16px 8px 32px 0 rgba(0, 0, 0, 0.06);
   background-color: #FFFFFF;
   margin: 0;
+  min-height: 0;
   max-height: 400px;
 }
 
@@ -2225,7 +2224,7 @@ body {
 .slide-purpose__thumb {
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: 0 center;
+  background-position: center;
   height: 100%;
   width: 100%;
   border-radius: 8px;
@@ -2251,6 +2250,7 @@ body {
 
   .container {
     max-width: 1024px;
+    padding: 0 20px;
     background-color: royalblue;
   }
 
@@ -2270,6 +2270,23 @@ body {
     width: 31.75%;
     margin-left: 20px;
   }
+
+  .slide-purpose {
+    min-width: 158px;
+    padding: 24px 12px;
+  }
+
+  .slide-purpose.expanded .part_left {
+    width: 56%;
+  }
+
+  .slide-purpose.expanded .part_right {
+    width: 44%;
+  }
+
+  .slide-purpose.expanded .slide-purpose__title {
+    font-size: 36px;
+  }
 }
 
 @media only screen and (max-width: 1023px) {
@@ -2279,6 +2296,7 @@ body {
 
   .container {
     max-width: 768px;
+    padding: 0 37px;
     background-color: lightgreen;
   }
 
@@ -2372,12 +2390,22 @@ body {
 
   .slider-purpose {
     display: block;
-    /* Swiper буде керувати flex-розміщенням */
+    padding-bottom: 74px;
+  }
+
+  .slider-purpose .swiper-pagination {
+    width: 100%;
+    text-align: center;
+  }
+
+  .slider-purpose .swiper-pagination-bullet-active {
+    background-color: #FFFFFF;
   }
 
   .slide-purpose {
     margin-right: 0;
     min-width: 100%;
+    padding: 32px 24px;
   }
 
   .slide-purpose .slide-purpose__title {
@@ -2395,12 +2423,9 @@ body {
     text-align: left;
   }
 
-  .slide-purpose .part_left {
-    align-items: flex-start;
-  }
-
+  .slide-purpose .part_left,
   .slide-purpose .part_right {
-    width: 100%;
+    width: 50%;
   }
 }
 

@@ -120,6 +120,10 @@ document.addEventListener('DOMContentLoaded', function () {
                 sliderPurpose = new Swiper('.slider-purpose', {
                     slidesPerView: 1,
                     spaceBetween: 24,
+                    pagination: {
+                        el: '.slider-purpose .swiper-pagination',
+                        clickable: true,
+                    },
                 });
             }
         } else {
