@@ -1540,7 +1540,7 @@ body {
   top: 50%;
   right: -30px;
   transform: translate(100%, -50%);
-  z-index: 1;
+  z-index: 2;
 }
 
 .card-product {
@@ -1686,7 +1686,7 @@ body {
   overflow: hidden;
   z-index: 0;
   pointer-events: none;
-  position: absolute;
+  position: fixed;
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%) scale(0.85);
@@ -2012,6 +2012,7 @@ body {
 
 .card-action .d-flex {
   align-items: center;
+  flex-wrap: nowrap;
 }
 
 .card-action__title {
@@ -2113,6 +2114,10 @@ body {
 
 .med-purpose .section__title {
   font-weight: 400;
+}
+
+.med-purpose .color-l-green {
+  color: #B3ED5F;
 }
 
 .slider-purpose {
@@ -2389,7 +2394,6 @@ body {
   }
 
   .slider-purpose {
-    display: block;
     padding-bottom: 74px;
   }
 
@@ -2423,9 +2427,16 @@ body {
     text-align: left;
   }
 
-  .slide-purpose .part_left,
-  .slide-purpose .part_right {
+  .slide-purpose.expanded .part {
     width: 50%;
+  }
+
+  .slide-purpose .part_left {
+    align-items: flex-start;
+  }
+
+  .slide-purpose .part_right {
+    width: 100%;
   }
 }
 
@@ -2561,5 +2572,22 @@ body {
 
   .section-banner {
     margin-bottom: 32px;
+  }
+
+  .slide-purpose {
+    flex-wrap: wrap;
+  }
+
+  .slide-purpose .part {
+    width: 100%;
+  }
+
+  .slide-purpose .part_left {
+    order: 1;
+  }
+
+  .slide-purpose .part__thumb {
+    min-height: 232px;
+    padding-top: 70%;
   }
 }

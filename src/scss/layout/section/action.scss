@@ -53,10 +53,6 @@
   }
 }
 
-.action-list {
-
-}
-
 .card-action {
   display: flex;
   align-items: center;
@@ -64,6 +60,7 @@
 
   .d-flex {
     align-items: center;
+    flex-wrap: nowrap;
   }
 
   &__title {
