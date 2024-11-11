@@ -2380,6 +2380,46 @@ body {
     right: 32px;
   }
 
+  .action__item {
+    height: 312px;
+  }
+
+  .action__item.show .card-action__title {
+    width: 100%;
+    max-width: 100%;
+    padding: 36px 48px;
+  }
+
+  .card-action {
+    display: block;
+    background: linen;
+  }
+
+  .card-action .part {
+    width: 100%;
+  }
+
+  .card-action .part:last-child {
+    padding-left: 0;
+  }
+
+  .card-action .part br {
+    display: none;
+  }
+
+  .card-action .d-flex {
+    display: block;
+  }
+
+  .card-action__icon {
+    margin-bottom: 24px;
+    margin-right: 0;
+  }
+
+  .card-action__title {
+    margin-bottom: 24px;
+  }
+
   .section-banner {
     margin-bottom: 64px;
   }
@@ -2580,6 +2620,17 @@ body {
 
   .card-product__link-wrap {
     right: 16px;
+  }
+
+  .action__item {
+    height: 360px;
+  }
+
+  .action__item.show .card-action__title {
+    font-size: 40px;
+    line-height: 48px;
+    padding: 16px;
+    margin: 0;
   }
 
   .section-banner {

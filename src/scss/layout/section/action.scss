@@ -92,3 +92,55 @@
     }
   }
 }
+
+@include respond-to($lg) {
+  .action__item{
+    height: 312px;
+    &.show{
+      .card-action__title{
+        width: 100%;
+        max-width: 100%;
+        padding: 36px 48px;
+      }
+    }
+  }
+  .card-action {
+    display: block;
+    background: linen;
+    .part {
+      width: 100%;
+
+      &:last-child {
+        padding-left: 0;
+      }
+      br{
+        display: none;
+      }
+    }
+
+    .d-flex {
+      display: block;
+    }
+    &__icon{
+      margin-bottom: 24px;
+      margin-right: 0;
+    }
+    &__title{
+      margin-bottom: 24px;
+    }
+  }
+}
+
+@include respond-to($sm) {
+  .action__item {
+    height: 360px;
+    &.show {
+      .card-action__title {
+        font-size: 40px;
+        line-height: 48px;
+        padding: 16px;
+        margin: 0;
+      }
+    }
+  }
+}
