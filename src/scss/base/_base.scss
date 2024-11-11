@@ -5,6 +5,7 @@ html {
 body {
   font-size: 24px;
   color: #20261F;
+  scroll-behavior: smooth;
 }
 
 .wrapper {
@@ -175,39 +176,14 @@ body {
   }
 }
 
-//.scroltop {
-//  display: none;
-//  position: fixed;
-//  right: 25px;
-//  bottom: 100px;
-//  width: 56px;
-//  height: 56px;
-//  background-color: #ffffff;
-//  background-image: url(../assets/img/arrow-down-right2.svg);
-//  border: 1px solid #000000;
-//  border-radius: 100px;
-//  padding: 16px;
-//  background-size: 25px 25px;
-//  background-repeat: no-repeat;
-//  background-position: center;
-//  transform: rotate(-45deg);
-//  transition: .35s;
-//  z-index: 99;
-//
-//  &:hover,
-//  &:focus {
-//    filter: invert(1);
-//  }
-//}
-
 @media screen and (max-width: 1920px) {
 
 }
 
 @include respond-to($lg) {
-.section{
-  padding: 76px 0 64px;
-}
+  .section {
+    padding: 76px 0 64px;
+  }
 }
 
 @include respond-to($md) {
@@ -216,9 +192,14 @@ body {
 }
 
 @include respond-to($sm) {
-.section{
-  padding: 48px 32px;
-}
+  .section {
+    padding: 48px 0 32px;
+
+
+    &__title {
+      margin-bottom: 48px;
+    }
+  }
 }
 
 

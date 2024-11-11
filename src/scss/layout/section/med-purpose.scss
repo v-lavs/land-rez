@@ -4,6 +4,7 @@
 
   .section__title {
     font-weight: 400;
+    font-size: 64px;
   }
 
   .color-l-green {
@@ -21,12 +22,12 @@
   margin-right: 24px;
   flex: 1 1;
   transition: flex-grow .5s;
-  font-size: 28px;
+  font-size: 32px;
   line-height: 1.2;
   text-align: center;
   display: flex;
   padding: 32px 24px;
-  color: #000000;
+  color: #647362;
   border-radius: 16px;
   box-shadow: 16px 8px 32px 0 rgba(0, 0, 0, .06);
   cursor: pointer;
@@ -42,6 +43,7 @@
       font-size: 40px;
       line-height: 1.2;
       margin-bottom: 8px;
+      color: #20261F;
     }
 
     .part {
@@ -150,7 +152,6 @@
 
 @include respond-to($lg) {
   .slider-purpose {
-    //display: block;
     padding-bottom: 74px;
 
     .swiper-pagination {
@@ -168,10 +169,9 @@
     padding: 32px 24px;
 
     .slide-purpose__title {
-      font-size: 40px;
-      line-height: 1.2;
       margin-bottom: 8px;
       text-align: left;
+      color: #20261F;
     }
 
     .slide-purpose__text {
@@ -198,17 +198,49 @@
   }
 }
 
+@include respond-to($md) {
+  .slide-purpose__title {
+    font-size: 32px;
+  }
+  .slide-purpose__text {
+    font-size: 24px;
+  }
+}
+
 @include respond-to($sm) {
-  .slide-purpose{
-    flex-wrap: wrap;
-    .part{
+  .med-purpose .section__title{
+    font-size: 32px;
+    line-height: 35.2px;
+  }
+  .slide-purpose.expanded {
+    .part {
       width: 100%;
-      &_left{
-        order:1;
+    }
+  }
+  .slide-purpose {
+    flex-wrap: wrap;
+    min-height: 0;
+
+    &__text {
+      height: auto;
+    }
+
+    &__icon {
+      display: none;
+    }
+
+    .part {
+      width: 100%;
+
+      &_right {
+        height: 232px;
+        background: rosybrown;
       }
-      &__thumb{
-        min-height: 232px;
-        padding-top: 70%;
+
+      &_left {
+        order: 1;
+        height: auto;
+        background: lightgreen;
       }
     }
   }

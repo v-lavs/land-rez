@@ -11,8 +11,8 @@
   box-shadow: 0 8px 12px 0 rgba(255, 116, 54, .15);
   border: 4px solid #FFFFFF;
   border-radius: 50%;
-  width: 72px;
-  height: 72px;
+  width: 96px;
+  height: 96px;
   padding: 0;
   background-image: url('../assets/img/hot.svg'), linear-gradient(270deg, #FF4F00 0%, #FF7436 100%);
   background-repeat: no-repeat, no-repeat;
@@ -356,7 +356,7 @@
 
 @include respond-to($sm){
   .card-product__header{
-    padding: 16px 78px 0 16px
+    padding: 16px 94px 0 16px
   }
   .card-product__link-wrap{
     right: 16px;
