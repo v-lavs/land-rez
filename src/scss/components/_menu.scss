@@ -43,11 +43,6 @@
     }
   }
 
-  //@media screen and (max-width: 1920px) {
-  //  //&__item {
-  //  //  font-size: clamp(16px, 1.3vw, 20px);
-  //  //}
-  //}
   @include respond-to($xl) {
     &__item {
       margin-right: 32px;
@@ -77,8 +72,7 @@
       &:last-child {
         margin-bottom: 0;
       }
-
-      &:hover > .sub-menu {
+     &:hover > .sub-menu {
         display: none!important;
       }
     }
@@ -86,10 +80,14 @@
       display: none!important;
     }
     .sub-menu {
+      padding: 0;
+      margin-top: 20px;
       &__item {
-        font-size: 25px;
+        font-size: 24px;
+        font-weight: 500;
         margin-bottom: 10px;
         color: #20261F;
+        padding: 16px 24px;
       }
 
       &__toggle {
@@ -118,7 +116,11 @@
       }
   @include respond-to($sm) {
     &__item {
-      font-size: 25px;
+      font-size: 32px;
+      padding-top: 4px;
+      padding-bottom: 4px;
+      padding-right: 0;
+      letter-spacing: 0.04em;
     }
   }
 }
@@ -254,18 +256,27 @@
    width: 100%;
   }
 }
-@include respond-to($xl) {
-  //.dropdown > .menu__link:before {
-  //  width: 10px;
-  //  height: 5px;
-  //}
-  //.dropdown > .menu__link {
-  //  padding-right: 20px;
-  //}
-}
 
 @include respond-to($sm) {
-  .sub-menu {
-    font-size: 20px;
+  .sub-menu{
+    min-width: 0;
+  }
+  .sub-menu .sub-menu__item{
+    font-size: 18px;
+    font-weight: 450;
+    line-height: 25.2px;
+    letter-spacing: 0.04em;
+    padding-top: 14px;
+    padding-bottom: 14px;
+    padding-right: 0;
+  }
+  .menu .sub-menu__toggle {
+    width: 40px;
+    height: 40px;
+  }
+
+  .dropdown >.menu__link {
+    padding-right: 40px;
   }
 }
+

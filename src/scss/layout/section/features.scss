@@ -67,9 +67,9 @@
 
   &__title {
     color: #20261F;
-    font-size: 36px;
+    font-size: 40px;
     font-weight: 500;
-    line-height: 1.1;
+    line-height: 1.2;
     margin-bottom: 16px;
   }
 
@@ -127,5 +127,17 @@
       width: 100%;
       text-align: center;
     }
+  }
+  .slider-features .swiper-slide {
+    width: 500px;
+  }
+  .card-features__body {
+    margin-right: 0;
+  }
+ }
+
+@include respond-to($sm){
+  .slider-features {
+    padding-bottom: 74px;
   }
 }

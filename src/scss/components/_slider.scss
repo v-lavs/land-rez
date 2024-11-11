@@ -66,3 +66,10 @@
 .swiper-button-next:after {
   display: none;
 }
+
+@include respond-to($sm){
+  .swiper-horizontal > .swiper-pagination-bullets,
+  .swiper-pagination-bullets.swiper-pagination-horizontal{
+    bottom: 0;
+  }
+}

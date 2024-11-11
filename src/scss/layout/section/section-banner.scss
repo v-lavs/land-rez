@@ -5,6 +5,7 @@
   min-height: 100vh;
   color: #ffffff;
   margin-bottom: 80px;
+
   &:before {
     position: absolute;
     content: '';
@@ -43,28 +44,36 @@
     max-width: 792px;
     width: 100%;
   }
-  .container{
+
+  .container {
     position: relative;
     z-index: 1;
   }
-  .title_lg{
+
+  .title_lg {
     margin-bottom: 48px;
-    strong{
+
+    strong {
       font-weight: 500;
     }
   }
-  .btn{
+
+  .btn {
     margin-right: 14px;
-    &:last-child{
+
+    &:last-child {
       margin-right: 0;
     }
   }
 }
 
 @include respond-to($lg) {
-.section-banner{
-  margin-bottom: 64px;
-}
+  .section-banner {
+    margin-bottom: 64px;
+    .title_lg{
+      font-size: 72px;
+    }
+  }
 }
 
 @include respond-to($md) {
@@ -72,7 +81,13 @@
 }
 
 @include respond-to($sm) {
-.section-banner{
-  margin-bottom: 32px;
-}
+  .section-banner {
+    margin-bottom: 32px;
+  }
+  .section-banner .btn {
+    margin-right: 0;
+    margin-bottom: 16px;
+    width: 100%;
+    justify-content: center;
+  }
 }
