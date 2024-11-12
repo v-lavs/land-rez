@@ -8,7 +8,10 @@
   border: 1px solid rgba(142, 174, 108, .25);
   border-radius: 16px;
   padding: 24px;
-
+  margin-bottom: 64px;
+  &:last-child{
+    margin-bottom: 0;
+  }
   .block-btns {
     display: flex;
     padding-top: 45px;
@@ -33,7 +36,8 @@
     width: 47.25%;
     padding-left: 164px;
   }
-  &__img{
+
+  &__img {
     display: block;
     position: absolute;
     left: 0;
@@ -54,20 +58,45 @@
     padding: 48px 32px;
     display: flex;
     justify-content: flex-end;
+    > div{
+      max-width: 190px;
+    }
   }
-  &__title{
+
+  &__title {
     font-size: 24px;
     font-weight: 400;
     line-height: 1.35;
     letter-spacing: -0.02em;
     text-transform: uppercase;
   }
-  .prep{
+
+  .prep {
     font-size: 40px;
     font-weight: 500;
     line-height: 1.2;
     letter-spacing: -0.02em;
     text-transform: uppercase;
+  }
+  &:nth-child(2){
+   .dosage{
+     order: 1;
+     padding-right: 0;
+     padding-left: 32px;
+   }
+    .app-carts {
+      &__col {
+        padding-left: 0;
+        padding-right: 164px;
+      }
+      &__heading{
+        justify-content: flex-start;
+      }
+      &__img{
+        right: 0;
+        left: auto;
+      }
+    }
   }
 }
 
@@ -75,7 +104,8 @@
   overflow: visible;
 
   .swiper-slide {
-    max-width: 278px;
+    width: auto;
+    flex-grow: 1;
     box-shadow: 16px 8px 32px 0 rgba(0, 0, 0, .06);
     margin-right: 16px;
     border-radius: 16px;
@@ -89,6 +119,47 @@
 .dosage {
   width: 52.75%;
   padding-right: 32px;
+  .time {
+    display: flex;
+    justify-content: center;
+    padding: 8px 0;
+    margin-top: 8px;
+
+    &__icon {
+      position: relative;
+      width: 32px;
+      height: 32px;
+      margin: 0 12px;
+
+      &:before {
+        position: absolute;
+        content: '';
+        display: block;
+        width: 1px;
+        height: 16px;
+        top: 50%;
+        transform: translateY(-50%);
+        right: -12px;
+        background-color: rgba(100, 115, 98, .1);
+        z-index: 1;
+      }
+
+      &:last-child:before {
+        display: none;
+      }
+    }
+  }
+  &.drops {
+    &.drops {
+      .time {
+        margin: 0;
+      }
+      .card-dosage__body{
+        padding-top: 0;
+        padding-bottom: 16px;
+      }
+    }
+  }
 }
 
 .card-dosage {
@@ -101,6 +172,20 @@
   font-weight: 500;
   text-align: center;
   overflow: hidden;
+
+
+  &__footer.mob {
+    display: none;
+  }
+
+  &__footer.desk {
+    margin-top: 64px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+
+  }
 
   &__header {
     background-color: #F7FAF5;
@@ -158,34 +243,5 @@
     border-top: 1px solid rgba(100, 115, 98, .1);
   }
 
-  .time {
-    display: flex;
-    justify-content: center;
-    padding: 8px 0;
-    margin-top: 8px;
 
-    &__icon {
-      position: relative;
-      width: 32px;
-      height: 32px;
-      margin: 0 12px;
-
-      &:before {
-        position: absolute;
-        content: '';
-        display: block;
-        width: 1px;
-        height: 16px;
-        top: 50%;
-        transform: translateY(-50%);
-        right: -12px;
-        background-color: rgba(100, 115, 98, .1);
-        z-index: 1;
-      }
-
-      &:last-child:before {
-        display: none;
-      }
-    }
-  }
 }

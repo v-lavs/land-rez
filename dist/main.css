@@ -2290,6 +2290,11 @@ body {
   border: 1px solid rgba(142, 174, 108, 0.25);
   border-radius: 16px;
   padding: 24px;
+  margin-bottom: 64px;
+}
+
+.app-carts:last-child {
+  margin-bottom: 0;
 }
 
 .app-carts .block-btns {
@@ -2340,6 +2345,10 @@ body {
   justify-content: flex-end;
 }
 
+.app-carts__heading > div {
+  max-width: 190px;
+}
+
 .app-carts__title {
   font-size: 24px;
   font-weight: 400;
@@ -2356,12 +2365,33 @@ body {
   text-transform: uppercase;
 }
 
+.app-carts:nth-child(2) .dosage {
+  order: 1;
+  padding-right: 0;
+  padding-left: 32px;
+}
+
+.app-carts:nth-child(2) .app-carts__col {
+  padding-left: 0;
+  padding-right: 164px;
+}
+
+.app-carts:nth-child(2) .app-carts__heading {
+  justify-content: flex-start;
+}
+
+.app-carts:nth-child(2) .app-carts__img {
+  right: 0;
+  left: auto;
+}
+
 .slider-dosage {
   overflow: visible;
 }
 
 .slider-dosage .swiper-slide {
-  max-width: 278px;
+  width: auto;
+  flex-grow: 1;
   box-shadow: 16px 8px 32px 0 rgba(0, 0, 0, 0.06);
   margin-right: 16px;
   border-radius: 16px;
@@ -2376,6 +2406,46 @@ body {
   padding-right: 32px;
 }
 
+.dosage .time {
+  display: flex;
+  justify-content: center;
+  padding: 8px 0;
+  margin-top: 8px;
+}
+
+.dosage .time__icon {
+  position: relative;
+  width: 32px;
+  height: 32px;
+  margin: 0 12px;
+}
+
+.dosage .time__icon:before {
+  position: absolute;
+  content: '';
+  display: block;
+  width: 1px;
+  height: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+  right: -12px;
+  background-color: rgba(100, 115, 98, 0.1);
+  z-index: 1;
+}
+
+.dosage .time__icon:last-child:before {
+  display: none;
+}
+
+.dosage.drops.drops .time {
+  margin: 0;
+}
+
+.dosage.drops.drops .card-dosage__body {
+  padding-top: 0;
+  padding-bottom: 16px;
+}
+
 .card-dosage {
   color: #647362;
   font-size: 18px;
@@ -2386,6 +2456,17 @@ body {
   font-weight: 500;
   text-align: center;
   overflow: hidden;
+}
+
+.card-dosage__footer.mob {
+  display: none;
+}
+
+.card-dosage__footer.desk {
+  margin-top: 64px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .card-dosage__header {
@@ -2440,37 +2521,6 @@ body {
   text-transform: uppercase;
   font-weight: 400;
   border-top: 1px solid rgba(100, 115, 98, 0.1);
-}
-
-.card-dosage .time {
-  display: flex;
-  justify-content: center;
-  padding: 8px 0;
-  margin-top: 8px;
-}
-
-.card-dosage .time__icon {
-  position: relative;
-  width: 32px;
-  height: 32px;
-  margin: 0 12px;
-}
-
-.card-dosage .time__icon:before {
-  position: absolute;
-  content: '';
-  display: block;
-  width: 1px;
-  height: 16px;
-  top: 50%;
-  transform: translateY(-50%);
-  right: -12px;
-  background-color: rgba(100, 115, 98, 0.1);
-  z-index: 1;
-}
-
-.card-dosage .time__icon:last-child:before {
-  display: none;
 }
 
 @media only screen and (max-width: 1440px) {
