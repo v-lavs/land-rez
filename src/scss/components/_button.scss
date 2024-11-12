@@ -7,10 +7,10 @@
   line-height: 1;
   letter-spacing: -0.02em;
   text-transform: uppercase;
-  padding: 21px 48px;
+  padding: 15px 48px 16px;
   border-radius: 100px;
   border: 1px solid;
-
+  justify-content: center;
 
   &__icon {
     display: block;
@@ -26,6 +26,11 @@
     }
   }
 
+  &_green {
+    background-color: #46B600;
+    color: #ffffff;
+  }
+
   &_light-green {
     color: #ffffff;
     background-color: rgba(70, 182, 0, .15);
@@ -37,14 +42,18 @@
     background-color: rgba(255, 255, 255, .15);
     color: #ffffff;
   }
+
   &_stroke {
     border-color: #ffffff;
     background-color: transparent;
     color: #ffffff;
-
   }
-
-  //
+  &_stroke-green{
+    border: 1px solid #46B600;
+    background-color: transparent;
+    color: #46B600;
+  }
+          //
   //  &:hover,
   //  &:focus {
   //    .btn__icon {

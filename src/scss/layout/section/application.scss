@@ -4,10 +4,71 @@
   }
 }
 
-.app-cart {
+.app-carts {
   border: 1px solid rgba(142, 174, 108, .25);
   border-radius: 16px;
   padding: 24px;
+
+  .block-btns {
+    display: flex;
+    padding-top: 45px;
+  }
+
+  .btn {
+    display: flex;
+    margin-right: 12px;
+    width: 100%;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  &__row {
+    display: flex;
+  }
+
+  &__col {
+    position: relative;
+    width: 47.25%;
+    padding-left: 164px;
+  }
+  &__img{
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 74%;
+  }
+
+  &__heading {
+    max-width: 384px;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-position: right bottom;
+    background-size: cover;
+    height: 100%;
+    color: #FFFFFF;
+    border-radius: 16px;
+    padding: 48px 32px;
+    display: flex;
+    justify-content: flex-end;
+  }
+  &__title{
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 1.35;
+    letter-spacing: -0.02em;
+    text-transform: uppercase;
+  }
+  .prep{
+    font-size: 40px;
+    font-weight: 500;
+    line-height: 1.2;
+    letter-spacing: -0.02em;
+    text-transform: uppercase;
+  }
 }
 
 .slider-dosage {
@@ -17,6 +78,7 @@
     max-width: 278px;
     box-shadow: 16px 8px 32px 0 rgba(0, 0, 0, .06);
     margin-right: 16px;
+    border-radius: 16px;
 
     &:last-child {
       margin-right: 0;
@@ -25,7 +87,7 @@
 }
 
 .dosage {
-  padding-bottom: 45px;
+  width: 52.75%;
   padding-right: 32px;
 }
 

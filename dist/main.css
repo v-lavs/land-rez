@@ -1215,9 +1215,10 @@ body {
   line-height: 1;
   letter-spacing: -0.02em;
   text-transform: uppercase;
-  padding: 21px 48px;
+  padding: 15px 48px 16px;
   border-radius: 100px;
   border: 1px solid;
+  justify-content: center;
 }
 
 .btn__icon {
@@ -1232,6 +1233,11 @@ body {
   display: block;
   width: 100%;
   height: auto;
+}
+
+.btn_green {
+  background-color: #46B600;
+  color: #ffffff;
 }
 
 .btn_light-green {
@@ -1250,6 +1256,12 @@ body {
   border-color: #ffffff;
   background-color: transparent;
   color: #ffffff;
+}
+
+.btn_stroke-green {
+  border: 1px solid #46B600;
+  background-color: transparent;
+  color: #46B600;
 }
 
 .swiper-horizontal > .swiper-pagination-bullets,
@@ -1504,7 +1516,6 @@ body {
 
 .header .btn_light-green {
   margin-left: auto;
-  padding: 15px 32px;
   font-size: 18px;
   text-transform: uppercase;
 }
@@ -2133,6 +2144,7 @@ body {
 
 .section-banner .btn {
   margin-right: 14px;
+  padding: 22px 48px;
 }
 
 .section-banner .btn:last-child {
@@ -2274,10 +2286,74 @@ body {
   font-weight: 600;
 }
 
-.app-cart {
+.app-carts {
   border: 1px solid rgba(142, 174, 108, 0.25);
   border-radius: 16px;
   padding: 24px;
+}
+
+.app-carts .block-btns {
+  display: flex;
+  padding-top: 45px;
+}
+
+.app-carts .btn {
+  display: flex;
+  margin-right: 12px;
+  width: 100%;
+}
+
+.app-carts .btn:last-child {
+  margin-right: 0;
+}
+
+.app-carts__row {
+  display: flex;
+}
+
+.app-carts__col {
+  position: relative;
+  width: 47.25%;
+  padding-left: 164px;
+}
+
+.app-carts__img {
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 74%;
+}
+
+.app-carts__heading {
+  max-width: 384px;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-position: right bottom;
+  background-size: cover;
+  height: 100%;
+  color: #FFFFFF;
+  border-radius: 16px;
+  padding: 48px 32px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.app-carts__title {
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 1.35;
+  letter-spacing: -0.02em;
+  text-transform: uppercase;
+}
+
+.app-carts .prep {
+  font-size: 40px;
+  font-weight: 500;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+  text-transform: uppercase;
 }
 
 .slider-dosage {
@@ -2288,6 +2364,7 @@ body {
   max-width: 278px;
   box-shadow: 16px 8px 32px 0 rgba(0, 0, 0, 0.06);
   margin-right: 16px;
+  border-radius: 16px;
 }
 
 .slider-dosage .swiper-slide:last-child {
@@ -2295,7 +2372,7 @@ body {
 }
 
 .dosage {
-  padding-bottom: 45px;
+  width: 52.75%;
   padding-right: 32px;
 }
 
