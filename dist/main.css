@@ -2280,6 +2280,122 @@ body {
   padding: 24px;
 }
 
+.slider-dosage {
+  overflow: visible;
+}
+
+.slider-dosage .swiper-slide {
+  max-width: 278px;
+  box-shadow: 16px 8px 32px 0 rgba(0, 0, 0, 0.06);
+  margin-right: 16px;
+}
+
+.slider-dosage .swiper-slide:last-child {
+  margin-right: 0;
+}
+
+.dosage {
+  padding-bottom: 45px;
+  padding-right: 32px;
+}
+
+.card-dosage {
+  color: #647362;
+  font-size: 18px;
+  line-height: 1.4;
+  letter-spacing: -0.02em;
+  border-radius: 8px;
+  background-color: #FFFFFF;
+  font-weight: 500;
+  text-align: center;
+  overflow: hidden;
+}
+
+.card-dosage__header {
+  background-color: #F7FAF5;
+  padding: 16px;
+}
+
+.card-dosage__title {
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 1.35;
+  text-align: center;
+  color: #20261F;
+  margin-bottom: 4px;
+}
+
+.card-dosage__icon {
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  background-repeat: no-repeat;
+  background-size: auto;
+  background-position: center;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.card-dosage .sub-title {
+  text-transform: uppercase;
+}
+
+.card-dosage .number {
+  display: inline-block;
+  width: auto;
+  padding-left: 24px;
+  position: relative;
+  font-size: 56px;
+  font-weight: 600;
+  line-height: 1.15;
+}
+
+.card-dosage__body {
+  color: #FF7436;
+  font-size: 24px;
+  line-height: 1.35;
+  padding: 24px 8px;
+}
+
+.card-dosage__footer {
+  padding: 24px 0 16px;
+  text-transform: uppercase;
+  font-weight: 400;
+  border-top: 1px solid rgba(100, 115, 98, 0.1);
+}
+
+.card-dosage .time {
+  display: flex;
+  justify-content: center;
+  padding: 8px 0;
+  margin-top: 8px;
+}
+
+.card-dosage .time__icon {
+  position: relative;
+  width: 32px;
+  height: 32px;
+  margin: 0 12px;
+}
+
+.card-dosage .time__icon:before {
+  position: absolute;
+  content: '';
+  display: block;
+  width: 1px;
+  height: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+  right: -12px;
+  background-color: rgba(100, 115, 98, 0.1);
+  z-index: 1;
+}
+
+.card-dosage .time__icon:last-child:before {
+  display: none;
+}
+
 @media only screen and (max-width: 1440px) {
   .container {
     max-width: 1280px;
