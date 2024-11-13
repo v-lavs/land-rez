@@ -1266,6 +1266,7 @@ body {
 
 .swiper-horizontal > .swiper-pagination-bullets,
 .swiper-pagination-bullets.swiper-pagination-horizontal {
+  display: none;
   width: auto;
   left: auto;
   right: 0;
@@ -1577,7 +1578,7 @@ body {
   background-position: center, center;
   position: absolute;
   top: 50%;
-  right: -30px;
+  right: 0;
   transform: translate(100%, -50%);
   z-index: 2;
 }
@@ -1586,7 +1587,8 @@ body {
   display: flex;
   position: relative;
   flex-direction: column;
-  width: 33%;
+  flex-basis: 0;
+  flex-grow: 1;
   min-height: 482px;
   border-radius: 16px;
   border: 1px solid rgba(32, 38, 31, 0.1);
@@ -1881,6 +1883,10 @@ body {
   flex-direction: column;
   width: 588px;
   height: auto;
+}
+
+.slider-features .swiper-pagination {
+  display: block;
 }
 
 .card-features {
@@ -2529,6 +2535,11 @@ body {
     max-width: 1280px;
     padding: 0 37px;
   }
+
+  .btn-hot {
+    transform: translate(50%, -50%);
+    right: 28px;
+  }
 }
 
 @media only screen and (max-width: 1280px) {
@@ -2554,7 +2565,6 @@ body {
   }
 
   .card-product {
-    width: 31.75%;
     margin-left: 20px;
   }
 
@@ -2603,6 +2613,14 @@ body {
   .container {
     max-width: 768px;
     padding: 0 37px;
+  }
+
+  .card-product {
+    flex-basis: inherit;
+  }
+
+  .slider-products .swiper-pagination {
+    display: block !important;
   }
 
   .header .btn_close,
@@ -2951,6 +2969,41 @@ body {
     margin-right: 5px;
   }
 
+  .card-product_hot {
+    max-width: 343px;
+  }
+
+  .card-product_hot .part_right {
+    display: none;
+  }
+
+  .card-product_hot .part_left {
+    width: 100%;
+  }
+
+  .card-product_hot .title_md {
+    font-size: 61px;
+    line-height: 58px;
+    letter-spacing: -0.02em;
+  }
+
+  .card-product_hot .small-text {
+    font-size: 26px;
+    line-height: 29px;
+  }
+
+  .card-product_hot .card-product__link {
+    width: 100%;
+  }
+
+  .card-product_hot .label {
+    left: -122px;
+  }
+
+  .card-product__inner {
+    padding: 45px 24px;
+  }
+
   .slider-features .swiper-button-next,
   .slider-features .swiper-button-prev {
     display: none;
@@ -3214,5 +3267,16 @@ body {
   .dosage.drops .card-dosage__body {
     padding-top: 24px;
     padding-bottom: 24px;
+  }
+}
+
+@media screen and (max-width: 360px) {
+  .card-product_inner {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  .card-product_hot .label {
+    left: -104px;
   }
 }

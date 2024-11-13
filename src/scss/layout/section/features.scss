@@ -9,6 +9,9 @@
     width: 588px;
     height: auto;
   }
+  .swiper-pagination{
+    display: block;
+  }
 }
 
 .card-features {
@@ -114,6 +117,12 @@
         margin-bottom: 16px;
       }
     }
+  }
+}
+@include respond-to($xxl){
+  .btn-hot{
+    transform: translate(50%, -50%);
+    right: 28px;
   }
 }
 

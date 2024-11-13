@@ -99,8 +99,8 @@ document.addEventListener('DOMContentLoaded', function () {
                 nextEl: '.slider-features .swiper-button-next',
                 prevEl: '.slider-features .swiper-button-prev',
             },
-            breakpoints:{
-                568:{
+            breakpoints: {
+                568: {
                     slidesPerView: 'auto',
                 }
             }
@@ -120,6 +120,11 @@ document.addEventListener('DOMContentLoaded', function () {
             if (!sliderProducts) {
                 sliderProducts = new Swiper('.slider-products', {
                     spaceBetween: 24,
+                    breakpoints: {
+                        568: {
+                            slidesPerView: 2,
+                        }
+                    },
                     pagination: {
                         el: '.slider-products .swiper-pagination',
                         clickable: true,
