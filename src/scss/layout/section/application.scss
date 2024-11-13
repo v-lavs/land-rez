@@ -9,9 +9,11 @@
   border-radius: 16px;
   padding: 24px;
   margin-bottom: 64px;
-  &:last-child{
+
+  &:last-child {
     margin-bottom: 0;
   }
+
   .block-btns {
     display: flex;
     padding-top: 45px;
@@ -58,7 +60,8 @@
     padding: 48px 32px;
     display: flex;
     justify-content: flex-end;
-    > div{
+
+    > div {
       max-width: 190px;
     }
   }
@@ -78,21 +81,25 @@
     letter-spacing: -0.02em;
     text-transform: uppercase;
   }
-  &:nth-child(2){
-   .dosage{
-     order: 1;
-     padding-right: 0;
-     padding-left: 32px;
-   }
+
+  &:nth-child(2) {
+    .dosage {
+      order: 1;
+      padding-right: 0;
+      padding-left: 32px;
+    }
+
     .app-carts {
       &__col {
         padding-left: 0;
         padding-right: 164px;
       }
-      &__heading{
+
+      &__heading {
         justify-content: flex-start;
       }
-      &__img{
+
+      &__img {
         right: 0;
         left: auto;
       }
@@ -106,6 +113,7 @@
   .swiper-slide {
     width: auto;
     flex-grow: 1;
+    flex-basis: 0;
     box-shadow: 16px 8px 32px 0 rgba(0, 0, 0, .06);
     margin-right: 16px;
     border-radius: 16px;
@@ -119,6 +127,7 @@
 .dosage {
   width: 52.75%;
   padding-right: 32px;
+
   .time {
     display: flex;
     justify-content: center;
@@ -149,12 +158,14 @@
       }
     }
   }
+
   &.drops {
     &.drops {
       .time {
         margin: 0;
       }
-      .card-dosage__body{
+
+      .card-dosage__body {
         padding-top: 0;
         padding-bottom: 16px;
       }
@@ -244,4 +255,84 @@
   }
 
 
+}
+
+
+@include respond-to($xl) {
+  .app-carts {
+    &__heading {
+      padding-top: 34px;
+      padding-bottom: 34px;
+    }
+
+    &__col {
+      padding-left: 134px;
+    }
+
+    &__img {
+      top: auto;
+      bottom: 0;
+      width: 76%;
+    }
+  }
+  .app-carts:nth-child(2) .app-carts__col {
+    padding-right: 134px;
+  }
+}
+
+@include respond-to($lg) {
+  .app-carts {
+    &__row {
+      flex-direction: column;
+    }
+
+    &__img {
+      max-width: 312px;
+      top: 0;
+    }
+
+    &__col {
+      width: 100%;
+      padding-left: 0;
+      padding-bottom: 32px;
+      order: -1;
+      min-height: 177px;
+    }
+
+    &__heading {
+      max-width: 100%;
+      min-height: 177px;
+      padding-top: 30px;
+      padding-bottom: 30px;
+    }
+
+    &:nth-child(2) {
+      .app-carts__heading {
+        justify-content: flex-end;
+      }
+
+      .dosage {
+        padding-left: 0;
+      }
+
+      .app-carts__col {
+        padding-right: 0;
+      }
+
+      .app-carts__img {
+        left: 0;
+      }
+    }
+
+    .dosage {
+      width: 100%;
+      padding-right: 0;
+    }
+  }
+}
+
+@include respond-to($md) {
+  .app-carts {
+    padding: 16px;
+  }
 }

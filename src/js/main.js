@@ -101,12 +101,17 @@ document.addEventListener('DOMContentLoaded', function () {
             },
         });
     }
-//SLIDER PRODUCTS
+//SLIDERS
     let sliderProducts;
     let sliderPurpose;
 
-    function initSwiper() {
-        if (window.innerWidth <= 1023) {
+    const identicalSwiperIds = ['#sliderDosage1', '#sliderDosage2', '#sliderDosage3'];
+    let identicalSwipers = [];
+
+    function initSwipers() {
+        const screenWidth = window.innerWidth;
+
+        if (screenWidth <= 1023) {
             if (!sliderProducts) {
                 sliderProducts = new Swiper('.slider-products', {
                     spaceBetween: 24,
@@ -136,11 +141,28 @@ document.addEventListener('DOMContentLoaded', function () {
                 sliderPurpose = null;
             }
         }
+
+        if (screenWidth <= 567) {
+            if (identicalSwipers.length === 0) {
+                identicalSwiperIds.forEach(id => {
+                    const swiper = new Swiper(id, {
+                        // pagination: {
+                        //     el: `${id} .swiper-pagination`,
+                        //     clickable: true,
+                        // },
+                    });
+                    identicalSwipers.push(swiper);
+                });
+            }
+        } else {
+            identicalSwipers.forEach(swiper => swiper && swiper.destroy(true, true));
+            identicalSwipers = [];
+        }
     }
 
-    initSwiper();
+    initSwipers();
+    window.addEventListener('resize', initSwipers);
 
-    window.addEventListener('resize', initSwiper);
 
 //HIDE-SHOW TEXT
     const btnsSeeMore = document.querySelectorAll('.see-more');
