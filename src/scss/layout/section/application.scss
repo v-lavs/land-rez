@@ -336,3 +336,7 @@
     padding: 16px;
   }
 }
+
+@include respond-to($sm) {
+
+}

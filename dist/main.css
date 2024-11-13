@@ -3049,6 +3049,8 @@ body {
 
   .footer__description {
     padding-bottom: 32px;
+    font-size: 14px;
+    line-height: 15.4;
   }
 
   .copyright span {
