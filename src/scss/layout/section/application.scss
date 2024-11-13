@@ -345,6 +345,7 @@
     &__heading {
       padding: 16px;
       min-height: 0;
+
       > div {
         max-width: 100%;
         width: 100%;
@@ -373,6 +374,10 @@
     .swiper-slide {
       flex-basis: inherit;
       margin-right: 0;
+    }
+
+    .swiper-pagination {
+      display: block;
     }
 
     .swiper-pagination-bullets {
