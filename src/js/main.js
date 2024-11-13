@@ -89,7 +89,7 @@ document.addEventListener('DOMContentLoaded', function () {
     if (document.querySelector('.slider-features')) {
         const sliderFeatures = new Swiper('.slider-features ', {
             spaceBetween: 24,
-            slidesPerView: 'auto',
+
             speed: 1500,
             pagination: {
                 el: '.slider-features .swiper-pagination',
@@ -99,6 +99,11 @@ document.addEventListener('DOMContentLoaded', function () {
                 nextEl: '.slider-features .swiper-button-next',
                 prevEl: '.slider-features .swiper-button-prev',
             },
+            breakpoints:{
+                567:{
+                    slidesPerView: 'auto',
+                }
+            }
         });
     }
 //SLIDERS
