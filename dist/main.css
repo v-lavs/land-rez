@@ -1973,7 +1973,6 @@ body {
   font-size: 24px;
   font-weight: 400;
   line-height: 1.35;
-  margin-bottom: 16px;
   color: #647362;
   height: 0;
   visibility: hidden;
@@ -1986,6 +1985,7 @@ body {
   height: auto;
   opacity: 1;
   visibility: visible;
+  margin-bottom: 16px;
 }
 
 .action {
@@ -3081,6 +3081,19 @@ body {
 
   .slider-features {
     padding-bottom: 74px;
+  }
+
+  .card-features__content .hide-text {
+    font-size: 18px;
+  }
+
+  .card-features__body {
+    padding-bottom: 32px;
+  }
+
+  .card-features__title {
+    font-size: 24px;
+    line-height: 32.4px;
   }
 
   .action__item {

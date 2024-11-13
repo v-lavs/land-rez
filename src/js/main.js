@@ -100,7 +100,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 prevEl: '.slider-features .swiper-button-prev',
             },
             breakpoints:{
-                567:{
+                568:{
                     slidesPerView: 'auto',
                 }
             }
