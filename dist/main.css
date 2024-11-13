@@ -3259,6 +3259,10 @@ body {
     margin-right: 0;
   }
 
+  .slider-dosage .swiper-pagination {
+    display: block;
+  }
+
   .slider-dosage .swiper-pagination-bullets {
     width: 100%;
     text-align: center;
