@@ -10,7 +10,6 @@
   .container {
     max-width: 1280px;
     padding: 0 37px;
-    background-color: mediumorchid;
   }
 }
 
@@ -18,7 +17,6 @@
   .container {
     max-width: 1024px;
     padding: 0 20px;
-    background-color: royalblue;
   }
 }
 
@@ -26,14 +24,12 @@
   .container {
     max-width: 768px;
     padding: 0 37px;
-    background-color: lightgreen;
   }
 }
 
 @include respond-to($md) {
   .container {
     max-width: 576px;
-    background-color: goldenrod;
     padding: 0 16px;
   }
 }
@@ -41,6 +37,5 @@
 @include respond-to($sm) {
   .container {
     max-width: 100%;
-    background-color: deeppink;
   }
 }

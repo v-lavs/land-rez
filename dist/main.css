@@ -2438,13 +2438,13 @@ body {
   display: none;
 }
 
-.dosage.drops.drops .time {
-  margin: 0;
-}
-
-.dosage.drops.drops .card-dosage__body {
+.dosage.drops .card-dosage__body {
   padding-top: 0;
   padding-bottom: 16px;
+}
+
+.dosage.drops .card-dosage__body .time {
+  margin: 0;
 }
 
 .card-dosage {
@@ -2528,7 +2528,6 @@ body {
   .container {
     max-width: 1280px;
     padding: 0 37px;
-    background-color: mediumorchid;
   }
 }
 
@@ -2540,7 +2539,6 @@ body {
   .container {
     max-width: 1024px;
     padding: 0 20px;
-    background-color: royalblue;
   }
 
   .header__logo-wrapper {
@@ -2605,7 +2603,6 @@ body {
   .container {
     max-width: 768px;
     padding: 0 37px;
-    background-color: lightgreen;
   }
 
   .header .btn_close,
@@ -2792,6 +2789,10 @@ body {
     width: 100%;
   }
 
+  .app-carts {
+    padding: 24px 16px;
+  }
+
   .app-carts__row {
     flex-direction: column;
   }
@@ -2806,7 +2807,6 @@ body {
     padding-left: 0;
     padding-bottom: 32px;
     order: -1;
-    min-height: 177px;
   }
 
   .app-carts__heading {
@@ -2934,7 +2934,6 @@ body {
 @media only screen and (max-width: 767px) {
   .container {
     max-width: 576px;
-    background-color: goldenrod;
     padding: 0 16px;
   }
 
@@ -2976,10 +2975,6 @@ body {
 
   .slide-purpose__text {
     font-size: 24px;
-  }
-
-  .app-carts {
-    padding: 16px;
   }
 }
 
@@ -3040,7 +3035,6 @@ body {
 
   .container {
     max-width: 100%;
-    background-color: deeppink;
   }
 
   .footer {
@@ -3050,7 +3044,7 @@ body {
   .footer__description {
     padding-bottom: 32px;
     font-size: 14px;
-    line-height: 15.4;
+    line-height: 15.4px;
   }
 
   .copyright span {
@@ -3150,5 +3144,62 @@ body {
 
   .slider-purpose {
     padding-bottom: 58px;
+  }
+
+  .card-dosage__footer.desk {
+    display: none;
+  }
+
+  .card-dosage__footer.mob {
+    display: block;
+  }
+
+  .app-carts__img {
+    display: none;
+  }
+
+  .app-carts__heading {
+    padding: 16px;
+    min-height: 0;
+  }
+
+  .app-carts__heading > div {
+    max-width: 100%;
+    width: 100%;
+  }
+
+  .app-carts .block-btns {
+    display: block;
+    padding-top: 24px;
+  }
+
+  .app-carts .block-btns .btn {
+    width: 100%;
+    margin-bottom: 16px;
+    margin-left: 0;
+  }
+
+  .app-carts .block-btns .btn:last-child {
+    margin-bottom: 0;
+  }
+
+  .slider-dosage {
+    overflow: hidden;
+    padding-bottom: 32px;
+  }
+
+  .slider-dosage .swiper-slide {
+    flex-basis: inherit;
+    margin-right: 0;
+  }
+
+  .slider-dosage .swiper-pagination-bullets {
+    width: 100%;
+    text-align: center;
+  }
+
+  .dosage.drops .card-dosage__body {
+    padding-top: 24px;
+    padding-bottom: 24px;
   }
 }

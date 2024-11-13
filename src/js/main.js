@@ -146,10 +146,11 @@ document.addEventListener('DOMContentLoaded', function () {
             if (identicalSwipers.length === 0) {
                 identicalSwiperIds.forEach(id => {
                     const swiper = new Swiper(id, {
-                        // pagination: {
-                        //     el: `${id} .swiper-pagination`,
-                        //     clickable: true,
-                        // },
+                        spaceBetween: 24,
+                        pagination: {
+                            el: `${id} .swiper-pagination`,
+                            clickable: true,
+                        },
                     });
                     identicalSwipers.push(swiper);
                 });
