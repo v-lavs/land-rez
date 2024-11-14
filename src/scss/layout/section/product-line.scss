@@ -3,6 +3,7 @@
   position: relative;
   display: flex;
 }
+
 .slider-products {
   overflow: visible;
 }
@@ -45,9 +46,10 @@
 
   &.bg-show {
     background: radial-gradient(circle at 75% 84%, rgba(70, 182, 0, 0.2) 25%, #ffffff 50%);
+
     .card__text,
     .title_sm,
-    .card__title{
+    .card__title {
       opacity: 0;
     }
   }
@@ -318,44 +320,50 @@
   border-radius: 50%;
 }
 
-@include respond-to($xl){
-  .card-product__header{
+@include respond-to($xl) {
+  .card-product__header {
     padding: 16px 78px 0 16px
   }
-  .card-product__link-wrap{
+  .card-product__link-wrap {
     right: 16px;
   }
-  .card-product{
+  .card-product {
     margin-left: 20px;
   }
 }
 
-@include respond-to($lg){
+@include respond-to($lg) {
   .slider-products {
     overflow: hidden;
     padding-bottom: 74px;
-    .swiper-pagination{
+
+    .swiper-pagination {
       bottom: 0;
       width: 100%;
       text-align: center;
+      display: block !important;
     }
-    .swiper-pagination-bullet{
+
+    .swiper-pagination-bullet {
       width: 55px;
     }
   }
-  .card-product{
-    margin: 0;
-  }
-  .card-product__header{
+  .card-product__header {
     padding: 32px 94px 0 32px;
   }
-  .card-product__link-wrap{
+  .card-product__link-wrap {
     right: 32px;
   }
+  .card-product {
+    flex-basis: inherit;
+    margin: 0;
+  }
 }
-@include respond-to($md){
+
+@include respond-to($md) {
   .card-product_hot {
     max-width: 343px;
+
     .part_right {
       display: none;
     }
@@ -363,37 +371,42 @@
     .part_left {
       width: 100%;
     }
-    .title_md{
+
+    .title_md {
       font-size: 61px;
       line-height: 58px;
       letter-spacing: -0.02em;
     }
+
     .small-text {
       font-size: 26px;
       line-height: 29px;
     }
-    .card-product__link{
+
+    .card-product__link {
       width: 100%;
     }
+
     .label {
       left: -122px;
     }
   }
-  .card-product__inner{
+  .card-product__inner {
     padding: 45px 24px;
   }
 }
-@include respond-to($sm){
-  .card-product__header{
+
+@include respond-to($sm) {
+  .card-product__header {
     padding: 16px 94px 0 16px
   }
-  .card-product__link-wrap{
+  .card-product__link-wrap {
     right: 16px;
   }
 }
 
-@media screen and (max-width: 360px){
-  .card-product_inner{
+@media screen and (max-width: 360px) {
+  .card-product_inner {
     padding-left: 10px;
     padding-right: 10px;
   }

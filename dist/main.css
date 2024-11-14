@@ -903,7 +903,7 @@ body {
   font-size: .56em;
 }
 
-.disclaimer {
+.disclaimer_main {
   position: fixed;
   bottom: 0;
   left: 0;
@@ -914,8 +914,7 @@ body {
 .disclaimer_main {
   display: flex;
   align-items: center;
-  height: 15vh;
-  padding: 16px 0;
+  padding: 13px 0;
   border-top: 1px solid rgba(255, 255, 255, 0.35);
   background: rgba(255, 255, 255, 0.01);
   -webkit-backdrop-filter: blur(24px);
@@ -927,9 +926,21 @@ body {
   color: #AAC291;
 }
 
+.disclaimer_main .container {
+  height: 15vh;
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
 .disclaimer_main svg {
   display: block;
   width: 100%;
+  height: 100%;
+}
+
+.dscl-img_tablet,
+.dscl-img_mob {
+  display: none !important;
 }
 
 .dynamic-content h1,
@@ -2543,6 +2554,11 @@ body {
 }
 
 @media only screen and (max-width: 1280px) {
+  .disclaimer_main .container {
+    padding-top: 15px;
+    padding-bottom: 15px;
+  }
+
   .menu__item {
     margin-right: 32px;
   }
@@ -2610,17 +2626,22 @@ body {
     padding: 76px 0 64px;
   }
 
+  .dscl-img_tablet {
+    display: block !important;
+  }
+
+  .dscl-img_desk {
+    display: none !important;
+  }
+
+  .disclaimer_main .container {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+
   .container {
     max-width: 768px;
     padding: 0 37px;
-  }
-
-  .card-product {
-    flex-basis: inherit;
-  }
-
-  .slider-products .swiper-pagination {
-    display: block !important;
   }
 
   .header .btn_close,
@@ -2696,14 +2717,11 @@ body {
     bottom: 0;
     width: 100%;
     text-align: center;
+    display: block !important;
   }
 
   .slider-products .swiper-pagination-bullet {
     width: 55px;
-  }
-
-  .card-product {
-    margin: 0;
   }
 
   .card-product__header {
@@ -2712,6 +2730,11 @@ body {
 
   .card-product__link-wrap {
     right: 32px;
+  }
+
+  .card-product {
+    flex-basis: inherit;
+    margin: 0;
   }
 
   .action__item {
@@ -2950,6 +2973,14 @@ body {
 }
 
 @media only screen and (max-width: 767px) {
+  .dscl-img_tablet {
+    display: block !important;
+  }
+
+  .dscl-img_desk {
+    display: none !important;
+  }
+
   .container {
     max-width: 576px;
     padding: 0 16px;
@@ -3038,6 +3069,14 @@ body {
 
   .section__title {
     margin-bottom: 48px;
+  }
+
+  .dscl-img_mob {
+    display: block !important;
+  }
+
+  .dscl-img_tablet {
+    display: none !important;
   }
 
   .title {

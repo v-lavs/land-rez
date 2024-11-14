@@ -25,14 +25,6 @@
     max-width: 768px;
     padding: 0 37px;
   }
-  .card-product{
-    flex-basis: inherit;
-  }
-  .slider-products{
-    .swiper-pagination{
-      display: block!important;
-    }
-  }
 }
 
 @include respond-to($md) {
