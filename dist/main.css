@@ -2347,6 +2347,248 @@ body {
   overflow: hidden;
 }
 
+.application .section__title {
+  font-weight: 600;
+}
+
+.app-carts {
+  border: 1px solid rgba(142, 174, 108, 0.25);
+  border-radius: 16px;
+  padding: 24px;
+  margin-bottom: 64px;
+}
+
+.app-carts:last-child {
+  margin-bottom: 0;
+}
+
+.app-carts .block-btns {
+  display: flex;
+  padding-top: 45px;
+}
+
+.app-carts .btn {
+  display: flex;
+  margin-right: 12px;
+  width: 100%;
+}
+
+.app-carts .btn:last-child {
+  margin-right: 0;
+}
+
+.app-carts__row {
+  display: flex;
+}
+
+.app-carts__col {
+  position: relative;
+  width: 47.25%;
+  padding-left: 164px;
+}
+
+.app-carts__img {
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 74%;
+}
+
+.app-carts__heading {
+  max-width: 384px;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-position: right bottom;
+  background-size: cover;
+  height: 100%;
+  color: #FFFFFF;
+  border-radius: 16px;
+  padding: 48px 32px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.app-carts__heading > div {
+  max-width: 190px;
+}
+
+.app-carts__title {
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 1.35;
+  letter-spacing: -0.02em;
+  text-transform: uppercase;
+}
+
+.app-carts .prep {
+  font-size: 40px;
+  font-weight: 500;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+  text-transform: uppercase;
+}
+
+.app-carts:nth-child(2) .dosage {
+  order: 1;
+  padding-right: 0;
+  padding-left: 32px;
+}
+
+.app-carts:nth-child(2) .app-carts__col {
+  padding-left: 0;
+  padding-right: 164px;
+}
+
+.app-carts:nth-child(2) .app-carts__heading {
+  justify-content: flex-start;
+}
+
+.app-carts:nth-child(2) .app-carts__img {
+  right: 0;
+  left: auto;
+}
+
+.slider-dosage {
+  overflow: visible;
+}
+
+.slider-dosage .swiper-slide {
+  width: auto;
+  flex-grow: 1;
+  flex-basis: 0;
+  box-shadow: 16px 8px 32px 0 rgba(0, 0, 0, 0.06);
+  margin-right: 16px;
+  border-radius: 16px;
+}
+
+.slider-dosage .swiper-slide:last-child {
+  margin-right: 0;
+}
+
+.dosage {
+  width: 52.75%;
+  padding-right: 32px;
+}
+
+.dosage .time {
+  display: flex;
+  justify-content: center;
+  padding: 8px 0;
+  margin-top: 8px;
+}
+
+.dosage .time__icon {
+  position: relative;
+  width: 32px;
+  height: 32px;
+  margin: 0 12px;
+}
+
+.dosage .time__icon:before {
+  position: absolute;
+  content: '';
+  display: block;
+  width: 1px;
+  height: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+  right: -12px;
+  background-color: rgba(100, 115, 98, 0.1);
+  z-index: 1;
+}
+
+.dosage .time__icon:last-child:before {
+  display: none;
+}
+
+.dosage.drops .card-dosage__body {
+  padding-top: 0;
+  padding-bottom: 16px;
+}
+
+.dosage.drops .card-dosage__body .time {
+  margin: 0;
+}
+
+.card-dosage {
+  color: #647362;
+  font-size: 18px;
+  line-height: 1.4;
+  letter-spacing: -0.02em;
+  border-radius: 8px;
+  background-color: #FFFFFF;
+  font-weight: 500;
+  text-align: center;
+  overflow: hidden;
+}
+
+.card-dosage__footer.mob {
+  display: none;
+}
+
+.card-dosage__footer.desk {
+  margin-top: 64px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.card-dosage__header {
+  background-color: #F7FAF5;
+  padding: 16px;
+}
+
+.card-dosage__title {
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 1.35;
+  text-align: center;
+  color: #20261F;
+  margin-bottom: 4px;
+}
+
+.card-dosage__icon {
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  background-repeat: no-repeat;
+  background-size: auto;
+  background-position: center;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.card-dosage .sub-title {
+  text-transform: uppercase;
+}
+
+.card-dosage .number {
+  display: inline-block;
+  width: auto;
+  padding-left: 24px;
+  position: relative;
+  font-size: 56px;
+  font-weight: 600;
+  line-height: 1.15;
+}
+
+.card-dosage__body {
+  color: #FF7436;
+  font-size: 24px;
+  line-height: 1.35;
+  padding: 24px 8px;
+}
+
+.card-dosage__footer {
+  padding: 24px 0 16px;
+  text-transform: uppercase;
+  font-weight: 400;
+  border-top: 1px solid rgba(100, 115, 98, 0.1);
+}
+
 .main_hot .section-banner {
   background-color: #FF7436;
   padding-top: 97px;
@@ -2459,6 +2701,25 @@ body {
 
   .slide-purpose.expanded .slide-purpose__title {
     font-size: 36px;
+  }
+
+  .app-carts__heading {
+    padding-top: 34px;
+    padding-bottom: 34px;
+  }
+
+  .app-carts__col {
+    padding-left: 134px;
+  }
+
+  .app-carts__img {
+    top: auto;
+    bottom: 0;
+    width: 76%;
+  }
+
+  .app-carts:nth-child(2) .app-carts__col {
+    padding-right: 134px;
   }
 }
 
@@ -2669,6 +2930,54 @@ body {
 
   .slide-purpose .part_right {
     width: 100%;
+  }
+
+  .app-carts {
+    padding: 24px 16px;
+  }
+
+  .app-carts__row {
+    flex-direction: column;
+  }
+
+  .app-carts__img {
+    max-width: 312px;
+    top: 0;
+  }
+
+  .app-carts__col {
+    width: 100%;
+    padding-left: 0;
+    padding-bottom: 32px;
+    order: -1;
+  }
+
+  .app-carts__heading {
+    max-width: 100%;
+    min-height: 177px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+
+  .app-carts:nth-child(2) .app-carts__heading {
+    justify-content: flex-end;
+  }
+
+  .app-carts:nth-child(2) .dosage {
+    padding-left: 0;
+  }
+
+  .app-carts:nth-child(2) .app-carts__col {
+    padding-right: 0;
+  }
+
+  .app-carts:nth-child(2) .app-carts__img {
+    left: 0;
+  }
+
+  .app-carts .dosage {
+    width: 100%;
+    padding-right: 0;
   }
 }
 
@@ -3042,6 +3351,67 @@ body {
 
   .slider-purpose {
     padding-bottom: 58px;
+  }
+
+  .card-dosage__footer.desk {
+    display: none;
+  }
+
+  .card-dosage__footer.mob {
+    display: block;
+  }
+
+  .app-carts__img {
+    display: none;
+  }
+
+  .app-carts__heading {
+    padding: 16px;
+    min-height: 0;
+  }
+
+  .app-carts__heading > div {
+    max-width: 100%;
+    width: 100%;
+  }
+
+  .app-carts .block-btns {
+    display: block;
+    padding-top: 24px;
+  }
+
+  .app-carts .block-btns .btn {
+    width: 100%;
+    margin-bottom: 16px;
+    margin-left: 0;
+  }
+
+  .app-carts .block-btns .btn:last-child {
+    margin-bottom: 0;
+  }
+
+  .slider-dosage {
+    overflow: hidden;
+    padding-bottom: 32px;
+  }
+
+  .slider-dosage .swiper-slide {
+    flex-basis: inherit;
+    margin-right: 0;
+  }
+
+  .slider-dosage .swiper-pagination {
+    display: block;
+  }
+
+  .slider-dosage .swiper-pagination-bullets {
+    width: 100%;
+    text-align: center;
+  }
+
+  .dosage.drops .card-dosage__body {
+    padding-top: 24px;
+    padding-bottom: 24px;
   }
 }
 
