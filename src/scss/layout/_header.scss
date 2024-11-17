@@ -12,6 +12,13 @@
   &_hot {
     border-bottom: 1px solid #ffb18e;
 
+    .btn {
+      min-height: 57px;
+      padding-left: 32px;
+      padding-right: 32px;
+      margin-left: 8px;
+    }
+
     .header__logo-wrapper:after {
       background-color: #ffb18e;
     }
