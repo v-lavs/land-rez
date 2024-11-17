@@ -1,12 +1,23 @@
 .footer {
   position: relative;
-  background-color: #80C41C;
-  color: #FFFFFF;
   padding: 96px 0;
   font-size: 16px;
   line-height: 17.6px;
   font-weight: 500;
   z-index: 200;
+
+  &_green {
+    background-color: #80C41C;
+    color: #FFFFFF;
+  }
+
+  &_hot {
+    background-color: rgba(255, 116, 34, .08);
+    color: #20261F;
+    .footer_bottom{
+      border-top: 1px solid rgba(32, 38, 31, .1);
+    }
+  }
 
   &__description {
     font-size: 16px;
@@ -24,7 +35,6 @@
     align-items: center;
     border-top: 1px solid rgba(255, 255, 255, .1);
     padding-top: 24px;
-
   }
 
   &__logo {
@@ -58,7 +68,7 @@
     flex-wrap: wrap;
     justify-content: center;
   }
-  .footer__logo{
+  .footer__logo {
     margin-bottom: 16px;
   }
   .copyright {
@@ -70,10 +80,10 @@
 }
 
 @include respond-to($sm) {
-  .footer{
+  .footer {
     padding: 48px 0 32px;
   }
-  .footer__description{
+  .footer__description {
     padding-bottom: 32px;
     font-size: 14px;
     line-height: 15.4px;
