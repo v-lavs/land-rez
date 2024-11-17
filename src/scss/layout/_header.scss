@@ -4,7 +4,18 @@
   right: 0;
   top: 0;
   z-index: 1000;
-  border-bottom: 1px solid #8EAE6C;
+
+  &_green {
+    border-bottom: 1px solid #8EAE6C;
+  }
+
+  &_hot {
+    border-bottom: 1px solid #ffb18e;
+
+    .header__logo-wrapper:after {
+      background-color: #ffb18e;
+    }
+  }
 
   &.scroll {
     .btn,
@@ -47,12 +58,10 @@
     position: relative;
     padding-top: 20px;
     padding-bottom: 20px;
-
-
   }
 
   &__logo {
-    max-width: 135px;
+    max-width: 180px;
     display: inline-block;
     color: #FFFFFF;
 
@@ -88,7 +97,7 @@
     font-size: 18px;
     text-transform: uppercase;
 
-    &.mob-btn{
+    &.mob-btn {
       display: none;
     }
   }
@@ -152,6 +161,7 @@
       width: 100%;
       height: 100vh;
       overflow: hidden;
+
       &.open {
         transform: translateX(0);
         transition: .5s;

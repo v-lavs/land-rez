@@ -54,37 +54,37 @@ document.addEventListener('DOMContentLoaded', function () {
 
 // CHANGED BG CARD BTN HOVER
     const bgChangeButtons = document.querySelectorAll('.bg-change');
+    if (document.querySelector('.bg-change')) {
+        bgChangeButtons.forEach(button => {
+            button.addEventListener('mouseover', () => {
+                const card = button.closest('.card-product');
+                card.classList.add('bg-show');
+            });
 
-    bgChangeButtons.forEach(button => {
-        button.addEventListener('mouseover', () => {
-            const card = button.closest('.card-product');
-            card.classList.add('bg-show');
+            button.addEventListener('mouseleave', () => {
+                const card = button.closest('.card-product');
+                card.classList.remove('bg-show');
+            });
         });
-
-        button.addEventListener('mouseleave', () => {
-            const card = button.closest('.card-product');
-            card.classList.remove('bg-show');
-        });
-    });
-
+    }
 //CARD-HOT HIDE
     const cpHot = document.querySelector('.card-product_hot');
     const btnScScroll = document.querySelector('.btn-hot');
     const overlay = document.querySelector('.overlay');
-
-    btnScScroll.addEventListener('click', function (e) {
-        e.preventDefault();
-        cpHot.classList.add('show');
-        btnScScroll.classList.add('show');
-        overlay.classList.add('show');
-    });
-    overlay.addEventListener('click', function (e) {
-        e.preventDefault();
-        cpHot.classList.remove('show');
-        btnScScroll.classList.remove('show');
-        overlay.classList.remove('show');
-    });
-
+    if (document.querySelector('.card-product_hot')) {
+        btnScScroll.addEventListener('click', function (e) {
+            e.preventDefault();
+            cpHot.classList.add('show');
+            btnScScroll.classList.add('show');
+            overlay.classList.add('show');
+        });
+        overlay.addEventListener('click', function (e) {
+            e.preventDefault();
+            cpHot.classList.remove('show');
+            btnScScroll.classList.remove('show');
+            overlay.classList.remove('show');
+        });
+    }
 //SLIDER FEATURES
     if (document.querySelector('.slider-features')) {
         const sliderFeatures = new Swiper('.slider-features ', {
