@@ -1,13 +1,9 @@
 .footer {
   position: relative;
-  padding: 96px 0 21vh;
+  padding: 96px 0 15vh;
   font-size: 16px;
   line-height: 17.6px;
   font-weight: 500;
-
-  .container {
-    max-width: 100%;
-  }
 
   &_green {
     background-color: #80C41C;
@@ -38,6 +34,7 @@
     align-items: center;
     border-top: 1px solid rgba(255, 255, 255, .1);
     padding-top: 24px;
+    padding-bottom: 24px;
   }
 
   &__logo {

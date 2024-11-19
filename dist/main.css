@@ -917,12 +917,10 @@ body {
   left: 0;
   right: 0;
   z-index: 100;
-}
-
-.disclaimer_main {
+  height: 15vh;
   display: flex;
   align-items: center;
-  padding: 13px 0;
+  padding: 30px 20px;
   border-top: 1px solid rgba(255, 255, 255, 0.35);
   background: rgba(255, 255, 255, 0.01);
   -webkit-backdrop-filter: blur(24px);
@@ -932,12 +930,6 @@ body {
 
 .disclaimer_main.scroll {
   color: #AAC291;
-}
-
-.disclaimer_main .container {
-  height: 15vh;
-  padding-top: 30px;
-  padding-bottom: 30px;
 }
 
 .disclaimer_main svg {
@@ -1415,14 +1407,10 @@ body {
 
 .footer {
   position: relative;
-  padding: 96px 0 21vh;
+  padding: 96px 0 15vh;
   font-size: 16px;
   line-height: 17.6px;
   font-weight: 500;
-}
-
-.footer .container {
-  max-width: 100%;
 }
 
 .footer_green {
@@ -1454,6 +1442,7 @@ body {
   align-items: center;
   border-top: 1px solid rgba(255, 255, 255, 0.1);
   padding-top: 24px;
+  padding-bottom: 24px;
 }
 
 .footer__logo {
