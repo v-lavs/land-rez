@@ -1723,7 +1723,7 @@ body {
 
 .card-product__header {
   position: relative;
-  padding: 32px 94px 0 32px;
+  padding: 32px 138px 0 32px;
 }
 
 .card-product__link-wrap {
@@ -3093,11 +3093,11 @@ body {
   }
 
   .card-product__header {
-    padding: 32px 94px 0 32px;
+    padding: 32px 94px 0 24px;
   }
 
   .card-product__link-wrap {
-    right: 32px;
+    right: 24px;
   }
 
   .card-product {
@@ -3367,6 +3367,18 @@ body {
   .copyright span {
     margin-left: 5px;
     margin-right: 5px;
+  }
+
+  .card-product__header {
+    padding: 32px 94px 0 32px;
+  }
+
+  .card-product__link-wrap {
+    right: 32px;
+  }
+
+  .card-product__header {
+    padding: 32px 138px 0 32px;
   }
 
   .card-product_hot {

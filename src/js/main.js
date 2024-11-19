@@ -143,7 +143,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 sliderProducts = new Swiper('.slider-products', {
                     spaceBetween: 24,
                     breakpoints: {
-                        568: {
+                        1023: {
                             slidesPerView: 2,
                         }
                     },
