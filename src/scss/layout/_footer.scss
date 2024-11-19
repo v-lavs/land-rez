@@ -1,10 +1,13 @@
 .footer {
   position: relative;
-  padding: 96px 0;
+  padding: 96px 0 21vh;
   font-size: 16px;
   line-height: 17.6px;
   font-weight: 500;
-  z-index: 200;
+
+  .container {
+    max-width: 100%;
+  }
 
   &_green {
     background-color: #80C41C;
@@ -14,7 +17,8 @@
   &_hot {
     background-color: rgba(255, 116, 34, .08);
     color: #20261F;
-    .footer_bottom{
+
+    .footer_bottom {
       border-top: 1px solid rgba(32, 38, 31, .1);
     }
   }

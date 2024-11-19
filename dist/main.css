@@ -1415,11 +1415,14 @@ body {
 
 .footer {
   position: relative;
-  padding: 96px 0;
+  padding: 96px 0 21vh;
   font-size: 16px;
   line-height: 17.6px;
   font-weight: 500;
-  z-index: 200;
+}
+
+.footer .container {
+  max-width: 100%;
 }
 
 .footer_green {

@@ -39,15 +39,24 @@ document.addEventListener('DOMContentLoaded', function () {
 
     const header = document.querySelector('.header');
     const fixedBlock = document.querySelector('.disclaimer_main');
+    const documentHeight = document.documentElement.scrollHeight;
+    const viewportHeight = window.innerHeight;
 
     window.addEventListener('scroll', function () {
         const scrollPosition = window.scrollY;
+
         if (scrollPosition > 100) {
             header.classList.add('scroll');
             fixedBlock.classList.add('scroll');
         } else {
             header.classList.remove('scroll');
             fixedBlock.classList.remove('scroll');
+        }
+        if (window.scrollY + viewportHeight >= documentHeight) {
+            fixedBlock.classList.remove('scroll');
+        }
+        else {
+            fixedBlock.classList.add('scroll');
         }
     });
 
