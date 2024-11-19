@@ -34,6 +34,31 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     });
 
+// SCROLL TO ANCHOR
+    function smoothScrollToAnchor(selector) {
+        document.querySelectorAll(selector).forEach((element) => {
+            element.addEventListener('click', function(event) {
+                const anchor = this.getAttribute('href');
+
+                if (anchor.startsWith('#') && anchor !== '#') {
+                    event.preventDefault();
+
+                    const targetElement = document.querySelector(anchor);
+                    if (targetElement) {
+                        window.scrollTo({
+                            top: targetElement.offsetTop,
+                            behavior: 'smooth'
+                        });
+                    }
+                }
+            });
+        });
+    }
+
+    smoothScrollToAnchor('.menu__item a');
+    smoothScrollToAnchor('.sub-menu__item a');
+    smoothScrollToAnchor('.card-product__link-wrap a');
+
 
 // HEADER AND DISCLAIMER SCROLL
 
