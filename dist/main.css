@@ -2377,6 +2377,7 @@ body {
   border-radius: 16px;
   padding: 24px;
   margin-bottom: 64px;
+  background-color: #FFFFFF;
 }
 
 .app-carts:last-child {
