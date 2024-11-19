@@ -11,6 +11,7 @@
   border-radius: 100px;
   border: 1px solid;
   justify-content: center;
+  transition: .35s;
 
   &__icon {
     display: block;
@@ -29,12 +30,31 @@
   &_green {
     background-color: #46B600;
     color: #ffffff;
+
+    &:hover,
+    &:focus {
+      background-color: #B3ED5F;
+    }
+
+    &:active {
+      background-color: #40A600;
+    }
   }
 
   &_light-green {
     color: #ffffff;
     background-color: rgba(70, 182, 0, .15);
     border-color: #80C41C;
+
+    &:hover,
+    &:focus {
+      box-shadow: 0 0 0 2px rgba(128, 196, 28, 1);
+    }
+
+    &:active {
+      box-shadow: 0 0 0 2px rgba(128, 196, 28, 1);
+      background-color: rgba(56, 147, 0, .15);
+    }
   }
 
   &_glass {
@@ -48,57 +68,20 @@
     background-color: transparent;
     color: #ffffff;
   }
-  &_stroke-green{
+
+  &_stroke-green {
     border: 1px solid #46B600;
     background-color: transparent;
     color: #46B600;
+
+    &:hover,
+    &:focus {
+      box-shadow: 0 0 0 1px rgba(70, 182, 0, 1);
+    }
+
+    &:active {
+      color: #42A901;
+      box-shadow: 0 0 0 1px rgba(70, 182, 0, 1);
+    }
   }
-          //
-  //  &:hover,
-  //  &:focus {
-  //    .btn__icon {
-  //      transform: translateY(-50%) rotate(-90deg);
-  //    }
-  //  }
-  //
-  //  &_light {
-  //    background-color: $white;
-  //    color: $black;
-  //  }
-  //
-  //  &_dark {
-  //    background-color: $black;
-  //    color: $white;
-  //
-  //    .btn__icon {
-  //      filter: invert(1);
-  //    }
-  //  }
-  //
-  //  &__icon {
-  //    position: absolute;
-  //    display: block;
-  //    background-repeat: no-repeat;
-  //    background-size: contain;
-  //    background-position: center;
-  //    right: 15px;
-  //    top: 50%;
-  //    transform: translateY(-50%);
-  //    width: 20px;
-  //    height: 20px;
-  //    z-index: 1;
-  //    transition: .5s;
-  //  }
-}
-
-@media screen and (max-width: 1920px) {
-
-}
-
-@include respond-to($xxl) {
-
-}
-
-@include respond-to($md) {
-
 }

@@ -81,7 +81,7 @@
 
 @include respond-to($sm) {
   .footer {
-    padding: 48px 0 32px;
+    padding: 48px 0 15vh;
   }
   .footer__description {
     padding-bottom: 32px;

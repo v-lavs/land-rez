@@ -1244,6 +1244,7 @@ body {
   border-radius: 100px;
   border: 1px solid;
   justify-content: center;
+  transition: .35s;
 }
 
 .btn__icon {
@@ -1265,10 +1266,29 @@ body {
   color: #ffffff;
 }
 
+.btn_green:hover,
+.btn_green:focus {
+  background-color: #B3ED5F;
+}
+
+.btn_green:active {
+  background-color: #40A600;
+}
+
 .btn_light-green {
   color: #ffffff;
   background-color: rgba(70, 182, 0, 0.15);
   border-color: #80C41C;
+}
+
+.btn_light-green:hover,
+.btn_light-green:focus {
+  box-shadow: 0 0 0 2px #80c41c;
+}
+
+.btn_light-green:active {
+  box-shadow: 0 0 0 2px #80c41c;
+  background-color: rgba(56, 147, 0, 0.15);
 }
 
 .btn_glass {
@@ -1287,6 +1307,16 @@ body {
   border: 1px solid #46B600;
   background-color: transparent;
   color: #46B600;
+}
+
+.btn_stroke-green:hover,
+.btn_stroke-green:focus {
+  box-shadow: 0 0 0 1px #46b600;
+}
+
+.btn_stroke-green:active {
+  color: #42A901;
+  box-shadow: 0 0 0 1px #46b600;
 }
 
 .swiper-horizontal > .swiper-pagination-bullets,
@@ -3375,6 +3405,11 @@ body {
     display: none !important;
   }
 
+  .disclaimer_main {
+    padding-top: 16px;
+    padding-bottom: 16px;
+  }
+
   .container {
     max-width: 576px;
     padding: 0 16px;
@@ -3457,6 +3492,16 @@ body {
 
   .card-features__body {
     margin-right: 0;
+  }
+
+  .section-banner {
+    padding-top: 96px;
+  }
+
+  .section-banner .title_lg {
+    font-size: 48px;
+    line-height: 57.6px;
+    margin-bottom: 48px;
   }
 
   .slide-purpose__title {
@@ -3545,7 +3590,7 @@ body {
   }
 
   .footer {
-    padding: 48px 0 32px;
+    padding: 48px 0 15vh;
   }
 
   .footer__description {
@@ -3613,7 +3658,7 @@ body {
   .action__item {
     font-size: 20px;
     margin-top: 30px;
-    height: 176px;
+    height: 200px;
   }
 
   .card-action__title {
@@ -3629,6 +3674,10 @@ body {
   .card-action .d-flex {
     display: flex;
     align-items: flex-start;
+  }
+
+  .action__item.show .card-action__title {
+    font-size: 34px;
   }
 
   .section-banner {
@@ -3670,13 +3719,11 @@ body {
 
   .slide-purpose .part_right {
     height: 232px;
-    background: rosybrown;
   }
 
   .slide-purpose .part_left {
     order: 1;
     height: auto;
-    background: lightgreen;
   }
 
   .slider-purpose {

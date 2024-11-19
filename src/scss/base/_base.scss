@@ -218,6 +218,10 @@ body {
   .dscl-img_desk {
     display: none !important;
   }
+  .disclaimer_main{
+    padding-top: 16px;
+    padding-bottom: 16px;
+  }
 }
 
 @include respond-to($sm) {
@@ -234,6 +238,7 @@ body {
   .dscl-img_tablet {
     display: none !important;
   }
+
 }
 
 
