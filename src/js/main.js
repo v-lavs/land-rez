@@ -20,7 +20,7 @@ document.addEventListener('DOMContentLoaded', function () {
         btnClose.style.display = 'block';
     });
 
-    [btnClose, backdrop, ...menuLinks].forEach(function (element) {
+    [btnClose, backdrop,  ...menuLinks].forEach(function (element) {
         element.addEventListener('click', function () {
             nav.classList.remove('open');
             backdrop.style.display = 'none';
@@ -66,10 +66,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
         if (window.scrollY + viewportHeight >= documentHeight) {
             fixedBlock.classList.remove('scroll');
-        } else {
-            fixedBlock.classList.add('scroll');
         }
-
         lastScrollY = scrollPosition;
     });
 
@@ -93,6 +90,8 @@ document.addEventListener('DOMContentLoaded', function () {
     const cpHot = document.querySelector('.card-product_hot');
     const btnScScroll = document.querySelector('.btn-hot');
     const overlay = document.querySelector('.overlay');
+    const productLink = document.querySelector('.card-product__link');
+
     if (document.querySelector('.card-product_hot')) {
         btnScScroll.addEventListener('click', function (e) {
             e.preventDefault();
@@ -102,6 +101,11 @@ document.addEventListener('DOMContentLoaded', function () {
         });
         overlay.addEventListener('click', function (e) {
             e.preventDefault();
+            cpHot.classList.remove('show');
+            btnScScroll.classList.remove('show');
+            overlay.classList.remove('show');
+        });
+        productLink.addEventListener('click', function (e) {
             cpHot.classList.remove('show');
             btnScScroll.classList.remove('show');
             overlay.classList.remove('show');

@@ -1639,6 +1639,24 @@ body {
   right: 0;
   transform: translate(100%, -50%);
   z-index: 2;
+  animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1) translate(100%, -50%);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  }
+
+  50% {
+    transform: scale(1.1) translate(100%, -50%);
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.3);
+  }
+
+  100% {
+    transform: scale(1) translate(100%, -50%);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  }
 }
 
 .card-product {
@@ -2917,7 +2935,7 @@ body {
 
   .btn-hot {
     transform: translate(50%, -50%);
-    right: 28px;
+    right: 90px;
   }
 }
 
