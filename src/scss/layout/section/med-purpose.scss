@@ -157,9 +157,10 @@
     .swiper-pagination {
       width: 100%;
       text-align: center;
+      display: block!important;
     }
 
-    .swiper-pagination-bullet-active {
+    .swiper-pagination-bullet {
       background-color: #FFFFFF;
     }
   }

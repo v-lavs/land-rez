@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sticky Scroll</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      height: 200vh; /* Для демонстрації */
+    }
+
+    .header {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      height: 60px;
+      background-color: #333;
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 10;
+    }
+
+    .scroll-block {
+      margin-top: 80px; /* Враховує висоту хедера */
+      height: 400px; /* Висота блоку */
+      overflow: hidden;
+      position: relative;
+    }
+
+    .cards {
+      position: relative;
+    }
+
+    .card {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100px;
+      background:red;
+      border: 1px solid #ccc;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 18px;
+      transition: transform 0.3s ease-out, z-index 0.3s ease-out;
+      transform: translateY(-100%);
+    }
+
+    .card:nth-child(2) { background: rosybrown; }
+    .card:nth-child(3) { background: lightgreen; }
+    .card:nth-child(4) { background: tan; }
+
+  </style>
+</head>
+<body>
+<div class="container">
+  <div class="header">Header</div>
+  <div class="" style="height: 100vh;background-color: lightskyblue;"></div>
+  <div class="scroll-block">
+    <div class="cards">
+      <div class="card">Card 1</div>
+      <div class="card">Card 2</div>
+      <div class="card">Card 3</div>
+      <div class="card">Card 4</div>
+    </div>
+  </div>
+  <div class="" style="height: 100vh;background-color: lightskyblue;"></div>
+</div>
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const scrollBlock = document.querySelector(".scroll-block");
+    const cards = document.querySelectorAll(".card");
+    const headerHeight = 60; // Висота хедера
+    const cardHeight = cards[0].offsetHeight; // Висота однієї картки
+    const totalScroll = cardHeight * (cards.length - 1); // Загальний шлях скролу
+    const scrollStart = scrollBlock.offsetTop - headerHeight;
+
+    window.addEventListener("scroll", () => {
+      const scrollY = window.scrollY;
+
+      if (scrollY >= scrollStart && scrollY <= scrollStart + totalScroll) {
+        // Блок стає "липким"
+        scrollBlock.style.position = "fixed";
+        scrollBlock.style.top = `${headerHeight}px`;
+
+        const progress = (scrollY - scrollStart) / totalScroll;
+
+        cards.forEach((card, index) => {
+          const cardProgress = progress - (index * (1 / cards.length));
+
+          if (cardProgress > 0 && cardProgress <= 1) {
+            card.style.transform = `translateY(-${cardProgress * cardHeight}px)`;
+            card.style.zIndex = `${cards.length - index}`;
+          } else if (cardProgress > 1) {
+            card.style.transform = `translateY(-${cardHeight}px)`;
+            card.style.zIndex = `${cards.length - index}`;
+          } else {
+            card.style.transform = `translateY(0)`;
+            card.style.zIndex = `${cards.length - index}`;
+          }
+        });
+      } else if (scrollY < scrollStart) {
+        // Скидаємо стилі, якщо скрол вище блоку
+        scrollBlock.style.position = "relative";
+        cards.forEach(card => {
+          card.style.transform = `translateY(0)`;
+          card.style.zIndex = `0`;
+        });
+      } else {
+        // Блок "липкість" вимкнено
+        scrollBlock.style.position = "relative";
+      }
+    });
+  });
+</script>
+</body>
+</html>

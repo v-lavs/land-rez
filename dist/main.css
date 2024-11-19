@@ -3164,9 +3164,10 @@ body {
   .slider-purpose .swiper-pagination {
     width: 100%;
     text-align: center;
+    display: block !important;
   }
 
-  .slider-purpose .swiper-pagination-bullet-active {
+  .slider-purpose .swiper-pagination-bullet {
     background-color: #FFFFFF;
   }
 
