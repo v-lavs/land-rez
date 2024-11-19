@@ -2096,6 +2096,10 @@ body {
   margin-bottom: 64px;
 }
 
+.action .section__title sup {
+  color: #46B600;
+}
+
 .action__item {
   position: relative;
   height: 160px;
@@ -2259,6 +2263,10 @@ body {
 .med-purpose .section__title {
   font-weight: 400;
   font-size: 64px;
+}
+
+.med-purpose .section__title sup {
+  color: #B3ED5F;
 }
 
 .med-purpose .color-l-green {
