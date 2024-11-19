@@ -234,7 +234,7 @@ document.addEventListener('DOMContentLoaded', function () {
         target.classList.add('expanded');
     }
 
-//ANIMATION BLOCKS SECTION ACTION
+// ANIMATION BLOCKS SECTION ACTION
     const blocks = document.querySelectorAll('.action__item');
 
     window.addEventListener('scroll', () => {

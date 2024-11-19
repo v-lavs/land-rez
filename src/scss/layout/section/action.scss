@@ -106,7 +106,7 @@
   }
   .card-action {
     display: block;
-    background: linen;
+
     .part {
       width: 100%;
 
@@ -133,7 +133,6 @@
 
 @include respond-to($sm) {
   .action__item {
-    height: 360px;
     &.show {
       .card-action__title {
         font-size: 40px;
@@ -142,5 +141,27 @@
         margin: 0;
       }
     }
+  }
+
+
+
+  .action__item{
+    font-size: 20px;
+    margin-top: 30px;
+    height: 176px;
+  }
+
+  .card-action__title {
+    font-size: 22px;
+    margin-bottom: 10px;
+  }
+  .card-action__icon{
+    flex-shrink: 0;
+    margin-right: 16px;
+
+  }
+ .card-action .d-flex{
+    display: flex;
+   align-items: flex-start;
   }
 }
