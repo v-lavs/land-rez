@@ -42,22 +42,33 @@ document.addEventListener('DOMContentLoaded', function () {
     const documentHeight = document.documentElement.scrollHeight;
     const viewportHeight = window.innerHeight;
 
+    let lastScrollY = window.scrollY;
+    let isHeaderHidden = false;
+
     window.addEventListener('scroll', function () {
         const scrollPosition = window.scrollY;
 
+        if (scrollPosition > lastScrollY && !isHeaderHidden) {
+            header.classList.add('hidden');
+            isHeaderHidden = true;
+        } else if (scrollPosition < lastScrollY && isHeaderHidden) {
+            header.classList.remove('hidden');
+            isHeaderHidden = false;
+        }
+
         if (scrollPosition > 100) {
             header.classList.add('scroll');
-            fixedBlock.classList.add('scroll');
         } else {
             header.classList.remove('scroll');
-            fixedBlock.classList.remove('scroll');
         }
+
         if (window.scrollY + viewportHeight >= documentHeight) {
             fixedBlock.classList.remove('scroll');
-        }
-        else {
+        } else {
             fixedBlock.classList.add('scroll');
         }
+
+        lastScrollY = scrollPosition;
     });
 
 
