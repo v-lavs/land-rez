@@ -4,12 +4,21 @@
   }
 }
 
+.app-list {
+  position: relative;
+}
+
 .app-carts {
   border: 1px solid rgba(142, 174, 108, .25);
   border-radius: 16px;
   padding: 24px;
   margin-bottom: 64px;
   background-color: #FFFFFF;
+
+  transform: perspective(1200px);
+  position: sticky;
+  top: 90px;
+
   &:last-child {
     margin-bottom: 0;
   }

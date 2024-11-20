@@ -856,10 +856,6 @@ body {
   scroll-behavior: smooth;
 }
 
-.wrapper {
-  overflow: hidden;
-}
-
 .overlay,
 .backdrop {
   display: none;
@@ -1978,6 +1974,10 @@ body {
   border-radius: 50%;
 }
 
+.features {
+  overflow: hidden;
+}
+
 .slider-features {
   min-height: 600px;
   overflow: visible;
@@ -2424,12 +2424,19 @@ body {
   font-weight: 600;
 }
 
+.app-list {
+  position: relative;
+}
+
 .app-carts {
   border: 1px solid rgba(142, 174, 108, 0.25);
   border-radius: 16px;
   padding: 24px;
   margin-bottom: 64px;
   background-color: #FFFFFF;
+  transform: perspective(1200px);
+  position: sticky;
+  top: 90px;
 }
 
 .app-carts:last-child {
@@ -2879,12 +2886,16 @@ body {
 }
 
 .composition-list {
+  position: relative;
   counter-reset: section;
   margin-bottom: 64px;
 }
 
 .composition__item {
   margin-bottom: 24px;
+  transform: perspective(1200px);
+  position: sticky;
+  top: 120px;
 }
 
 .composition__item:last-child {
@@ -2907,6 +2918,7 @@ body {
   margin: 0 auto;
   padding: 48px 332px 48px 48px;
   min-height: 482px;
+  background-color: #FFFFFF;
 }
 
 .composition__card:before {

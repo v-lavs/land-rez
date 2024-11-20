@@ -221,12 +221,17 @@
 }
 
 .composition-list {
+  position: relative;
   counter-reset: section;
   margin-bottom: 64px;
 }
 
 .composition__item {
   margin-bottom: 24px;
+
+  transform: perspective(1200px);
+  position: sticky;
+  top: 120px;
 
   &:last-child {
     margin-bottom: 0;
@@ -250,7 +255,7 @@
     margin: 0 auto;
     padding: 48px 332px 48px 48px;
     min-height: 482px;
-
+    background-color: #FFFFFF;
     &:before {
       counter-increment: section;
       content: counter(section, decimal-leading-zero);
