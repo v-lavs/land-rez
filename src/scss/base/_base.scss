@@ -6,6 +6,10 @@ body {
   font-size: 24px;
   color: #20261F;
   scroll-behavior: smooth;
+  &.disable-scroll{
+    overflow: hidden;
+    height: 100vh;
+  }
 }
 
 .overlay,

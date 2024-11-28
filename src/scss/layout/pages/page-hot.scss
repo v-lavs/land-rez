@@ -103,7 +103,13 @@
     &__thumb {
       border-radius: 16px;
       width: 100%;
+      height: 150px;
       margin-bottom: 24px;
+      img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
 
       img:hover {
         transform: none;
@@ -313,7 +319,24 @@
     }
   }
 }
+@include respond-to($xl){
+  .main_hot .section-banner__thumb-hot{
+    width: 40%;
+    min-height: 345px;
+  }
+  .main_hot .section-banner__content {
+    width: 60%;
+  }
+  .header_hot .btn {
+    margin-left: auto;
+    padding-left: 17px;
+    padding-right: 17px;
+  }
+}
 
+@include respond-to($lg) {
+
+}
 @include respond-to($md) {
   .section-hot-bg .card-list {
     flex-wrap: wrap;

@@ -12,12 +12,14 @@ document.addEventListener('DOMContentLoaded', function () {
     const backdrop = document.querySelector('.backdrop');
     const menuLinks = document.querySelectorAll('.menu__link');
     const subMenuToggles = document.querySelectorAll('.sub-menu__toggle');
+    const body = document.querySelector('body');
 
     btnBurger.addEventListener('click', function (e) {
         e.preventDefault();
         nav.classList.add('open');
         backdrop.style.display = 'block';
         btnClose.style.display = 'block';
+        body.classList.add('disable-scroll');
     });
 
     [btnClose, backdrop, ...menuLinks].forEach(function (element) {
@@ -25,6 +27,7 @@ document.addEventListener('DOMContentLoaded', function () {
             nav.classList.remove('open');
             backdrop.style.display = 'none';
             btnClose.style.display = 'none';
+            body.classList.remove('disable-scroll');
         });
     });
 

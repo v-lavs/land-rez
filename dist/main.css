@@ -856,6 +856,11 @@ body {
   scroll-behavior: smooth;
 }
 
+body.disable-scroll {
+  overflow: hidden;
+  height: 100vh;
+}
+
 .overlay,
 .backdrop {
   display: none;
@@ -2785,7 +2790,14 @@ body {
 .section-hot-bg .card__thumb {
   border-radius: 16px;
   width: 100%;
+  height: 150px;
   margin-bottom: 24px;
+}
+
+.section-hot-bg .card__thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .section-hot-bg .card__thumb img:hover {
@@ -3068,6 +3080,21 @@ body {
 
   .app-carts:nth-child(2) .app-carts__col {
     padding-right: 134px;
+  }
+
+  .main_hot .section-banner__thumb-hot {
+    width: 40%;
+    min-height: 345px;
+  }
+
+  .main_hot .section-banner__content {
+    width: 60%;
+  }
+
+  .header_hot .btn {
+    margin-left: auto;
+    padding-left: 17px;
+    padding-right: 17px;
   }
 }
 
