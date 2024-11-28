@@ -344,19 +344,37 @@
     }
   }
   .card-dosage {
+    display: flex;
+    flex-wrap: wrap;
+    box-shadow: 16px 8px 32px 0 rgba(0,0,0, .06);
     &__footer.desk {
       display: none;
     }
     &__header{
       display: flex;
+      width: 100%;
       justify-content: space-between;
       align-items: center;
+      margin-bottom: 8px;
+    }
+    &__footer,
+    &__body{
+      width: 50%;
+    }
+    &__footer{
+      border-top: none;
+      border-left: 1px solid rgba(100, 115, 98, 0.1);
     }
   }
   .card-dosage__footer.mob {
-    display: block;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
   }
   .app-carts {
+    overflow: hidden;
+    top: 40px;
+
     &__img {
       display: none;
     }
@@ -378,16 +396,15 @@
       padding-bottom: 8px;
     }
     .block-btns {
-      display: block;
       padding-top: 24px;
 
       .btn {
-        width: 100%;
-        margin-bottom: 16px;
-        margin-left: 0;
-
-        &:last-child {
-          margin-bottom: 0;
+        min-width: 0;
+        &__icon{
+          margin-right: 0;
+        }
+        &:first-child {
+          font-size: 0;
         }
       }
     }
@@ -397,7 +414,6 @@
     }
   }
   .slider-dosage {
-    overflow: hidden;
     padding-bottom: 32px;
 
     .swiper-slide {

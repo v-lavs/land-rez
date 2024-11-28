@@ -3760,18 +3760,43 @@ body {
     margin-bottom: 24px;
   }
 
+  .card-dosage {
+    display: flex;
+    flex-wrap: wrap;
+    box-shadow: 16px 8px 32px 0 rgba(0, 0, 0, 0.06);
+  }
+
   .card-dosage__footer.desk {
     display: none;
   }
 
   .card-dosage__header {
     display: flex;
+    width: 100%;
     justify-content: space-between;
     align-items: center;
+    margin-bottom: 8px;
+  }
+
+  .card-dosage__footer,
+  .card-dosage__body {
+    width: 50%;
+  }
+
+  .card-dosage__footer {
+    border-top: none;
+    border-left: 1px solid rgba(100, 115, 98, 0.1);
   }
 
   .card-dosage__footer.mob {
-    display: block;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .app-carts {
+    overflow: hidden;
+    top: 40px;
   }
 
   .app-carts__img {
@@ -3797,18 +3822,19 @@ body {
   }
 
   .app-carts .block-btns {
-    display: block;
     padding-top: 24px;
   }
 
   .app-carts .block-btns .btn {
-    width: 100%;
-    margin-bottom: 16px;
-    margin-left: 0;
+    min-width: 0;
   }
 
-  .app-carts .block-btns .btn:last-child {
-    margin-bottom: 0;
+  .app-carts .block-btns .btn__icon {
+    margin-right: 0;
+  }
+
+  .app-carts .block-btns .btn:first-child {
+    font-size: 0;
   }
 
   .app-carts .prep {
@@ -3816,7 +3842,6 @@ body {
   }
 
   .slider-dosage {
-    overflow: hidden;
     padding-bottom: 32px;
   }
 
