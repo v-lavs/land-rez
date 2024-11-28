@@ -61,6 +61,7 @@ document.addEventListener('DOMContentLoaded', function () {
     smoothScrollToAnchor('.menu__item a');
     smoothScrollToAnchor('.sub-menu__item a');
     smoothScrollToAnchor('.card-product__link-wrap a');
+    smoothScrollToAnchor('.section-banner .btn_stroke');
 
 
 // HEADER AND DISCLAIMER SCROLL
