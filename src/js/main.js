@@ -20,7 +20,7 @@ document.addEventListener('DOMContentLoaded', function () {
         btnClose.style.display = 'block';
     });
 
-    [btnClose, backdrop,  ...menuLinks].forEach(function (element) {
+    [btnClose, backdrop, ...menuLinks].forEach(function (element) {
         element.addEventListener('click', function () {
             nav.classList.remove('open');
             backdrop.style.display = 'none';
@@ -37,7 +37,7 @@ document.addEventListener('DOMContentLoaded', function () {
 // SCROLL TO ANCHOR
     function smoothScrollToAnchor(selector) {
         document.querySelectorAll(selector).forEach((element) => {
-            element.addEventListener('click', function(event) {
+            element.addEventListener('click', function (event) {
                 const anchor = this.getAttribute('href');
 
                 if (anchor.startsWith('#') && anchor !== '#') {
@@ -80,17 +80,22 @@ document.addEventListener('DOMContentLoaded', function () {
             header.classList.remove('hidden');
             isHeaderHidden = false;
         }
-
         if (scrollPosition > 100) {
             header.classList.add('scroll');
-            fixedBlock.classList.add('scroll');
         } else {
             header.classList.remove('scroll');
-            fixedBlock.classList.remove('scroll');
         }
 
-        if (window.scrollY + viewportHeight >= documentHeight) {
-            fixedBlock.classList.remove('scroll');
+        if (fixedBlock) {
+            if (scrollPosition > 100) {
+                fixedBlock.classList.add('scroll');
+            } else {
+                fixedBlock.classList.remove('scroll');
+            }
+
+            if (window.scrollY + viewportHeight >= documentHeight) {
+                fixedBlock.classList.remove('scroll');
+            }
         }
         lastScrollY = scrollPosition;
     });
