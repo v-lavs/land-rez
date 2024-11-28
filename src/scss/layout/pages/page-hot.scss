@@ -1,6 +1,7 @@
 .main_hot {
   .section {
     padding: 130px 0;
+    overflow: hidden;
   }
 
   .text_big {
@@ -247,8 +248,11 @@
     margin-bottom: 0;
   }
 }
-
+.section.composition{
+  overflow: visible;
+}
 .composition {
+
   .block-btns {
     text-align: center;
   }

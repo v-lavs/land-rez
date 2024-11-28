@@ -2695,6 +2695,7 @@ body.disable-scroll {
 
 .main_hot .section {
   padding: 130px 0;
+  overflow: hidden;
 }
 
 .main_hot .text_big {
@@ -2935,6 +2936,10 @@ body.disable-scroll {
 
 .composition__item:last-child {
   margin-bottom: 0;
+}
+
+.section.composition {
+  overflow: visible;
 }
 
 .composition .block-btns {
@@ -3685,6 +3690,11 @@ body.disable-scroll {
     line-height: 15.4px;
   }
 
+  .footer__logo,
+  .copyright {
+    width: 100%;
+  }
+
   .copyright span {
     margin: 0;
     width: 100%;
@@ -3887,6 +3897,14 @@ body.disable-scroll {
 
   .app-carts .block-btns .btn {
     min-width: 0;
+    padding-left: 32px;
+    padding-right: 32px;
+    height: 73px;
+    width: auto;
+  }
+
+  .app-carts .block-btns .btn_stroke-green {
+    flex-grow: 1;
   }
 
   .app-carts .block-btns .btn__icon {

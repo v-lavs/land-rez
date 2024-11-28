@@ -400,6 +400,13 @@
 
       .btn {
         min-width: 0;
+        padding-left: 32px;
+        padding-right: 32px;
+        height: 73px;
+        width: auto;
+        &_stroke-green{
+          flex-grow: 1;
+        }
         &__icon{
           margin-right: 0;
         }
