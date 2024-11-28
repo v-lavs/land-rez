@@ -3410,6 +3410,10 @@ body.disable-scroll {
     text-align: center;
   }
 
+  .app-slider {
+    margin-bottom: 24px;
+  }
+
   .app-slider,
   .card-slider {
     padding-bottom: 74px;
@@ -3417,6 +3421,25 @@ body.disable-scroll {
 
   .app-slider .app-list-hot {
     padding-bottom: 0;
+  }
+
+  .composition-list {
+    background-color: red;
+  }
+
+  .composition__thumb {
+    position: relative;
+    transform: none;
+    right: auto;
+    left: auto;
+  }
+
+  .composition__card {
+    padding-right: 48px;
+  }
+
+  .composition__card:before {
+    display: none;
   }
 }
 
@@ -3626,6 +3649,10 @@ body.disable-scroll {
   }
 
   .slide-purpose__text {
+    font-size: 24px;
+  }
+
+  .section-hot-bg .card__description {
     font-size: 24px;
   }
 
@@ -3980,6 +4007,10 @@ body.disable-scroll {
   .dosage.drops .card-dosage__body {
     padding-top: 24px;
     padding-bottom: 24px;
+  }
+
+  .app-carts-hot__icon {
+    margin-bottom: 32px;
   }
 }
 
