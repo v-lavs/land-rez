@@ -2771,6 +2771,10 @@ body.disable-scroll {
   background-color: #FF7436;
 }
 
+.section-hot-bg .card-slider {
+  overflow: visible;
+}
+
 .section-hot-bg .card-list {
   display: flex;
   gap: 24px;
@@ -2786,6 +2790,9 @@ body.disable-scroll {
   background-color: #FFFFFF;
   border-radius: 16px;
   box-shadow: 16px 8px 32px 0 rgba(0, 0, 0, 0.06);
+  width: 32%;
+  max-width: 385px;
+  height: auto;
 }
 
 .section-hot-bg .card__icon {
@@ -2805,7 +2812,7 @@ body.disable-scroll {
 .section-hot-bg .card__thumb {
   border-radius: 16px;
   width: 100%;
-  height: 150px;
+  height: 192px;
   margin-bottom: 24px;
 }
 
@@ -2825,6 +2832,10 @@ body.disable-scroll {
   font-weight: 450;
   line-height: 1.25;
   color: #647362;
+}
+
+.app-slider {
+  overflow: visible;
 }
 
 .application-hot {
@@ -3415,7 +3426,8 @@ body.disable-scroll {
   }
 
   .app-slider,
-  .card-slider {
+  .section-hot-bg .card-slider {
+    overflow: hidden;
     padding-bottom: 74px;
   }
 
@@ -3650,6 +3662,11 @@ body.disable-scroll {
 
   .slide-purpose__text {
     font-size: 24px;
+  }
+
+  .section-banner__disclaimer {
+    padding-left: 16px;
+    padding-right: 16px;
   }
 
   .section-hot-bg .card__description {

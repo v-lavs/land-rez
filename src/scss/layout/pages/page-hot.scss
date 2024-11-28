@@ -75,6 +75,10 @@
 .section-hot-bg {
   background-color: #FF7436;
 
+  .card-slider {
+    overflow: visible;
+  }
+
   .card-list {
     display: flex;
     gap: 24px;
@@ -90,6 +94,10 @@
     background-color: #FFFFFF;
     border-radius: 16px;
     box-shadow: 16px 8px 32px 0 rgba(0, 0, 0, .06);
+    width: 32%;
+    max-width: 385px;
+    height: auto;
+
 
     &__icon {
       position: absolute;
@@ -108,7 +116,7 @@
     &__thumb {
       border-radius: 16px;
       width: 100%;
-      height: 150px;
+      height: 192px;
       margin-bottom: 24px;
 
       img {
@@ -131,7 +139,9 @@
     }
   }
 }
-
+.app-slider{
+  overflow: visible;
+}
 .application-hot {
   background-color: rgba(255, 116, 34, .08);
   color: #000000;
@@ -360,6 +370,7 @@
 }
 
 @include respond-to($lg) {
+
   .section-banner__thumb-hot {
     order: -1;
     width: 100%;
@@ -390,7 +401,8 @@
     margin-bottom: 24px;
   }
   .app-slider,
-  .card-slider {
+  .section-hot-bg  .card-slider {
+    overflow: hidden;
     padding-bottom: 74px;
   }
   .app-slider .app-list-hot {
@@ -419,7 +431,13 @@
 }
 
 @include respond-to($md) {
-
+//.container{
+//  background: rosybrown;
+//}
+  .section-banner__disclaimer{
+    padding-left: 16px;
+    padding-right: 16px;
+  }
   .section-hot-bg {
     .card__description {
       font-size: 24px;

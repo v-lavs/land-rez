@@ -11,6 +11,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const btnClose = document.querySelector('.btn_close');
     const backdrop = document.querySelector('.backdrop');
     const menuLinks = document.querySelectorAll('.menu__link');
+    const subMenuLinks = document.querySelectorAll('.sub-menu__link');
     const subMenuToggles = document.querySelectorAll('.sub-menu__toggle');
     const body = document.querySelector('body');
 
@@ -35,6 +36,13 @@ document.addEventListener('DOMContentLoaded', function () {
         toggle.addEventListener('click', function () {
             toggle.classList.toggle('sub-menu__toggle_active');
         });
+    });
+    subMenuLinks.forEach(function (el) {
+        el.addEventListener('click', function () {
+            nav.classList.remove('open');
+            backdrop.style.display = 'none';
+            body.classList.remove('disable-scroll');
+        })
     });
 
 // SCROLL TO ANCHOR
