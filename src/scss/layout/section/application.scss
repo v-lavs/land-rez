@@ -338,9 +338,19 @@
 }
 
 @include respond-to($sm) {
+  .application {
+    .section__title {
+      margin-bottom: 24px;
+    }
+  }
   .card-dosage {
     &__footer.desk {
       display: none;
+    }
+    &__header{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
     }
   }
   .card-dosage__footer.mob {
@@ -349,6 +359,10 @@
   .app-carts {
     &__img {
       display: none;
+    }
+
+    &__title {
+      font-size: 16px;
     }
 
     &__heading {
@@ -360,7 +374,9 @@
         width: 100%;
       }
     }
-
+    &__col{
+      padding-bottom: 8px;
+    }
     .block-btns {
       display: block;
       padding-top: 24px;
@@ -374,6 +390,10 @@
           margin-bottom: 0;
         }
       }
+    }
+
+    .prep {
+      font-size: 28px;
     }
   }
   .slider-dosage {

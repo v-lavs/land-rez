@@ -1651,6 +1651,10 @@ body {
   border: 1px solid #46B600;
 }
 
+.product-line {
+  overflow: hidden;
+}
+
 .cards-line {
   position: relative;
   display: flex;
@@ -3752,8 +3756,18 @@ body {
     padding-bottom: 58px;
   }
 
+  .application .section__title {
+    margin-bottom: 24px;
+  }
+
   .card-dosage__footer.desk {
     display: none;
+  }
+
+  .card-dosage__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
   }
 
   .card-dosage__footer.mob {
@@ -3764,6 +3778,10 @@ body {
     display: none;
   }
 
+  .app-carts__title {
+    font-size: 16px;
+  }
+
   .app-carts__heading {
     padding: 16px;
     min-height: 0;
@@ -3772,6 +3790,10 @@ body {
   .app-carts__heading > div {
     max-width: 100%;
     width: 100%;
+  }
+
+  .app-carts__col {
+    padding-bottom: 8px;
   }
 
   .app-carts .block-btns {
@@ -3787,6 +3809,10 @@ body {
 
   .app-carts .block-btns .btn:last-child {
     margin-bottom: 0;
+  }
+
+  .app-carts .prep {
+    font-size: 28px;
   }
 
   .slider-dosage {
