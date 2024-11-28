@@ -19,6 +19,9 @@
     padding-top: 97px;
     min-height: 100vh;
     justify-content: flex-end;
+    &:before{
+      display: none;
+    }
 
     &__content {
       width: 50%;

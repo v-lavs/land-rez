@@ -2714,6 +2714,10 @@ body.disable-scroll {
   justify-content: flex-end;
 }
 
+.main_hot .section-banner:before {
+  display: none;
+}
+
 .main_hot .section-banner__content {
   width: 50%;
 }
