@@ -83,14 +83,10 @@ document.addEventListener('DOMContentLoaded', function () {
 
         if (scrollPosition > 100) {
             header.classList.add('scroll');
-            if(fixedBlock) {
-                fixedBlock.classList.add('scroll');
-            }
+            fixedBlock.classList.add('scroll');
         } else {
             header.classList.remove('scroll');
-            if(fixedBlock) {
-                fixedBlock.classList.remove('scroll');
-            }
+            fixedBlock.classList.remove('scroll');
         }
 
         if (window.scrollY + viewportHeight >= documentHeight) {
