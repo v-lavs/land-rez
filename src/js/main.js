@@ -119,6 +119,7 @@ document.addEventListener('DOMContentLoaded', function () {
             });
         });
     }
+
 //CARD-HOT HIDE
     const cpHot = document.querySelector('.card-product_hot');
     const btnScScroll = document.querySelector('.btn-hot');
@@ -144,6 +145,7 @@ document.addEventListener('DOMContentLoaded', function () {
             overlay.classList.remove('show');
         });
     }
+
 //SLIDER FEATURES
     if (document.querySelector('.slider-features')) {
         const sliderFeatures = new Swiper('.slider-features ', {
@@ -168,6 +170,8 @@ document.addEventListener('DOMContentLoaded', function () {
 //SLIDERS
     let sliderProducts;
     let sliderPurpose;
+    let cardListSlider;
+    let appSlider;
 
     const identicalSwiperIds = ['#sliderDosage1', '#sliderDosage2', '#sliderDosage3'];
     let identicalSwipers = [];
@@ -190,6 +194,20 @@ document.addEventListener('DOMContentLoaded', function () {
                     },
                 });
             }
+            if (!cardListSlider) {
+                cardListSlider = new Swiper('.card-slider', {
+                    spaceBetween: 24,
+                    breakpoints: {
+                        1023: {
+                            slidesPerView: 2,
+                        }
+                    },
+                    pagination: {
+                        el: '.card-slider .swiper-pagination',
+                        clickable: true,
+                    },
+                });
+            }
             if (!sliderPurpose) {
                 sliderPurpose = new Swiper('.slider-purpose', {
                     slidesPerView: 1,
@@ -200,14 +218,36 @@ document.addEventListener('DOMContentLoaded', function () {
                     },
                 });
             }
+            if (!appSlider) {
+                appSlider = new Swiper('.app-slider', {
+                    spaceBetween: 24,
+                    breakpoints: {
+                        1023: {
+                            slidesPerView: 2,
+                        }
+                    },
+                    pagination: {
+                        el: '.app-slider .swiper-pagination',
+                        clickable: true,
+                    },
+                });
+            }
         } else {
             if (sliderProducts) {
                 sliderProducts.destroy(true, true);
                 sliderProducts = null;
             }
+            if (cardListSlider) {
+                cardListSlider.destroy(true, true);
+                cardListSlider = null;
+            }
             if (sliderPurpose) {
                 sliderPurpose.destroy(true, true);
                 sliderPurpose = null;
+            }
+            if (appSlider) {
+                appSlider.destroy(true, true);
+                appSlider = null;
             }
         }
 

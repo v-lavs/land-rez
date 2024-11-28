@@ -16,7 +16,9 @@
   border-radius: 100px;
   opacity: .25;
 }
-
+.swiper-pagination.white .swiper-pagination-bullet {
+  background-color: #FFFFFF;
+}
 .swiper-pagination-bullet-active {
   opacity: 1;
 }

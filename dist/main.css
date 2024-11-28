@@ -1349,6 +1349,10 @@ body.disable-scroll {
   opacity: .25;
 }
 
+.swiper-pagination.white .swiper-pagination-bullet {
+  background-color: #FFFFFF;
+}
+
 .swiper-pagination-bullet-active {
   opacity: 1;
 }
@@ -1462,6 +1466,7 @@ body.disable-scroll {
 .footer_hot {
   background-color: rgba(255, 116, 34, 0.08);
   color: #20261F;
+  padding-bottom: 72px;
 }
 
 .footer_hot .footer_bottom {
@@ -3296,10 +3301,6 @@ body.disable-scroll {
     display: block !important;
   }
 
-  .slider-purpose .swiper-pagination-bullet {
-    background-color: #FFFFFF;
-  }
-
   .slide-purpose {
     margin-right: 0;
     min-width: 100%;
@@ -3391,6 +3392,31 @@ body.disable-scroll {
 
   .main_hot .section-banner .container {
     flex-wrap: wrap;
+  }
+
+  .app-list-hot,
+  .section-hot-bg .card-list {
+    gap: 0;
+  }
+
+  .section-hot-bg .swiper-slide {
+    height: auto;
+  }
+
+  .app-slider .swiper-pagination,
+  .section-hot-bg .swiper-pagination {
+    display: block;
+    width: 100%;
+    text-align: center;
+  }
+
+  .app-slider,
+  .card-slider {
+    padding-bottom: 74px;
+  }
+
+  .app-slider .app-list-hot {
+    padding-bottom: 0;
   }
 }
 
@@ -3603,13 +3629,23 @@ body.disable-scroll {
     font-size: 24px;
   }
 
-  .section-hot-bg .card-list {
-    flex-wrap: wrap;
-    gap: 80px;
+  .section-hot-bg .card__thumb {
+    height: 192px;
+    margin-bottom: 24px;
+    position: relative;
+    padding-top: 70%;
   }
 
-  .section-hot-bg .card {
+  .section-hot-bg .card__thumb img {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
     width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 1;
   }
 }
 
@@ -3682,6 +3718,10 @@ body.disable-scroll {
 
   .footer {
     padding: 48px 0 15vh;
+  }
+
+  .footer_hot {
+    padding-bottom: 8px;
   }
 
   .footer__description {

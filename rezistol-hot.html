@@ -113,16 +113,15 @@
     <div class="overlay"></div>
     <main class="main main_hot">
         <section class="section-banner">
-
             <div class="container">
                 <div class="section-banner__content">
                     <h1 class="title_lg">Рослина відповідь <span class="text_big">застуді</span></h1>
                     <a href="#" class="btn btn_glass" target="_blank">Ціни в аптеках</a>
                     <a href="#" class="btn btn_stroke">Дізнатись більше</a>
                 </div>
-                    <div class="section-banner__thumb-hot">
-                        <img class="banner-img" src="assets/img/rez-hot/anim-gif.png" alt="Упаковки Резистол Хот">
-                    </div>
+                <div class="section-banner__thumb-hot">
+                    <img class="banner-img" src="assets/img/rez-hot/anim-gif.png" alt="Упаковки Резистол Хот">
+                </div>
             </div>
             <div class="section-banner__disclaimer">
                 <div class="container">
@@ -294,32 +293,37 @@
                 <h2 class="title section__title"><span class="color_white"><strong>РЕЗІСТОЛ Хот </strong></span>
                     — ДЛЯ ДОРОСЛИХ ТА ДІТЕЙ ВІКОМ ВІД 6-ТИ РОКІВ
                 </h2>
-                <ul class="card-list">
-                    <li class="card">
-                        <div class="card__icon" style="background-image: url(assets/img/i-purp-1.svg);"></div>
-                        <div class="card__thumb">
-                            <img src="assets/img/rez-hot/unpleased-young-ill-girl-with-closed-eyes-wearing-white-robe-wiping-nose-with-napkin-isolated-green%201.jpg"
-                                 alt="" width="336" height="192">
-                        </div>
-                        <div class="card__description">Сприяє покращенню загального стану організму</div>
-                    </li>
-                    <li class="card">
-                        <div class="card__icon" style="background-image: url(assets/img/i-purp-2.svg);"></div>
-                        <div class="card__thumb">
-                            <img src="assets/img/rez-hot/sick-man-holding-hand-neck%201.jpg" alt="" width="588"
-                                 height="400">
-                        </div>
-                        <div class="card__description">Сприяє підвищенню імунітету</div>
-                    </li>
-                    <li class="card">
-                        <div class="card__icon" style="background-image: url(assets/img/i-purp-3.svg);"></div>
-                        <div class="card__thumb">
-                            <img src="assets/img/rez-hot/ill-little-boywrapped-blanket-feeling-unwell-coughing-standing-white-wall%201.jpg"
-                                 alt="" width="336" height="192">
-                        </div>
-                        <div class="card__description">Сприяє зменшенню тривалості та важкості застуди</div>
-                    </li>
-                </ul>
+                <!-- Swiper -->
+                <div class="swiper card-slider">
+                    <ul class="swiper-wrapper card-list">
+                        <li class="swiper-slide card">
+                            <div class="card__icon" style="background-image: url(assets/img/i-purp-1.svg);"></div>
+                            <div class="card__thumb">
+                                <img src="assets/img/rez-hot/unpleased-young-ill-girl-with-closed-eyes-wearing-white-robe-wiping-nose-with-napkin-isolated-green%201.jpg"
+                                     alt="" width="336" height="192">
+                            </div>
+                            <div class="card__description">Сприяє покращенню загального стану організму</div>
+                        </li>
+                        <li class="swiper-slide card">
+                            <div class="card__icon" style="background-image: url(assets/img/i-purp-2.svg);"></div>
+                            <div class="card__thumb">
+                                <img src="assets/img/rez-hot/sick-man-holding-hand-neck%201.jpg" alt="" width="588"
+                                     height="400">
+                            </div>
+                            <div class="card__description">Сприяє підвищенню імунітету</div>
+                        </li>
+                        <li class="swiper-slide card">
+                            <div class="card__icon" style="background-image: url(assets/img/i-purp-3.svg);"></div>
+                            <div class="card__thumb">
+                                <img src="assets/img/rez-hot/ill-little-boywrapped-blanket-feeling-unwell-coughing-standing-white-wall%201.jpg"
+                                     alt="" width="336" height="192">
+                            </div>
+                            <div class="card__description">Сприяє зменшенню тривалості та важкості застуди</div>
+                        </li>
+                    </ul>
+                    <!-- Add Pagination -->
+                    <div class="swiper-pagination white"></div>
+                </div>
             </div>
         </section>
         <section class="section application-hot">
@@ -327,27 +331,32 @@
                 <h2 class="title section__title">Як Приймати <br>
                     <span class="color_hot">резістол Хот</span>
                 </h2>
-                <div class="app-list-hot">
-                    <div class="app-carts-hot">
-                        <div class="app-carts-hot__icon"
-                             style="background-image: url(assets/img/rez-hot/ah1.svg);"></div>
-                        <div class="app-carts-hot__text">Вміст саше-пакета необхідно розчинити в 150 мл (ml) теплої
-                            води
+                <div class="swiper app-slider">
+                    <div class="swiper-wrapper app-list-hot">
+                        <div class="swiper-slide app-carts-hot">
+                            <div class="app-carts-hot__icon"
+                                 style="background-image: url(assets/img/rez-hot/ah1.svg);"></div>
+                            <div class="app-carts-hot__text">Вміст саше-пакета необхідно розчинити в 150 мл (ml) теплої
+                                води
+                            </div>
+                            <div class="app-carts-hot__footer"></div>
                         </div>
-                        <div class="app-carts-hot__footer"></div>
+                        <div class="swiper-slide app-carts-hot ">
+                            <div class="app-carts-hot__icon"
+                                 style="background-image: url(assets/img/rez-hot/ah2.svg);"></div>
+                            <div class="app-carts-hot__text">Ретельно перемішати до повного розчинення</div>
+                            <div class="app-carts-hot__footer"></div>
+                        </div>
+                        <div class="swiper-slide app-carts-hot ">
+                            <div class="app-carts-hot__icon"
+                                 style="background-image: url(assets/img/rez-hot/ah3.svg);"></div>
+                            <div class="app-carts-hot__text">Отриманий розчин слід випити одразу після приготування
+                            </div>
+                            <div class="app-carts-hot__footer"></div>
+                        </div>
                     </div>
-                    <div class="app-carts-hot ">
-                        <div class="app-carts-hot__icon"
-                             style="background-image: url(assets/img/rez-hot/ah2.svg);"></div>
-                        <div class="app-carts-hot__text">Ретельно перемішати до повного розчинення</div>
-                        <div class="app-carts-hot__footer"></div>
-                    </div>
-                    <div class="app-carts-hot ">
-                        <div class="app-carts-hot__icon"
-                             style="background-image: url(assets/img/rez-hot/ah3.svg);"></div>
-                        <div class="app-carts-hot__text">Отриманий розчин слід випити одразу після приготування</div>
-                        <div class="app-carts-hot__footer"></div>
-                    </div>
+                    <!-- Add Pagination -->
+                    <div class="swiper-pagination"></div>
                 </div>
                 <div class="application-hot__description">*Тривалість споживання узгоджувати з лікарем індивідуально
                 </div>
