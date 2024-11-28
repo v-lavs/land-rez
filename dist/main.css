@@ -1264,7 +1264,7 @@ body {
 
 .btn_green:hover,
 .btn_green:focus {
-  background-color: #B3ED5F;
+  background-color: #50C904;
 }
 
 .btn_green:active {
@@ -1293,10 +1293,20 @@ body {
   color: #ffffff;
 }
 
+.btn_glass:hover,
+.btn_glass:focus {
+  box-shadow: 0 0 0 1px white;
+}
+
 .btn_stroke {
   border-color: #ffffff;
   background-color: transparent;
   color: #ffffff;
+}
+
+.btn_stroke:hover,
+.btn_stroke:focus {
+  box-shadow: 0 0 0 1px white;
 }
 
 .btn_stroke-green {
