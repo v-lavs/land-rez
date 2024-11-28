@@ -58,6 +58,10 @@
   .block-btns .btn {
     padding: 22px 50px;
   }
+
+  .slider-features {
+    min-height: 0;
+  }
 }
 
 .section-banner__disclaimer {
@@ -139,9 +143,11 @@
     }
   }
 }
-.app-slider{
+
+.app-slider {
   overflow: visible;
 }
+
 .application-hot {
   background-color: rgba(255, 116, 34, .08);
   color: #000000;
@@ -250,7 +256,6 @@
 
 .composition__item {
   margin-bottom: 24px;
-
   transform: perspective(1200px);
   position: sticky;
   top: 120px;
@@ -265,7 +270,6 @@
 }
 
 .composition {
-
   .block-btns {
     text-align: center;
   }
@@ -370,7 +374,14 @@
 }
 
 @include respond-to($lg) {
-
+  .header_hot {
+    .menu {
+      margin-left: 0;
+    }
+  }
+  .header_hot .menu__item {
+    margin-right: 0;
+  }
   .section-banner__thumb-hot {
     order: -1;
     width: 100%;
@@ -390,6 +401,7 @@
   }
   .section-hot-bg .swiper-slide {
     height: auto;
+    max-width: 100%;
   }
   .app-slider .swiper-pagination,
   .section-hot-bg .swiper-pagination {
@@ -401,16 +413,14 @@
     margin-bottom: 24px;
   }
   .app-slider,
-  .section-hot-bg  .card-slider {
+  .section-hot-bg .card-slider {
     overflow: hidden;
     padding-bottom: 74px;
   }
   .app-slider .app-list-hot {
     padding-bottom: 0;
   }
-  .composition-list {
-    background-color: red;
-  }
+
   .composition {
     &__thumb {
       position: relative;
@@ -431,10 +441,11 @@
 }
 
 @include respond-to($md) {
-//.container{
-//  background: rosybrown;
-//}
-  .section-banner__disclaimer{
+  //.container {
+  //  background: rosybrown;
+  //}
+
+  .section-banner__disclaimer {
     padding-left: 16px;
     padding-right: 16px;
   }
@@ -465,7 +476,87 @@
 }
 
 @include respond-to($sm) {
+  .main_hot .section {
+    padding: 48px 0 32px;
+  }
+  .main_hot .section__title {
+    font-size: 32px;
+  }
+  .application-hot .section__title {
+    font-size: 48px;
+  }
+  .application-hot__description {
+    font-size: 24px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  .main_hot .section-banner {
+    margin-bottom: 0;
+  }
   .app-carts-hot__icon {
     margin-bottom: 32px;
+  }
+  .main_hot .section-banner .title_lg {
+    letter-spacing: -0.04em;
+    margin-bottom: 24px;
+  }
+  .main_hot .text_big {
+    font-size: 88px;
+  }
+  .main_hot .section-banner__content {
+    text-align: center;
+  }
+  .main_hot .section-banner .container {
+    gap: 0;
+  }
+  .main_hot .section-banner__thumb-hot {
+    padding-top: 0;
+    position: initial;
+    width: 100%;
+    max-width: 100%;
+
+    .img-desc {
+      display: none;
+    }
+
+    .img-mob {
+      display: block;
+    }
+  }
+  .main_hot .section-banner .banner-img {
+    position: initial;
+    object-fit: initial;
+    width: 100%;
+    height: auto;
+  }
+  .composition-list {
+    margin-bottom: 48px;
+  }
+  .main_hot .block-btns .btn {
+    height: 73px;
+    width: 100%;
+  }
+  .composition__item {
+    &:first-child {
+      box-shadow: 16px 8px 32px 0 rgba(0, 0, 0, .06);
+
+    }
+  }
+
+  .main_hot .swiper-horizontal > .swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal {
+    bottom: -6px;
+  }
+  .app-slider {
+    padding-bottom: 34px;
+  }
+  .application-hot .block-btns{
+    padding-top: 24px;
+    .btn{
+      margin-bottom: 8px;
+      margin-right: 0;
+      &:last-child{
+        margin-bottom: 0;
+      }
+    }
   }
 }
