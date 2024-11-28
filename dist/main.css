@@ -1536,6 +1536,10 @@ body.disable-scroll {
   background-color: #ffb18e;
 }
 
+.header_hot .header_intro:after {
+  background-color: #ffb18e;
+}
+
 .header.scroll .btn,
 .header.scroll .btn_burger {
   background-color: #46B600;
@@ -2717,8 +2721,9 @@ body.disable-scroll {
 .main_hot .section-banner__thumb-hot {
   position: relative;
   width: 50%;
-  min-height: 452px;
   z-index: 1;
+  padding-top: 37.5%;
+  max-width: 588px;
 }
 
 .main_hot .section-banner .container {
@@ -3083,12 +3088,23 @@ body.disable-scroll {
   }
 
   .main_hot .section-banner__thumb-hot {
-    width: 40%;
-    min-height: 345px;
+    padding-top: 36%;
+  }
+
+  .main_hot .title_lg {
+    font-size: 76px;
   }
 
   .main_hot .section-banner__content {
     width: 60%;
+  }
+
+  .header_hot .menu {
+    margin-left: 20px;
+  }
+
+  .header_hot .menu__item {
+    margin-right: 20px;
   }
 
   .header_hot .btn {
@@ -3353,6 +3369,19 @@ body.disable-scroll {
   .app-carts .dosage {
     width: 100%;
     padding-right: 0;
+  }
+
+  .section-banner__thumb-hot {
+    order: -1;
+    width: 100%;
+  }
+
+  .main_hot .section-banner__content {
+    width: 100%;
+  }
+
+  .main_hot .section-banner .container {
+    flex-wrap: wrap;
   }
 }
 
