@@ -209,15 +209,15 @@ document.addEventListener('DOMContentLoaded', function () {
             if (!cardListSlider) {
                 cardListSlider = new Swiper('.card-slider', {
                     spaceBetween: 24,
-                    breakpoints: {
-                        1023: {
-                            slidesPerView: 2,
-                        }
-                    },
                     pagination: {
                         el: '.card-slider .swiper-pagination',
                         clickable: true,
                     },
+                    breakpoints: {
+                        568: {
+                            slidesPerView: 'auto',
+                        }
+                    }
                 });
             }
             if (!sliderPurpose) {
@@ -234,8 +234,8 @@ document.addEventListener('DOMContentLoaded', function () {
                 appSlider = new Swiper('.app-slider', {
                     spaceBetween: 24,
                     breakpoints: {
-                        1023: {
-                            slidesPerView: 2,
+                        568: {
+                            slidesPerView: 'auto',
                         }
                     },
                     pagination: {
@@ -297,9 +297,41 @@ document.addEventListener('DOMContentLoaded', function () {
                 hideText.classList.toggle('open-text');
                 this.textContent = hideText.classList.contains('open-text') ? "Згорнути інформацію" : "Більше інформації";
             }
+
         });
     });
 
+
+    const btnsMore = document.querySelectorAll('.composition__card .more-btn');
+    const cards = document.querySelectorAll('.composition__card');
+    btnsMore.forEach((btn) => {
+        btn.addEventListener('click', function () {
+            const hideCardText = this.parentElement.querySelector(' .hide-text');
+            if (window.innerWidth < 1024) {
+                if (hideCardText) {
+                    hideCardText.classList.toggle('open-text');
+                    this.textContent = hideCardText.classList.contains('open-text') ? "Згорнути інформацію" : "Детальна інформація";
+                }
+                window.addEventListener('scroll', () => {
+                    cards.forEach((card, index) => {
+                        const rect = card.getBoundingClientRect();
+                        if (rect.top >= 0 && rect.top < window.innerHeight / 2) {
+                            cards.forEach((otherCard, otherIndex) => {
+                                if (otherIndex !== index) {
+                                    const otherText = otherCard.querySelector('.hide-text');
+                                    if (otherText && otherText.classList.contains('open-text')) {
+                                        otherText.classList.remove('open-text');
+                                        const otherBtn = otherCard.querySelector('.more-btn');
+                                        if (otherBtn) otherBtn.textContent = "Детальна інформація";
+                                    }
+                                }
+                            });
+                        }
+                    });
+                });
+            }
+        });
+    });
 
 //SLIDER-ACCORDION
     const slides = document.querySelectorAll('.slide-purpose');

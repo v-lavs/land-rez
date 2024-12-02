@@ -7,6 +7,27 @@
 
   &_green {
     border-bottom: 1px solid #8EAE6C;
+    &.active,
+    &.scroll {
+      .btn,
+      .btn_burger {
+        background-color: #46B600;
+      }
+
+      //.menu__link,
+      //.sub-menu__link {
+      //  color: #20261F;
+      //}
+
+      .menu__link:hover,
+      .sub-menu__link:hover {
+        color: #46B600;
+      }
+
+      .header__logo {
+        color: #46B600;
+      }
+    }
   }
 
   &_hot {
@@ -30,24 +51,24 @@
 
   &.active,
   &.scroll {
-    .btn,
-    .btn_burger {
-      background-color: #46B600;
-    }
+    //.btn,
+    //.btn_burger {
+    //  background-color: #46B600;
+    //}
 
     .menu__link,
     .sub-menu__link {
       color: #20261F;
     }
 
-    .menu__link:hover,
-    .sub-menu__link:hover {
-      color: #46B600;
-    }
-
-    .header__logo {
-      color: #46B600;
-    }
+    //.menu__link:hover,
+    //.sub-menu__link:hover {
+    //  color: #46B600;
+    //}
+    //
+    //.header__logo {
+    //  color: #46B600;
+    //}
   }
 
   &.hidden {

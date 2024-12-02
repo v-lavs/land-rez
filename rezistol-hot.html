@@ -25,18 +25,11 @@
             </div>
             <div class="header__nav">
                 <div class="header_intro">
-                    <div class="header__logo-wrapper">
-                        <a href="#" class="header__logo">
-                            <img src="assets/img/rez-hot/logo-hot.svg" alt="Лого Резістол Хот">
-                        </a>
-                    </div>
-                    <a class="btn btn_light-green"
-                       target="_blank"
-                       href="#"
-                       aria-label="Посилання на листок-вкладку">листок-вкладка
-                    </a>
-                    <a class="btn btn_light-green"
-                       target="_blank"
+                    <button type="button" aria-label="Закрити меню" class="btn_close"></button>
+                </div>
+                <div class="header__inner-nav">
+                    <a href="#" class="btn btn_stroke mob-btn">листок-вкладка</a>
+                    <a class="btn btn_glass mob-btn"
                        href="#"
                        aria-label="Купити">
                 <span class="btn__icon">
@@ -54,9 +47,6 @@
                 </span>
                         Купити
                     </a>
-                    <button type="button" aria-label="Закрити меню" class="btn_close"></button>
-                </div>
-                <div class="header__inner-nav">
                     <ul class="menu">
                         <li class="menu__item">
                             <a href="#composition" class="menu__link">Склад</a>
@@ -67,14 +57,16 @@
                             <button type="button" class="sub-menu__toggle"></button>
                             <ul class="sub-menu">
                                 <li class="sub-menu__item">
-                                    <a href="index.html#applic" class="sub-menu__link">резістол<sup>&#174;</sup> -ТАБ</a>
+                                    <a href="index.html#applic" class="sub-menu__link">резістол<sup>&#174;</sup>
+                                        -ТАБ</a>
                                 </li>
                                 <li class="sub-menu__item">
                                     <a href="index.html#applic"
                                        class="sub-menu__link">резістол<sup>&#174;</sup> КРАПЛІ, 20 мл</a>
                                 </li>
                                 <li class="sub-menu__item">
-                                    <a href="index.html#applic" class="sub-menu__link">Резістол<sup>&#174;</sup> КРАПЛІ, 50 мл</a>
+                                    <a href="index.html#applic" class="sub-menu__link">Резістол<sup>&#174;</sup> КРАПЛІ,
+                                        50 мл</a>
                                 </li>
                                 <li class="sub-menu__item">
                                     <a href="#"
@@ -120,8 +112,10 @@
                     <a href="#" class="btn btn_stroke">Дізнатись більше</a>
                 </div>
                 <div class="section-banner__thumb-hot">
-                    <img class="banner-img img-desc" src="assets/img/rez-hot/anim-gif.png" alt="Упаковки Резистол Хот">
-                    <img class="banner-img img-mob" src="assets/img/rez-hot/banner-img-mob.png" alt="Упаковки Резистол Хот">
+                    <picture>
+                        <source srcset="assets/img/rez-hot/banner-img-mob.png" media="(max-width:576px)"/>
+                        <img class="banner-img" src="assets/img/rez-hot/anim-gif.png" alt="Упаковки Резистол Хот"/>
+                    </picture>
                 </div>
             </div>
             <div class="section-banner__disclaimer">
@@ -144,9 +138,12 @@
                                 <img src="assets/img/rez-hot/card-hot1.png" alt="Корінь пеларгонії">
                             </div>
                             <h3 class="composition__card-title">Екстракт корені пеларгонії</h3>
-                            <div class="composition__card-text">Полегшує симптоми та скорочує тривалість застуди.
-                                Виявляє противірусну, імуномодулюючу та антибактеріальну дію.
+                            <div class="hide-text">
+                                <div class="composition__card-text">Полегшує симптоми та скорочує тривалість застуди.
+                                    Виявляє противірусну, імуномодулюючу та антибактеріальну дію.
+                                </div>
                             </div>
+                            <button type="button" class="more-btn">Детальна інформація</button>
                         </div>
                     </li>
                     <li class="composition__item">
@@ -155,10 +152,13 @@
                                 <img src="assets/img/rez-hot/card-hot2.png" alt="Плоди чорної бузини">
                             </div>
                             <h3 class="composition__card-title">Екстракт плодів чорної бузини</h3>
-                            <div class="composition__card-text">Допомагає в зменшенні прояві симптомів захворювань
-                                верхніх дихальних шляхів, пов'язаних із застудою, володіє протимікробними,
-                                противірусними та імуномодулюючими властивостями
+                            <div class="hide-text">
+                                <div class="composition__card-text">Допомагає в зменшенні прояві симптомів захворювань
+                                    верхніх дихальних шляхів, пов'язаних із застудою, володіє протимікробними,
+                                    противірусними та імуномодулюючими властивостями
+                                </div>
                             </div>
+                            <button type="button" class="more-btn">Детальна інформація</button>
                         </div>
                     </li>
                     <li class="composition__item">
@@ -167,10 +167,14 @@
                                 <img src="assets/img/rez-hot/card-hot3.png" alt="Квіти липи">
                             </div>
                             <h3 class="composition__card-title">Екстракт квіток липи</h3>
-                            <div class="composition__card-text">Сприяє полегшенню кашлю та подразнення в горлі при
-                                застуді та запаленні верхніх дихальних шляхів, має заспокійливу дію, позитивно впливає
-                                при лихоманці
+                            <div class="hide-text">
+                                <div class="composition__card-text">Сприяє полегшенню кашлю та подразнення в горлі при
+                                    застуді та запаленні верхніх дихальних шляхів, має заспокійливу дію, позитивно
+                                    впливає
+                                    при лихоманці
+                                </div>
                             </div>
+                            <button type="button" class="more-btn">Детальна інформація</button>
                         </div>
                     </li>
                     <li class="composition__item">
@@ -179,9 +183,12 @@
                                 <img src="assets/img/rez-hot/card-hot4.png" alt="Трава вербени">
                             </div>
                             <h3 class="composition__card-title">Екстракт трави вербини</h3>
-                            <div class="composition__card-text">Має антиоксидантні, протимікробні та противірусні
-                                властивості
+                            <div class="hide-text">
+                                <div class="composition__card-text">Має антиоксидантні, протимікробні та противірусні
+                                    властивості
+                                </div>
                             </div>
+                            <button type="button" class="more-btn">Детальна інформація</button>
                         </div>
                     </li>
 
@@ -191,9 +198,12 @@
                                 <img src="assets/img/rez-hot/card-hot5.png" alt="Корінь імбиру">
                             </div>
                             <h3 class="composition__card-title">Екстракт кореню імбиру</h3>
-                            <div class="composition__card-text">Сприяє заспокоєнню кашлю і болю в горлі, володіє
-                                протизапальною активністю, сприяє підвищенню імунітету
+                            <div class="hide-text">
+                                <div class="composition__card-text">Сприяє заспокоєнню кашлю і болю в горлі, володіє
+                                    протизапальною активністю, сприяє підвищенню імунітету
+                                </div>
                             </div>
+                            <button type="button" class="more-btn">Детальна інформація</button>
                         </div>
                     </li>
                     <li class="composition__item">
@@ -202,7 +212,10 @@
                                 <img src="assets/img/rez-hot/card-hot6.png" alt="Квітки коров'яку">
                             </div>
                             <h3 class="composition__card-title">Екстракт квіток коров’яку</h3>
-                            <div class="composition__card-text">Позитивно впливає на горло і знімає запалення</div>
+                            <div class="hide-text">
+                                <div class="composition__card-text">Позитивно впливає на горло і знімає запалення</div>
+                            </div>
+                            <button type="button" class="more-btn">Детальна інформація</button>
                         </div>
                     </li>
                     <li class="composition__item">
@@ -211,9 +224,12 @@
                                 <img src="assets/img/rez-hot/card-hot7.png" alt="Вітамін С">
                             </div>
                             <h3 class="composition__card-title">Вітамін С</h3>
-                            <div class="composition__card-text">Сприяє зміцненню імунної системи, сприяє зменшенню
-                                тривалості та важкості застуди
+                            <div class="hide-text">
+                                <div class="composition__card-text">Сприяє зміцненню імунної системи, сприяє зменшенню
+                                    тривалості та важкості застуди
+                                </div>
                             </div>
+                            <button type="button" class="more-btn">Детальна інформація</button>
                         </div>
                     </li>
                     <li class="composition__item">
@@ -222,9 +238,12 @@
                                 <img src="assets/img/rez-hot/card-hot8.png" alt="М'ята">
                             </div>
                             <h3 class="composition__card-title">Ментол</h3>
-                            <div class="composition__card-text">Полегшує симптоми застуди, зменшує кашель та
-                                закладеність носа.
+                            <div class="hide-text">
+                                <div class="composition__card-text">Полегшує симптоми застуди, зменшує кашель та
+                                    закладеність носа.
+                                </div>
                             </div>
+                            <button type="button" class="more-btn">Детальна інформація</button>
                         </div>
                     </li>
                 </ul>
@@ -308,8 +327,8 @@
                         <li class="swiper-slide card">
                             <div class="card__icon" style="background-image: url(assets/img/i-purp-2.svg);"></div>
                             <div class="card__thumb">
-                                <img src="assets/img/rez-hot/sick-man-holding-hand-neck%201.jpg" alt="" width="588"
-                                     height="400">
+                                <img src="assets/img/rez-hot/christmas-holidays-celebration-concept-man-feeling-sick-coughing-grimacing-from-sore-throat%201.jpg" alt="" width="336"
+                                     height="192">
                             </div>
                             <div class="card__description">Сприяє підвищенню імунітету</div>
                         </li>
@@ -336,7 +355,7 @@
                     <div class="swiper-wrapper app-list-hot">
                         <div class="swiper-slide app-carts-hot">
                             <div class="app-carts-hot__icon"
-                                 style="background-image: url(assets/img/rez-hot/ah1.svg);"></div>
+                                 style="background-image: url(assets/img/rez-hot/ah1.png);"></div>
                             <div class="app-carts-hot__text">Вміст саше-пакета необхідно розчинити в 150 мл (ml) теплої
                                 води
                             </div>
@@ -344,13 +363,13 @@
                         </div>
                         <div class="swiper-slide app-carts-hot ">
                             <div class="app-carts-hot__icon"
-                                 style="background-image: url(assets/img/rez-hot/ah2.svg);"></div>
+                                 style="background-image: url(assets/img/rez-hot/ah2.png);"></div>
                             <div class="app-carts-hot__text">Ретельно перемішати до повного розчинення</div>
                             <div class="app-carts-hot__footer"></div>
                         </div>
                         <div class="swiper-slide app-carts-hot ">
                             <div class="app-carts-hot__icon"
-                                 style="background-image: url(assets/img/rez-hot/ah3.svg);"></div>
+                                 style="background-image: url(assets/img/rez-hot/ah3.png);"></div>
                             <div class="app-carts-hot__text">Отриманий розчин слід випити одразу після приготування
                             </div>
                             <div class="app-carts-hot__footer"></div>
