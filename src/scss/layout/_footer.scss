@@ -62,8 +62,16 @@
 .copyright a:focus {
   text-decoration: underline;
 }
+@include respond-to($lg){
+  .footer .container{
+    max-width: 100%;
+  }
+}
+@include respond-to($lg) {
 
-@include respond-to($md) {
+}
+
+@media screen and (max-width: 640px){
   .footer_bottom {
     flex-wrap: wrap;
     justify-content: center;
@@ -77,9 +85,6 @@
       margin-right: 5px;
     }
   }
-}
-
-@include respond-to($sm) {
   .footer {
     padding: 48px 0 15vh;
     &_hot{

@@ -1545,21 +1545,28 @@ body.disable-scroll {
   background-color: #ffb18e;
 }
 
+.header.active .btn,
+.header.active .btn_burger,
 .header.scroll .btn,
 .header.scroll .btn_burger {
   background-color: #46B600;
 }
 
+.header.active .menu__link,
+.header.active .sub-menu__link,
 .header.scroll .menu__link,
 .header.scroll .sub-menu__link {
   color: #20261F;
 }
 
+.header.active .menu__link:hover,
+.header.active .sub-menu__link:hover,
 .header.scroll .menu__link:hover,
 .header.scroll .sub-menu__link:hover {
   color: #46B600;
 }
 
+.header.active .header__logo,
 .header.scroll .header__logo {
   color: #46B600;
 }
@@ -1604,9 +1611,9 @@ body.disable-scroll {
 }
 
 .header__logo-wrapper {
+  position: relative;
   height: 100%;
   padding-right: 43px;
-  position: relative;
 }
 
 .header__logo-wrapper:after {
@@ -1624,9 +1631,11 @@ body.disable-scroll {
 }
 
 .header .btn_light-green {
+  position: relative;
   margin-left: auto;
   font-size: 18px;
   text-transform: uppercase;
+  z-index: 1100;
 }
 
 .header .btn_light-green.mob-btn {
@@ -1663,6 +1672,7 @@ body.disable-scroll {
   background-image: url(../assets/img/close.svg);
   background-color: transparent;
   border: 1px solid #46B600;
+  transition: 2s;
 }
 
 .product-line {
@@ -3166,22 +3176,33 @@ body.disable-scroll {
     padding: 0 37px;
   }
 
+  .footer .container {
+    max-width: 100%;
+  }
+
+  .header .container {
+    max-width: 100%;
+  }
+
   .header .btn_close,
   .header .btn_burger {
     display: block;
   }
 
+  .header .btn_close {
+    margin-left: auto;
+  }
+
   .header__nav {
     position: fixed;
     left: 0;
-    max-width: 768px;
+    width: 100%;
     top: 0;
     background: #ffffff;
     padding: 0;
     transform: translateX(-100%);
-    transition: .5s;
+    transition: .35s;
     z-index: 600;
-    width: 100%;
     height: 100vh;
     overflow: hidden;
   }
@@ -3199,14 +3220,16 @@ body.disable-scroll {
   }
 
   .header__logo-wrapper {
+    position: relative;
     padding-right: 44px;
+    z-index: 1100;
   }
 
   .header_intro {
     display: flex;
     align-items: center;
     position: relative;
-    padding: 20px 36px;
+    padding: 20px 37px;
   }
 
   .header_intro:after {
@@ -3220,14 +3243,6 @@ body.disable-scroll {
     transform: translateX(-50%);
     bottom: 0;
     z-index: 1;
-  }
-
-  .header_intro .btn_light-green {
-    background-color: #46B600;
-  }
-
-  .header_intro .header__logo {
-    color: #46B600;
   }
 
   .slider-products {
@@ -3576,18 +3591,9 @@ body.disable-scroll {
     padding: 0 16px;
   }
 
-  .footer_bottom {
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-
-  .footer__logo {
-    margin-bottom: 16px;
-  }
-
-  .copyright span {
-    margin-left: 5px;
-    margin-right: 5px;
+  .header_intro {
+    padding-left: 16px;
+    padding-right: 16px;
   }
 
   .card-product__header {
@@ -3702,6 +3708,47 @@ body.disable-scroll {
   }
 }
 
+@media screen and (max-width: 640px) {
+  .footer_bottom {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .footer__logo {
+    margin-bottom: 16px;
+  }
+
+  .copyright span {
+    margin-left: 5px;
+    margin-right: 5px;
+  }
+
+  .footer {
+    padding: 48px 0 15vh;
+  }
+
+  .footer_hot {
+    padding-bottom: 8px;
+  }
+
+  .footer__description {
+    padding-bottom: 32px;
+    font-size: 14px;
+    line-height: 15.4px;
+  }
+
+  .footer__logo,
+  .copyright {
+    width: 100%;
+  }
+
+  .copyright span {
+    margin: 0;
+    width: 100%;
+    text-align: center;
+  }
+}
+
 @media only screen and (max-width: 567px) {
   .section {
     padding: 48px 0 32px;
@@ -3769,33 +3816,7 @@ body.disable-scroll {
     max-width: 100%;
   }
 
-  .footer {
-    padding: 48px 0 15vh;
-  }
-
-  .footer_hot {
-    padding-bottom: 8px;
-  }
-
-  .footer__description {
-    padding-bottom: 32px;
-    font-size: 14px;
-    line-height: 15.4px;
-  }
-
-  .footer__logo,
-  .copyright {
-    width: 100%;
-  }
-
-  .copyright span {
-    margin: 0;
-    width: 100%;
-    text-align: center;
-  }
-
-  .header .btn_light-green,
-  .header_intro .btn_light-green {
+  .header .btn_light-green {
     display: none !important;
   }
 
@@ -3807,7 +3828,6 @@ body.disable-scroll {
     margin-top: 48px;
   }
 
-  .btn_close,
   .btn_burger {
     margin-left: auto;
   }

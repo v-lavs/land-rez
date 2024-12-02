@@ -7,6 +7,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 // MOBILE MENU
     const nav = document.querySelector('.header__nav');
+    const navOpenHeader = document.querySelector('.header');
     const btnBurger = document.querySelector('.btn_burger');
     const btnClose = document.querySelector('.btn_close');
     const backdrop = document.querySelector('.backdrop');
@@ -18,16 +19,18 @@ document.addEventListener('DOMContentLoaded', function () {
     btnBurger.addEventListener('click', function (e) {
         e.preventDefault();
         nav.classList.add('open');
+        navOpenHeader.classList.add('active');
         backdrop.style.display = 'block';
-        btnClose.style.display = 'block';
+        btnClose.style.opacity = '1';
         body.classList.add('disable-scroll');
     });
 
     [btnClose, backdrop, ...menuLinks].forEach(function (element) {
         element.addEventListener('click', function () {
             nav.classList.remove('open');
+            navOpenHeader.classList.remove('active');
             backdrop.style.display = 'none';
-            btnClose.style.display = 'none';
+            btnClose.style.opacity = '0';
             body.classList.remove('disable-scroll');
         });
     });
