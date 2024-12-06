@@ -611,24 +611,27 @@
     .btn_stroke {
       display: none;
     }
+
     .header__inner-nav {
       padding-top: 48px;
+
       .mob-btn {
         display: inline-flex;
         width: 100%;
-        max-width: 576px;
         margin: 0 auto 8px;
-        &:last-of-type{
-          //margin-bottom: 24px;
+
+        &:last-of-type {
           margin-bottom: 0;
-          font-size: 18px!important;
-          .btn__icon{
+          font-size: 18px !important;
+
+          .btn__icon {
             margin-right: 16px;
           }
         }
       }
     }
-    .container{
+
+    .container {
       justify-content: space-between;
     }
   }
@@ -667,6 +670,7 @@
   .main_hot {
     .section-banner {
       margin-bottom: 0;
+
       &__content {
         width: 100%;
         text-align: center;
@@ -678,9 +682,6 @@
       }
     }
   }
-  //.section-banner__thumb-hot {
-  //  padding-top: 58%;
-  //}
 }
 
 @include respond-to($sm) {

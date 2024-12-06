@@ -7,17 +7,13 @@
 
   &_green {
     border-bottom: 1px solid #8EAE6C;
+
     &.active,
     &.scroll {
       .btn,
       .btn_burger {
         background-color: #46B600;
       }
-
-      //.menu__link,
-      //.sub-menu__link {
-      //  color: #20261F;
-      //}
 
       .menu__link:hover,
       .sub-menu__link:hover {
@@ -38,6 +34,19 @@
       padding-left: 32px;
       padding-right: 32px;
       margin-left: 8px;
+      &_burger{
+        border-color: #ffffff;
+        background-color: rgba(255, 255, 255, 0.15);
+        color: #ffffff;
+      }
+      &_close{
+        border: 1px solid #46B600;
+        color: #46B600;
+      }
+    }
+
+    .header__logo {
+      color: #FFFFFF;
     }
 
     .header__logo-wrapper:after {
@@ -47,28 +56,56 @@
     .header_intro:after {
       background-color: #ffb18e;
     }
+    &.active,
+    &.scroll {
+      .btn {
+        background-color: transparent;
+      }
+
+      .btn,
+      .btn_close,
+      .btn_burger {
+        border-color: #FF7436;
+        color: #FF7436;
+      }
+
+      .btn_burger,
+      .btn_glass {
+        background-color: rgba(255, 116, 54, 0.15);
+      }
+
+      .menu__link,
+      .sub-menu__link {
+        color: #20261F;
+      }
+
+      .menu__link:hover,
+      .sub-menu__link:hover {
+        color: #FF7436;
+      }
+
+      .dropdown > .menu__link:before {
+        filter: none;
+      }
+
+      .header__logo {
+        color: #FF7436;
+      }
+    }
   }
 
   &.active,
   &.scroll {
-    //.btn,
-    //.btn_burger {
-    //  background-color: #46B600;
-    //}
 
     .menu__link,
     .sub-menu__link {
       color: #20261F;
     }
 
-    //.menu__link:hover,
-    //.sub-menu__link:hover {
-    //  color: #46B600;
+    //.dropdown > .menu__link:before {
+    //  filter: none;
     //}
-    //
-    //.header__logo {
-    //  color: #46B600;
-    //}
+
   }
 
   &.hidden {
@@ -136,6 +173,7 @@
     font-size: 18px;
     text-transform: uppercase;
     z-index: 1100;
+
     &.mob-btn {
       display: none;
     }
@@ -156,25 +194,24 @@
   width: 72px;
   height: 56px;
   border-radius: 100px;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: 24px 24px;
   margin-left: 24px;
+  justify-content: center;
+  align-items: center;
 
 }
 
 .btn_burger {
-  background-image: url(../assets/img/burger.svg);
+  color: #FFFFFF;
   background-color: rgba(70, 182, 0, .15);
   border: 1px solid #80C41C;
 }
 
 .btn_close {
-  background-image: url(../assets/img/close.svg);
+  color: #46B600;
   background-color: transparent;
   border: 1px solid #46B600;
-  transition: 2s;
 }
+
 
 @include respond-to($xl) {
   .header__logo-wrapper {
@@ -184,16 +221,19 @@
 
 @include respond-to($lg) {
   .header {
-    .container{
+    .container {
       max-width: 100%;
     }
+
     .btn_close,
     .btn_burger {
-      display: block;
+      display: flex;
     }
-    .btn_close{
+
+    .btn_close {
       margin-left: auto;
     }
+
     &__nav {
       position: fixed;
       left: 0;
@@ -209,7 +249,7 @@
 
       &.open {
         transform: translateX(0);
-        transition: .5s;
+        transition: .35s;
       }
     }
 
@@ -231,6 +271,7 @@
     align-items: center;
     position: relative;
     padding: 20px 37px;
+    height: 97px;
 
     &:after {
       position: absolute;
@@ -248,14 +289,14 @@
 }
 
 @include respond-to($md) {
-  .header_intro{
+  .header_intro {
     padding-left: 16px;
     padding-right: 16px;
   }
 }
 
 @include respond-to($sm) {
-  .header .btn_light-green{
+  .header .btn_light-green {
     display: none !important;
   }
   .header__nav .btn_light-green.mob-btn {

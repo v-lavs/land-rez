@@ -19,19 +19,23 @@ document.addEventListener('DOMContentLoaded', function () {
     btnBurger.addEventListener('click', function (e) {
         e.preventDefault();
         nav.classList.add('open');
-        navOpenHeader.classList.add('active');
+        navOpenHeader.classList.remove('hidden')
         backdrop.style.display = 'block';
-        btnClose.style.opacity = '1';
         body.classList.add('disable-scroll');
+        navOpenHeader.classList.add('active');
+        setTimeout(() => {
+            btnClose.style.display = 'flex';
+        }, 250);
+
     });
 
     [btnClose, backdrop, ...menuLinks].forEach(function (element) {
         element.addEventListener('click', function () {
             nav.classList.remove('open');
-            navOpenHeader.classList.remove('active');
             backdrop.style.display = 'none';
-            btnClose.style.opacity = '0';
+            btnClose.style.display = 'none';
             body.classList.remove('disable-scroll');
+            navOpenHeader.classList.remove('active');
         });
     });
 
@@ -301,7 +305,7 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     });
 
-
+//HIDE-SHOW TEXT PAGE HOT
     const btnsMore = document.querySelectorAll('.composition__card .more-btn');
     const cards = document.querySelectorAll('.composition__card');
     btnsMore.forEach((btn) => {
