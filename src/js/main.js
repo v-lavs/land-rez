@@ -86,8 +86,14 @@ document.addEventListener('DOMContentLoaded', function () {
     const header = document.querySelector('.header');
     const bannerHeight =document.querySelector('.section-banner').offsetHeight;
     const fixedBlock = document.querySelector('.disclaimer_main');
+
+    const targetSection = document.querySelector('#sectionHotBg');
+
     const documentHeight = document.documentElement.scrollHeight;
     const viewportHeight = window.innerHeight;
+
+    const targetSectionOffsetTop = targetSection ? targetSection.offsetTop : 0;
+    const targetSectionHeight = targetSection ? targetSection.offsetHeight : 0;
 
     let lastScrollY = window.scrollY;
     let isHeaderHidden = false;
@@ -102,14 +108,20 @@ document.addEventListener('DOMContentLoaded', function () {
             header.classList.remove('hidden');
             isHeaderHidden = false;
         }
-        if (scrollPosition > (bannerHeight - 96)) {
+        if (scrollPosition > (bannerHeight - 48)) {
             header.classList.add('scroll');
         } else {
             header.classList.remove('scroll');
         }
 
+        if (scrollPosition >= targetSectionOffsetTop && scrollPosition < targetSectionOffsetTop + targetSectionHeight) {
+            header.classList.remove('scroll');
+        } else if (scrollPosition >= bannerHeight - 48) {
+            header.classList.add('scroll');
+        }
+
         if (fixedBlock) {
-            if (scrollPosition > (bannerHeight - 96)) {
+            if (scrollPosition > (bannerHeight - 48)) {
                 fixedBlock.classList.add('scroll');
             } else {
                 fixedBlock.classList.remove('scroll');
@@ -121,7 +133,6 @@ document.addEventListener('DOMContentLoaded', function () {
         }
         lastScrollY = scrollPosition;
     });
-
 
 // CHANGED BG CARD BTN HOVER
     const bgChangeButtons = document.querySelectorAll('.bg-change');
