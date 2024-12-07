@@ -49,7 +49,7 @@ document.addEventListener('DOMContentLoaded', function () {
             nav.classList.remove('open');
             backdrop.style.display = 'none';
             body.classList.remove('disable-scroll');
-        })
+        });
     });
 
 // SCROLL TO ANCHOR
