@@ -84,6 +84,7 @@ document.addEventListener('DOMContentLoaded', function () {
 // HEADER AND DISCLAIMER SCROLL
 
     const header = document.querySelector('.header');
+    const bannerHeight =document.querySelector('.section-banner').offsetHeight;
     const fixedBlock = document.querySelector('.disclaimer_main');
     const documentHeight = document.documentElement.scrollHeight;
     const viewportHeight = window.innerHeight;
@@ -101,14 +102,14 @@ document.addEventListener('DOMContentLoaded', function () {
             header.classList.remove('hidden');
             isHeaderHidden = false;
         }
-        if (scrollPosition > 100) {
+        if (scrollPosition > (bannerHeight - 96)) {
             header.classList.add('scroll');
         } else {
             header.classList.remove('scroll');
         }
 
         if (fixedBlock) {
-            if (scrollPosition > 100) {
+            if (scrollPosition > (bannerHeight - 96)) {
                 fixedBlock.classList.add('scroll');
             } else {
                 fixedBlock.classList.remove('scroll');
