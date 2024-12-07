@@ -36,6 +36,7 @@ document.addEventListener('DOMContentLoaded', function () {
             btnClose.style.display = 'none';
             body.classList.remove('disable-scroll');
             navOpenHeader.classList.remove('active');
+            document.querySelector('.sub-menu__toggle').classList.remove('sub-menu__toggle_active');
         });
     });
 
@@ -49,6 +50,7 @@ document.addEventListener('DOMContentLoaded', function () {
             nav.classList.remove('open');
             backdrop.style.display = 'none';
             body.classList.remove('disable-scroll');
+            document.querySelector('.sub-menu__toggle').classList.remove('sub-menu__toggle_active');
         });
     });
 
