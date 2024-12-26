@@ -1,3 +1,6 @@
+@use "../../utils/mixins";
+@use "../../utils/variables";
+
 .product-line{
   overflow: hidden;
 }
@@ -338,14 +341,14 @@
   border-radius: 50%;
 }
 
-@include respond-to($xxl) {
+@include mixins.respond-to(variables.$xxl) {
   .btn-hot {
     transform: translate(50%, -50%);
     right: 90px;
   }
 }
 
-@include respond-to($xl) {
+@include mixins.respond-to(variables.$xl) {
   .card-product__header {
     padding: 16px 78px 0 16px
   }
@@ -357,7 +360,7 @@
   }
 }
 
-@include respond-to($lg) {
+@include mixins.respond-to(variables.$lg) {
   .slider-products {
     overflow: hidden;
     padding-bottom: 74px;
@@ -385,7 +388,7 @@
   }
 }
 
-@include respond-to($md) {
+@include mixins.respond-to(variables.$md) {
   .card-product__header {
     padding: 32px 94px 0 32px;
   }
@@ -430,7 +433,7 @@
   }
 }
 
-@include respond-to($sm) {
+@include mixins.respond-to(variables.$sm) {
   .card-product__header {
     padding: 16px 94px 0 16px
   }

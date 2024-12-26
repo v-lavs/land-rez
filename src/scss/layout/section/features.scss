@@ -1,3 +1,6 @@
+@use "../../utils/mixins";
+@use "../../utils/variables";
+
 .features{
   overflow: hidden;
 }
@@ -113,7 +116,7 @@
       border: none;
       border-bottom: 1px dashed #46B600;
       background-color: transparent;
-      font-family: $main-font;
+      font-family: variables.$main-font;
 
       &.open-text {
         height: 0;
@@ -143,7 +146,7 @@
   }
 }
 
-@include respond-to($md) {
+@include mixins.respond-to(variables.$md) {
   .slider-features {
     .swiper-button-next,
     .swiper-button-prev {
@@ -163,7 +166,7 @@
   }
 }
 
-@include respond-to($sm) {
+@include mixins.respond-to(variables.$sm) {
   .slider-features {
     padding-bottom: 74px;
 

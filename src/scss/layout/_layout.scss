@@ -1,3 +1,6 @@
+@use "../utils/mixins";
+@use "../utils/variables";
+
 .container {
   max-width: 1280px;
   padding: 0 40px;
@@ -6,35 +9,35 @@
 }
 
 
-@include respond-to($xxl) {
+@include mixins.respond-to(variables.$xxl) {
   .container {
     max-width: 1280px;
     padding: 0 37px;
   }
 }
 
-@include respond-to($xl) {
+@include mixins.respond-to(variables.$xl) {
   .container {
     max-width: 1024px;
     padding: 0 20px;
   }
 }
 
-@include respond-to($lg) {
+@include mixins.respond-to(variables.$lg) {
   .container {
     max-width: 768px;
     padding: 0 37px;
   }
 }
 
-@include respond-to($md) {
+@include mixins.respond-to(variables.$md) {
   .container {
     max-width: 576px;
     padding: 0 16px;
   }
 }
 
-@include respond-to($sm) {
+@include mixins.respond-to(variables.$sm) {
   .container {
     max-width: 100%;
   }

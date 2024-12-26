@@ -1,3 +1,6 @@
+@use "../../utils/mixins";
+@use "../../utils/variables";
+
 .application {
   .section__title {
     font-weight: 600;
@@ -263,7 +266,7 @@
 }
 
 
-@include respond-to($xl) {
+@include mixins.respond-to(variables.$xl) {
   .app-carts {
     &__heading {
       padding-top: 34px;
@@ -285,7 +288,7 @@
   }
 }
 
-@include respond-to($lg) {
+@include mixins.respond-to(variables.$lg) {
   .app-carts {
     padding: 24px 16px;
 
@@ -337,7 +340,7 @@
   }
 }
 
-@include respond-to($sm) {
+@include mixins.respond-to(variables.$sm) {
   .application {
     .section__title {
       margin-bottom: 24px;

@@ -1,3 +1,6 @@
+@use "../utils/mixins";
+@use "../utils/variables";
+
 .card {
   max-width: 640px;
   width: 100%;
@@ -39,6 +42,6 @@
   }
 }
 
-@include respond-to($lg) {
+@include mixins.respond-to(variables.$lg) {
 
 }

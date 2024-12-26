@@ -1,3 +1,6 @@
+@use "../../utils/mixins";
+@use "../../utils/variables";
+
 
 .header_hot {
   .container {
@@ -369,7 +372,7 @@
   }
 }
 
-@include respond-to($xl) {
+@include mixins.respond-to(variables.$xl) {
   .section-banner__thumb-hot {
     padding-top: 36%;
   }
@@ -403,7 +406,7 @@
   }
 }
 
-@include respond-to($lg) {
+@include mixins.respond-to(variables.$lg) {
   .header_hot {
     .menu {
       margin-left: 0;
@@ -605,7 +608,7 @@
   }
 }
 
-@include respond-to($md) {
+@include mixins.respond-to(variables.$md) {
   .header_hot {
     .btn_glass,
     .btn_stroke {
@@ -684,7 +687,7 @@
   }
 }
 
-@include respond-to($sm) {
+@include mixins.respond-to(variables.$sm) {
   .main_hot {
     .section {
       padding: 48px 0 32px;

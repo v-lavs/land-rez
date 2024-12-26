@@ -1,7 +1,9 @@
+@use "../utils/variables";
+
 .btn {
   display: inline-flex;
   align-items: center;
-  font-family: $main-font;
+  font-family: variables.$main-font;
   font-weight: 500;
   font-size: 18px;
   line-height: 1;

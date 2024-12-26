@@ -1,3 +1,6 @@
+@use "../utils/mixins";
+@use "../utils/variables";
+
 .footer {
   position: relative;
   padding: 96px 0 15vh;
@@ -62,12 +65,12 @@
 .copyright a:focus {
   text-decoration: underline;
 }
-@include respond-to($lg){
+@include mixins.respond-to(variables.$lg){
   .footer .container{
     max-width: 100%;
   }
 }
-@include respond-to($lg) {
+@include mixins.respond-to(variables.$lg) {
 
 }
 

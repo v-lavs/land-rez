@@ -1,3 +1,6 @@
+@use "../utils/mixins";
+@use "../utils/variables";
+
 .menu {
   display: flex;
   justify-content: center;
@@ -9,7 +12,7 @@
     line-height: 1;
     text-transform: uppercase;
     letter-spacing: 0.04em;
-    font-family: $main-font;
+    font-family: variables.$main-font;
     color: #ffffff;
     margin-right: 64px;
     padding: 10px 0;
@@ -39,7 +42,7 @@
 
   }
 
-  @include respond-to($xl) {
+  @include mixins.respond-to(variables.$xl) {
     &__item {
       margin-right: 16px;
       font-size: 16px;
@@ -112,7 +115,7 @@
     }
 
   }
-  @include respond-to($sm) {
+  @include mixins.respond-to(variables.$sm) {
     &__item {
       font-size: 32px;
       padding-top: 4px;
@@ -336,7 +339,7 @@
   }
 }
 
-@include respond-to($sm) {
+@include mixins.respond-to(variables.$sm) {
   .sub-menu {
     min-width: 0;
   }

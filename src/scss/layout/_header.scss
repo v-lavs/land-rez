@@ -1,3 +1,6 @@
+@use "../utils/mixins";
+@use "../utils/variables";
+
 .header {
   position: fixed;
   left: 0;
@@ -210,13 +213,13 @@
 }
 
 
-@include respond-to($xl) {
+@include mixins.respond-to(variables.$xl) {
   .header__logo-wrapper {
     padding-right: 32px;
   }
 }
 
-@include respond-to($lg) {
+@include mixins.respond-to(variables.$lg) {
   .header {
     .container {
       max-width: 100%;
@@ -285,14 +288,14 @@
   }
 }
 
-@include respond-to($md) {
+@include mixins.respond-to(variables.$md) {
   .header_intro {
     padding-left: 16px;
     padding-right: 16px;
   }
 }
 
-@include respond-to($sm) {
+@include mixins.respond-to(variables.$sm) {
   .header .btn_light-green {
     display: none !important;
   }

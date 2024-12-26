@@ -1,3 +1,6 @@
+@use "../utils/mixins";
+@use "../utils/variables";
+
 .title{
   font-size: 72px;
   font-weight: 600;
@@ -20,7 +23,7 @@
   line-height: 1.2;
 }
 
-@include respond-to($sm) {
+@include mixins.respond-to(variables.$sm) {
   .title{
     font-size: 48px;
     line-height: 55.2px;

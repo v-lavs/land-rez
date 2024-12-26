@@ -1,3 +1,6 @@
+@use "../../utils/mixins";
+@use "../../utils/variables";
+
 .med-purpose {
   background-color: #46B600;
   color: #FFFFFF;
@@ -5,7 +8,8 @@
   .section__title {
     font-weight: 400;
     font-size: 64px;
-    sup{
+
+    sup {
       color: #B3ED5F;
     }
   }
@@ -132,7 +136,7 @@
   }
 }
 
-@include respond-to($xl) {
+@include mixins.respond-to(variables.$xl) {
   .slide-purpose {
     min-width: 158px;
     padding: 24px 12px;
@@ -153,14 +157,14 @@
   }
 }
 
-@include respond-to($lg) {
+@include mixins.respond-to(variables.$lg) {
   .slider-purpose {
     padding-bottom: 74px;
 
     .swiper-pagination {
       width: 100%;
       text-align: center;
-      display: block!important;
+      display: block !important;
     }
   }
   .slide-purpose {
@@ -198,7 +202,8 @@
   }
 }
 
-@include respond-to($md) {
+@include mixins.respond-to(variables.$md) {
+
   .slide-purpose__title {
     font-size: 32px;
   }
@@ -207,8 +212,8 @@
   }
 }
 
-@include respond-to($sm) {
-  .med-purpose .section__title{
+@include mixins.respond-to(variables.$sm) {
+  .med-purpose .section__title {
     font-size: 32px;
     line-height: 35.2px;
   }
@@ -244,5 +249,12 @@
   }
   .slider-purpose {
     padding-bottom: 58px;
+    max-width: 400px;
+  }
+  .slide-purpose:nth-child(2) {
+    .slide-purpose__thumb {
+      background-position: 0 0;
+    }
+
   }
 }

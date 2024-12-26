@@ -1,5 +1,8 @@
+@use "../utils/mixins";
+@use "../utils/variables";
+
 html {
-  font: 400 16px/1.2 $main-font;
+  font: 400 16px/1.2 variables.$main-font;
 }
 
 body {
@@ -188,13 +191,13 @@ body {
 @media screen and (max-width: 1920px) {
 
 }
-@include respond-to($xl){
+@include mixins.respond-to(variables.$xl){
   .disclaimer_main .container {
     padding-top: 15px;
     padding-bottom: 15px;
   }
 }
-@include respond-to($lg) {
+@include mixins.respond-to(variables.$lg) {
   .section {
     padding: 76px 0 64px;
   }
@@ -211,7 +214,7 @@ body {
   }
 }
 
-@include respond-to($md) {
+@include mixins.respond-to(variables.$md) {
   .dscl-img_tablet {
     display: block !important;
   }
@@ -224,7 +227,7 @@ body {
   }
 }
 
-@include respond-to($sm) {
+@include mixins.respond-to(variables.$sm) {
   .section {
     padding: 48px 0 32px;
 

@@ -1,28 +1,28 @@
-@import 'utils/variables';
-@import 'utils/mixins';
+@use 'utils/variables';
+@use 'utils/mixins';
 
-@import '../lib/swiper/swiper-bundle.min';
+@use '../lib/swiper/swiper-bundle.min';
 
-@import 'base/reset';
-@import 'base/base';
-@import 'base/typography';
+@use 'base/reset';
+@use 'base/base';
+@use 'base/typography';
 
-@import 'components/menu';
-@import 'components/button';
-@import 'components/slider';
-@import 'components/accordion';
-@import 'components/card';
+@use 'components/menu';
+@use 'components/button';
+@use 'components/slider';
+@use 'components/accordion';
+@use 'components/card';
 
-@import "layout/layout";
-@import "layout/footer";
-@import "layout/header";
-@import "layout/section/product-line";
-@import "layout/section/features";
-@import "layout/section/action";
-@import "layout/section/section-banner";
-@import "layout/section/med-purpose";
-@import "layout/section/application";
-@import "layout/pages/page-hot";
+@use "layout/layout";
+@use "layout/footer";
+@use "layout/header";
+@use "layout/section/product-line";
+@use "layout/section/features";
+@use "layout/section/action";
+@use "layout/section/section-banner";
+@use "layout/section/med-purpose";
+@use "layout/section/application";
+@use "layout/pages/page-hot";
 
 
 

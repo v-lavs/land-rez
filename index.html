@@ -36,7 +36,8 @@
                     <button type="button" aria-label="Закрити меню" class="btn_close">
                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <g clip-path="url(#clip0_64_616)">
-                                <path d="M19 6.41L17.59 5L12 10.59L6.41 5L5 6.41L10.59 12L5 17.59L6.41 19L12 13.41L17.59 19L19 17.59L13.41 12L19 6.41Z" fill="currentColor"/>
+                                <path d="M19 6.41L17.59 5L12 10.59L6.41 5L5 6.41L10.59 12L5 17.59L6.41 19L12 13.41L17.59 19L19 17.59L13.41 12L19 6.41Z"
+                                      fill="currentColor"/>
                             </g>
                             <defs>
                                 <clipPath id="clip0_64_616">
@@ -69,18 +70,20 @@
                         <li class="menu__item"><a href="#choose" class="menu__link">Чому обирають</a></li>
                         <li class="menu__item"><a href="#action" class="menu__link">Як діє</a></li>
                         <li class="menu__item dropdown">
-                            <a href="#" class="menu__link">Форми випуска</a>
+                            <a href="#" class="menu__link">Форми випуску</a>
                             <button type="button" class="sub-menu__toggle"></button>
                             <ul class="sub-menu">
                                 <li class="sub-menu__item">
-                                    <a href="#applic" class="sub-menu__link">резістол<sup>&#174;</sup> -ТАБ</a>
+                                    <a data-scroll="applic1" href="#" class="sub-menu__link">резістол<sup>&#174;</sup>
+                                        -ТАБ</a>
                                 </li>
                                 <li class="sub-menu__item">
-                                    <a href="#applic"
+                                    <a data-scroll="applic2" href="#"
                                        class="sub-menu__link">резістол<sup>&#174;</sup> КРАПЛІ, 20 мл</a>
                                 </li>
                                 <li class="sub-menu__item">
-                                    <a href="#applic" class="sub-menu__link">Резістол<sup>&#174;</sup> КРАПЛІ, 50 мл</a>
+                                    <a data-scroll="applic3" href="#" class="sub-menu__link">Резістол<sup>&#174;</sup>
+                                        КРАПЛІ, 50 мл</a>
                                 </li>
                                 <li class="sub-menu__item">
                                     <a href="rezistol-hot.html"
@@ -89,14 +92,15 @@
                             </ul>
                         </li>
                         <li class="menu__item dropdown">
-                            <a href="assets/Інструкція%20таблетки.pdf" class="menu__link">Інструкція</a>
+                            <a href="#" class="menu__link">Інструкція</a>
                             <button type="button" class="sub-menu__toggle"></button>
                             <ul class="sub-menu">
                                 <li class="sub-menu__item">
-                                    <a href="#" class="sub-menu__link">Інструкція резістол<sup>&#174;</sup> -ТАБ</a>
+                                    <a target="_blank" href="assets/Інструкція_таблетки.pdf" class="sub-menu__link">Інструкція
+                                        резістол<sup>&#174;</sup> -ТАБ</a>
                                 </li>
                                 <li class="sub-menu__item">
-                                    <a href="#"
+                                    <a target="_blank" href="assets/Інструкція_краплі%2020_50.pdf"
                                        class="sub-menu__link">Інструкція резістол<sup>&#174;</sup> КРАПЛІ</a>
                                 </li>
                             </ul>
@@ -170,7 +174,7 @@
                                 <div class="card-product__header">
                                     <h3 class="card__title">Резістол<sup>&#174;</sup>-таб</h3>
                                     <span class="title_sm">таблетки</span>
-                                    <div class="card__text">Комплексне рішення при застуді для дорослих та дітей віком
+                                    <div class="card__text">Симптоматичне лікування застуди у дорослих та дітей віком
                                         від 6
                                         років в зручній формі для застосування
                                     </div>
@@ -343,7 +347,7 @@
                             <div class="card-features__body">
                                 <div class="card-features__icon"
                                      style="background-image: url(assets/img/ic-04-sl.svg);"></div>
-                                <h3 class="card-features__title">Натуральний рослинний склад</h3>
+                                <h3 class="card-features__title">Має рослинний склад</h3>
                                 <div class="card-features__content">
                                     <div class="hide-text">
                                         <p>
@@ -365,7 +369,7 @@
                                 <div class="card-features__icon"
                                      style="background-image: url(assets/img/ic-05-sl.svg);"></div>
                                 <h3 class="card-features__title">Дозволений для дітей
-                                    від 1 року та дорослих</h3>
+                                    від 1 року та дорослих<sup>1</sup></h3>
                                 <div class="card-features__content">
                                     <div class="hide-text">
                                         <p>
@@ -532,13 +536,13 @@
                 </div>
             </div>
         </section>
-        <section id="applic" class="section application ">
+        <section class="section application ">
             <div class="container">
                 <h2 class="title section__title">Як Приймати <br>
                     <span class="color_green">резістол<sup>&#174;</sup></span>
                 </h2>
                 <div class="app-list ">
-                    <div class="app-carts">
+                    <div id="applic1" class="app-carts">
                         <div class="app-carts__row">
                             <div class="dosage">
                                 <!--  Swiper -->
@@ -629,7 +633,7 @@
                                     </a>
                                     <a class="btn btn_stroke-green"
                                        target="_blank"
-                                       href="assets/Інструкція%20таблетки.pdf"
+                                       href="assets/Інструкція_таблетки.pdf"
                                        aria-label="Інструкція">
                                         Інструкція
                                     </a>
@@ -652,7 +656,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="app-carts ">
+                    <div id="applic2" class="app-carts ">
                         <div class="app-carts__row">
                             <div class="dosage drops">
                                 <!--  Swiper -->
@@ -789,7 +793,7 @@
                                     </a>
                                     <a class="btn btn_stroke-green"
                                        target="_blank"
-                                       href="assets/Інструкція%20краплі%2020_50.pdf"
+                                       href="assets/Інструкція_краплі%2020_50.pdf"
                                        aria-label="Інструкція">
                                         Інструкція
                                     </a>
@@ -813,7 +817,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="app-carts ">
+                    <div id="applic3" class="app-carts ">
                         <div class="app-carts__row">
                             <div class="dosage drops">
                                 <!--  Swiper -->
@@ -950,7 +954,7 @@
                                     </a>
                                     <a class="btn btn_stroke-green"
                                        target="_blank"
-                                       href="assets/Інструкція%20краплі%2020_50.pdf"
+                                       href="assets/Інструкція_краплі%2020_50.pdf"
                                        aria-label="Інструкція">
                                         Інструкція
                                     </a>

@@ -1,3 +1,6 @@
+@use "../../utils/mixins";
+@use "../../utils/variables";
+
 .action {
   background-color: #F7FAF5;
 
@@ -96,7 +99,7 @@
   }
 }
 
-@include respond-to($lg) {
+@include mixins.respond-to(variables.$lg) {
   .action__item{
     height: 312px;
     &.show{
@@ -134,7 +137,7 @@
   }
 }
 
-@include respond-to($sm) {
+@include mixins.respond-to(variables.$sm) {
   .action__item {
     &.show {
       .card-action__title {

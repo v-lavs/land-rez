@@ -55,18 +55,89 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 
 // SCROLL TO ANCHOR
-    function smoothScrollToAnchor(selector) {
+//     function smoothScrollToAnchor(selector) {
+//         document.querySelectorAll(selector).forEach((element) => {
+//             element.addEventListener('click', function (event) {
+//                 const anchor = this.getAttribute('href');
+//
+//                 if (anchor.startsWith('#') && anchor !== '#') {
+//                     event.preventDefault();
+//
+//                     const targetElement = document.querySelector(anchor);
+//                     if (targetElement) {
+//                         window.scrollTo({
+//                             top: targetElement.offsetTop,
+//                             behavior: 'smooth'
+//                         });
+//                     }
+//                 }
+//             });
+//         });
+//     }
+//
+//     smoothScrollToAnchor('.menu__item a');
+//     smoothScrollToAnchor('.sub-menu__item a');
+//     smoothScrollToAnchor('.card-product__link-wrap a');
+//     smoothScrollToAnchor('.section-banner .btn_stroke');
+//
+//     function smoothScrollToAnchorCard(selector, offset = 0) {
+//         document.querySelectorAll(selector).forEach((element) => {
+//             element.addEventListener('click', function (event) {
+//                 const targetId = this.getAttribute('data-scroll');
+//                 if (targetId) {
+//                     event.preventDefault();
+//
+//                     const targetElement = document.getElementById(targetId);
+//                     if (targetElement) {
+//                         const topPosition = targetElement.getBoundingClientRect().top + window.scrollY - offset;
+//
+//                         window.scrollTo({
+//                             top: topPosition,
+//                             behavior: 'smooth'
+//                         });
+//                     }
+//                 }
+//             });
+//         });
+//     }
+//
+//     smoothScrollToAnchorCard('[data-scroll]', 90);
+// Функція для плавного скролу до елемента за ID
+    function smoothScrollToElementById(id, offset = 0) {
+        const targetElement = document.getElementById(id);
+        if (targetElement) {
+            const topPosition = targetElement.getBoundingClientRect().top + window.scrollY - offset;
+
+            window.scrollTo({
+                top: topPosition,
+                behavior: 'smooth'
+            });
+        }
+    }
+
+// Перевірка фрагмента URL після завантаження сторінки
+    document.addEventListener('DOMContentLoaded', () => {
+        const hash = window.location.hash; // Отримуємо фрагмент (#applic1, #applic2 тощо)
+        if (hash) {
+            const id = hash.substring(1); // Видаляємо символ "#"
+            smoothScrollToElementById(id, 90); // Скрол з урахуванням відступу
+        }
+    });
+
+// Підключення до меню для роботи на тій самій сторінці
+    function smoothScrollToAnchorCard(selector, offset = 0) {
         document.querySelectorAll(selector).forEach((element) => {
             element.addEventListener('click', function (event) {
-                const anchor = this.getAttribute('href');
-
-                if (anchor.startsWith('#') && anchor !== '#') {
+                const targetId = this.getAttribute('data-scroll');
+                if (targetId) {
                     event.preventDefault();
 
-                    const targetElement = document.querySelector(anchor);
+                    const targetElement = document.getElementById(targetId);
                     if (targetElement) {
+                        const topPosition = targetElement.getBoundingClientRect().top + window.scrollY - offset;
+
                         window.scrollTo({
-                            top: targetElement.offsetTop,
+                            top: topPosition,
                             behavior: 'smooth'
                         });
                     }
@@ -75,10 +146,9 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
 
-    smoothScrollToAnchor('.menu__item a');
-    smoothScrollToAnchor('.sub-menu__item a');
-    smoothScrollToAnchor('.card-product__link-wrap a');
-    smoothScrollToAnchor('.section-banner .btn_stroke');
+// Виклик для елементів із атрибутом data-scroll
+    smoothScrollToAnchorCard('[data-scroll]', 90);
+
 
 
 // HEADER AND DISCLAIMER SCROLL

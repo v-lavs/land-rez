@@ -77,7 +77,7 @@
 
 .swiper-autoheight .swiper-wrapper {
   align-items: flex-start;
-  transition-property: transform,height;
+  transition-property: transform, height;
 }
 
 .swiper-backface-hidden .swiper-slide {
@@ -159,7 +159,7 @@
 }
 
 .swiper-centered > .swiper-wrapper::before {
-  content: '';
+  content: "";
   flex-shrink: 0;
   order: 9999;
 }
@@ -195,7 +195,7 @@
 }
 
 .swiper-virtual.swiper-css-mode .swiper-wrapper::after {
-  content: '';
+  content: "";
   position: absolute;
   left: 0;
   top: 0;
@@ -220,9 +220,9 @@
 .swiper-button-prev {
   position: absolute;
   top: 50%;
-  width: calc(var(--swiper-navigation-size)/ 44 * 27);
+  width: calc(var(--swiper-navigation-size) / 44 * 27);
   height: var(--swiper-navigation-size);
-  margin-top: calc(0px - (var(--swiper-navigation-size)/ 2));
+  margin-top: calc(0px - var(--swiper-navigation-size) / 2);
   z-index: 10;
   cursor: pointer;
   display: flex;
@@ -233,7 +233,7 @@
 
 .swiper-button-next.swiper-button-disabled,
 .swiper-button-prev.swiper-button-disabled {
-  opacity: .35;
+  opacity: 0.35;
   cursor: auto;
   pointer-events: none;
 }
@@ -268,7 +268,7 @@
 
 .swiper-button-prev:after,
 .swiper-rtl .swiper-button-next:after {
-  content: 'prev';
+  content: "prev";
 }
 
 .swiper-button-next,
@@ -279,7 +279,7 @@
 
 .swiper-button-next:after,
 .swiper-rtl .swiper-button-prev:after {
-  content: 'next';
+  content: "next";
 }
 
 .swiper-button-lock {
@@ -289,7 +289,7 @@
 .swiper-pagination {
   position: absolute;
   text-align: center;
-  transition: .3s opacity;
+  transition: 0.3s opacity;
   transform: translate3d(0, 0, 0);
   z-index: 10;
 }
@@ -400,7 +400,7 @@ button.swiper-pagination-bullet {
 .swiper-pagination-vertical.swiper-pagination-bullets.swiper-pagination-bullets-dynamic .swiper-pagination-bullet,
 .swiper-vertical > .swiper-pagination-bullets.swiper-pagination-bullets-dynamic .swiper-pagination-bullet {
   display: inline-block;
-  transition: .2s transform,.2s top;
+  transition: 0.2s transform, 0.2s top;
 }
 
 .swiper-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet,
@@ -417,11 +417,11 @@ button.swiper-pagination-bullet {
 
 .swiper-horizontal > .swiper-pagination-bullets.swiper-pagination-bullets-dynamic .swiper-pagination-bullet,
 .swiper-pagination-horizontal.swiper-pagination-bullets.swiper-pagination-bullets-dynamic .swiper-pagination-bullet {
-  transition: .2s transform,.2s left;
+  transition: 0.2s transform, 0.2s left;
 }
 
 .swiper-horizontal.swiper-rtl > .swiper-pagination-bullets-dynamic .swiper-pagination-bullet {
-  transition: .2s transform,.2s right;
+  transition: 0.2s transform, 0.2s right;
 }
 
 .swiper-pagination-progressbar {
@@ -670,12 +670,12 @@ button.swiper-pagination-bullet {
   bottom: 0px;
   width: 100%;
   height: 100%;
-  opacity: .6;
+  opacity: 0.6;
   z-index: 0;
 }
 
 .swiper-cube .swiper-cube-shadow:before {
-  content: '';
+  content: "";
   background: #000;
   position: absolute;
   left: 0;
@@ -718,7 +718,7 @@ button.swiper-pagination-bullet {
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
   overflow: hidden;
-  transition-property: transform,opacity,height;
+  transition-property: transform, opacity, height;
 }
 
 .swiper-cards {
@@ -871,7 +871,7 @@ body.disable-scroll {
   top: 0;
   z-index: 10;
   background-color: #070707;
-  opacity: .35;
+  opacity: 0.35;
 }
 
 .overlay.show {
@@ -909,7 +909,7 @@ body.disable-scroll {
 }
 
 .section__title sup {
-  font-size: .56em;
+  font-size: 0.56em;
 }
 
 .disclaimer_main {
@@ -974,7 +974,7 @@ body.disable-scroll {
 
 .dynamic-content ul li:before {
   position: absolute;
-  content: '';
+  content: "";
   display: block;
   width: 3px;
   height: 3px;
@@ -1063,7 +1063,7 @@ body.disable-scroll {
 .main_hot .title_lg {
   font-size: 80px;
   font-weight: 450;
-  line-height: .9;
+  line-height: 0.9;
   letter-spacing: -0.02em;
 }
 
@@ -1090,7 +1090,7 @@ body.disable-scroll {
   color: #ffffff;
   margin-right: 64px;
   padding: 10px 0;
-  transition: .35s;
+  transition: 0.35s;
 }
 
 .menu__item:last-child {
@@ -1124,7 +1124,7 @@ body.disable-scroll {
 .dropdown > .menu__link:before {
   position: absolute;
   display: block;
-  content: '';
+  content: "";
   background-repeat: no-repeat;
   background-position: center center;
   background-size: 12px 7px;
@@ -1132,7 +1132,7 @@ body.disable-scroll {
   height: 24px;
   right: 0;
   top: calc(50% + 1px);
-  transition: .35s;
+  transition: 0.35s;
   -webkit-transform: translateY(-50%) rotate(180deg);
   transform: translateY(-50%) rotate(180deg);
   transform-origin: center;
@@ -1164,7 +1164,7 @@ body.disable-scroll {
 
 .sub-menu:before {
   position: absolute;
-  content: '';
+  content: "";
   width: 0;
   height: 0;
   border-style: solid;
@@ -1182,7 +1182,7 @@ body.disable-scroll {
 .sub-menu__link:before {
   display: none;
   position: absolute;
-  content: '';
+  content: "";
   width: 24px;
   height: 24px;
   left: 0;
@@ -1195,7 +1195,7 @@ body.disable-scroll {
   padding: 8px 0 8px 24px;
   margin: 0;
   line-height: 1;
-  transition: .35s;
+  transition: 0.35s;
   color: #FFFFFF;
   font-size: 16px;
   border-radius: 6px;
@@ -1252,13 +1252,13 @@ body.disable-scroll {
 .header_hot .dropdown > .menu__link:before {
   background-image: url(../assets/img/rez-hot/dropdown-hot.svg);
   filter: brightness(0) saturate(100%) invert(100%) sepia(99%) saturate(3%) hue-rotate(337deg) brightness(101%) contrast(104%);
-  opacity: .65;
+  opacity: 0.65;
 }
 
 .header_hot .menu__link:hover,
 .header_hot .menu__link:focus {
   color: rgba(255, 255, 255, 0.8);
-  transition: .35s;
+  transition: 0.35s;
 }
 
 .header_hot .sub-menu {
@@ -1278,7 +1278,7 @@ body.disable-scroll {
   background-position: center;
   -webkit-transform: translateY(-50%) rotate(180deg);
   transform: translateY(-50%) rotate(90deg);
-  opacity: .25;
+  opacity: 0.25;
 }
 
 .header_hot .sub-menu__item:hover,
@@ -1304,7 +1304,7 @@ body.disable-scroll {
   border-radius: 100px;
   border: 1px solid;
   justify-content: center;
-  transition: .35s;
+  transition: 0.35s;
 }
 
 .btn__icon {
@@ -1343,11 +1343,11 @@ body.disable-scroll {
 
 .btn_light-green:hover,
 .btn_light-green:focus {
-  box-shadow: 0 0 0 2px #80c41c;
+  box-shadow: 0 0 0 2px rgb(128, 196, 28);
 }
 
 .btn_light-green:active {
-  box-shadow: 0 0 0 2px #80c41c;
+  box-shadow: 0 0 0 2px rgb(128, 196, 28);
   background-color: rgba(56, 147, 0, 0.15);
 }
 
@@ -1359,7 +1359,7 @@ body.disable-scroll {
 
 .btn_glass:hover,
 .btn_glass:focus {
-  box-shadow: 0 0 0 1px white;
+  box-shadow: 0 0 0 1px rgb(255, 255, 255);
 }
 
 .btn_stroke {
@@ -1370,7 +1370,7 @@ body.disable-scroll {
 
 .btn_stroke:hover,
 .btn_stroke:focus {
-  box-shadow: 0 0 0 1px white;
+  box-shadow: 0 0 0 1px rgb(255, 255, 255);
 }
 
 .btn_stroke-green {
@@ -1381,12 +1381,12 @@ body.disable-scroll {
 
 .btn_stroke-green:hover,
 .btn_stroke-green:focus {
-  box-shadow: 0 0 0 1px #46b600;
+  box-shadow: 0 0 0 1px rgb(70, 182, 0);
 }
 
 .btn_stroke-green:active {
   color: #42A901;
-  box-shadow: 0 0 0 1px #46b600;
+  box-shadow: 0 0 0 1px rgb(70, 182, 0);
 }
 
 .swiper-horizontal > .swiper-pagination-bullets,
@@ -1405,7 +1405,7 @@ body.disable-scroll {
   margin: 0 8px 0 0 !important;
   background-color: #46B600;
   border-radius: 100px;
-  opacity: .25;
+  opacity: 0.25;
 }
 
 .swiper-pagination.white .swiper-pagination-bullet {
@@ -1438,7 +1438,7 @@ body.disable-scroll {
 .swiper-button-prev:before,
 .swiper-button-next:before {
   position: absolute;
-  content: '';
+  content: "";
   display: block;
   width: 24px;
   height: 24px;
@@ -1474,7 +1474,7 @@ body.disable-scroll {
 .card__thumb img {
   height: 100%;
   width: auto;
-  transition: .35s;
+  transition: 0.35s;
 }
 
 .card__thumb img:hover {
@@ -1693,12 +1693,12 @@ body.disable-scroll {
 
 .header.hidden {
   top: -100%;
-  transition: .35s;
+  transition: 0.35s;
 }
 
 .header:before {
   position: absolute;
-  content: '';
+  content: "";
   display: block;
   left: 0;
   right: 0;
@@ -1738,7 +1738,7 @@ body.disable-scroll {
 
 .header__logo-wrapper:after {
   position: absolute;
-  content: '';
+  content: "";
   display: block;
   background-color: #8EAE6C;
   width: 1px;
@@ -1851,7 +1851,7 @@ body.disable-scroll {
   border-radius: 16px;
   border: 1px solid rgba(32, 38, 31, 0.1);
   line-height: 1.2;
-  transition: .5s;
+  transition: 0.5s;
   background: radial-gradient(circle at 75% 84%, rgba(70, 182, 0, 0) 25%, #ffffff 50%);
   margin-left: 24px;
   color: #647362;
@@ -1899,7 +1899,7 @@ body.disable-scroll {
   text-transform: uppercase;
   margin-bottom: 4px;
   color: #20261F;
-  transition: .35s;
+  transition: 0.35s;
 }
 
 .card-product .text_uppercase {
@@ -1912,13 +1912,13 @@ body.disable-scroll {
   line-height: 1.4;
   text-transform: uppercase;
   margin-bottom: 4px;
-  transition: .35s;
+  transition: 0.35s;
 }
 
 .card-product .card__text {
   font-size: 14px;
   line-height: 1.2;
-  transition: .35s;
+  transition: 0.35s;
 }
 
 .card-product__header {
@@ -1962,7 +1962,7 @@ body.disable-scroll {
   height: 64px;
   width: 64px;
   float: right;
-  transition: width .5s ease-in-out;
+  transition: width 0.5s ease-in-out;
   overflow: hidden;
 }
 
@@ -2085,7 +2085,7 @@ body.disable-scroll {
 }
 
 .card-product_hot sup {
-  font-size: .56em;
+  font-size: 0.56em;
 }
 
 .card-product_hot .part_left {
@@ -2263,7 +2263,7 @@ body.disable-scroll {
   height: 0;
   visibility: hidden;
   opacity: 0;
-  transition: height .5s, opacity .35s;
+  transition: height 0.5s, opacity 0.35s;
 }
 
 .card-features__content .hide-text.open-text {
@@ -2300,7 +2300,7 @@ body.disable-scroll {
 .action__item.show .action__item-overlay {
   opacity: 1;
   z-index: 2;
-  transition: opacity .5s;
+  transition: opacity 0.5s;
 }
 
 .action__item.show .card-action__title {
@@ -2330,7 +2330,7 @@ body.disable-scroll {
   border-radius: 16px;
   overflow: hidden;
   pointer-events: none;
-  transition: .35s;
+  transition: 0.35s;
 }
 
 .card-action {
@@ -2382,13 +2382,13 @@ body.disable-scroll {
 
 .section-banner:before {
   position: absolute;
-  content: '';
+  content: "";
   display: block;
   left: 0;
   right: 0;
   top: 0;
   bottom: 0;
-  opacity: .35;
+  opacity: 0.35;
   background-image: linear-gradient(90deg, #46B600 0%, rgba(70, 182, 0, 0.45) 100%);
   z-index: 1;
 }
@@ -2468,7 +2468,7 @@ body.disable-scroll {
   min-width: 180px;
   margin-right: 24px;
   flex: 1 1;
-  transition: flex-grow .5s;
+  transition: flex-grow 0.5s;
   font-size: 32px;
   line-height: 1.2;
   text-align: center;
@@ -2554,7 +2554,7 @@ body.disable-scroll {
   height: 80px;
   opacity: 0;
   overflow: hidden;
-  transition: opacity .5s;
+  transition: opacity 0.5s;
 }
 
 .slide-purpose__icon {
@@ -2725,7 +2725,7 @@ body.disable-scroll {
 
 .dosage .time__icon:before {
   position: absolute;
-  content: '';
+  content: "";
   display: block;
   width: 1px;
   height: 16px;
@@ -2846,7 +2846,7 @@ body.disable-scroll {
 .main_hot .text_big {
   font-size: 144px;
   font-weight: 700;
-  line-height: .9;
+  line-height: 0.9;
   text-shadow: 0 0 16px rgba(255, 255, 255, 0.25);
   text-transform: uppercase;
 }
@@ -3064,7 +3064,7 @@ body.disable-scroll {
 
 .app-carts-hot__footer:after {
   position: absolute;
-  content: '';
+  content: "";
   display: block;
   width: 48px;
   height: 48px;
@@ -3350,7 +3350,7 @@ body.disable-scroll {
     background: #ffffff;
     padding: 0;
     transform: translateX(-100%);
-    transition: .35s;
+    transition: 0.35s;
     z-index: 600;
     height: 100vh;
     overflow: hidden;
@@ -3358,7 +3358,7 @@ body.disable-scroll {
 
   .header__nav.open {
     transform: translateX(0);
-    transition: .35s;
+    transition: 0.35s;
   }
 
   .header__inner-nav {
@@ -3384,7 +3384,7 @@ body.disable-scroll {
 
   .header_intro:after {
     position: absolute;
-    content: '';
+    content: "";
     display: block;
     background-color: #8EAE6C;
     width: 100vw;
@@ -3590,7 +3590,7 @@ body.disable-scroll {
 
   .main_hot .text_big {
     font-size: 80px;
-    line-height: .8;
+    line-height: 0.8;
   }
 
   .main_hot .section-banner .title_lg {
@@ -3738,7 +3738,7 @@ body.disable-scroll {
     height: 0;
     visibility: hidden;
     opacity: 0;
-    transition: height .5s, opacity .35s;
+    transition: height 0.5s, opacity 0.35s;
   }
 
   .composition__card .hide-text.open-text {
@@ -3824,7 +3824,7 @@ body.disable-scroll {
     height: 56px;
     border: none;
     background-color: transparent;
-    transition: .35s;
+    transition: 0.35s;
     z-index: 1;
   }
 
@@ -4263,6 +4263,11 @@ body.disable-scroll {
 
   .slider-purpose {
     padding-bottom: 58px;
+    max-width: 400px;
+  }
+
+  .slide-purpose:nth-child(2) .slide-purpose__thumb {
+    background-position: 0 0;
   }
 
   .application .section__title {
