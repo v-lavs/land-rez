@@ -1035,6 +1035,10 @@ body.disable-scroll {
   margin-right: auto;
 }
 
+sup {
+  font-size: 0.51em;
+}
+
 .title {
   font-size: 72px;
   font-weight: 600;

@@ -127,10 +127,10 @@ document.addEventListener('DOMContentLoaded', function () {
             element.addEventListener('click', function (event) {
                 const targetId = this.getAttribute('data-scroll');
                 if (targetId) {
-                    event.preventDefault();
-
                     const targetElement = document.getElementById(targetId);
                     if (targetElement) {
+                        event.preventDefault();
+
                         const topPosition = targetElement.getBoundingClientRect().top + window.scrollY - offset;
 
                         window.scrollTo({
