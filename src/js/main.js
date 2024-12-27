@@ -187,7 +187,7 @@ document.addEventListener('DOMContentLoaded', function () {
         }
 
         if (fixedBlock) {
-            if (scrollPosition > (bannerHeight - 48)) {
+            if (scrollPosition > 0) {
                 fixedBlock.classList.add('scroll');
             } else {
                 fixedBlock.classList.remove('scroll');
