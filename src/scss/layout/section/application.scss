@@ -17,10 +17,16 @@
   padding: 24px;
   margin-bottom: 64px;
   background-color: #FFFFFF;
+  box-shadow: 0px -16px 48px 0px #20261F1A;
 
   transform: perspective(1200px);
   position: sticky;
   top: 90px;
+
+  &:first-child {
+    //box-shadow: 0px -16px 48px 0px #20261F1A;
+
+  }
 
   &:last-child {
     margin-bottom: 0;
@@ -349,22 +355,26 @@
   .card-dosage {
     display: flex;
     flex-wrap: wrap;
-    box-shadow: 16px 8px 32px 0 rgba(0,0,0, .06);
+    box-shadow: 16px 8px 32px 0 rgba(0, 0, 0, .06);
+
     &__footer.desk {
       display: none;
     }
-    &__header{
+
+    &__header {
       display: flex;
       width: 100%;
       justify-content: space-between;
       align-items: center;
       margin-bottom: 8px;
     }
+
     &__footer,
-    &__body{
+    &__body {
       width: 50%;
     }
-    &__footer{
+
+    &__footer {
       border-top: none;
       border-left: 1px solid rgba(100, 115, 98, 0.1);
     }
@@ -395,9 +405,11 @@
         width: 100%;
       }
     }
-    &__col{
+
+    &__col {
       padding-bottom: 8px;
     }
+
     .block-btns {
       padding-top: 24px;
 
@@ -407,12 +419,15 @@
         padding-right: 32px;
         height: 73px;
         width: auto;
-        &_stroke-green{
+
+        &_stroke-green {
           flex-grow: 1;
         }
-        &__icon{
+
+        &__icon {
           margin-right: 0;
         }
+
         &:first-child {
           font-size: 0;
         }
