@@ -11,9 +11,11 @@ document.addEventListener('DOMContentLoaded', function () {
     const btnBurger = document.querySelector('.btn_burger');
     const btnClose = document.querySelector('.btn_close');
     const backdrop = document.querySelector('.backdrop');
-    const menuLinks = document.querySelectorAll('.menu__link');
+    const menuLinks = document.querySelectorAll('.menu__link:not(.menu__item.dropdown .menu__link)');
     const subMenuLinks = document.querySelectorAll('.sub-menu__link');
-    const subMenuToggles = document.querySelectorAll('.sub-menu__toggle');
+    const subMenuToggles = document.querySelectorAll('.menu__item.dropdown .sub-menu__toggle');
+    const menuItems = document.querySelectorAll('.menu__item.dropdown');
+
     const body = document.querySelector('body');
 
     btnBurger.addEventListener('click', function (e) {
@@ -40,19 +42,57 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     });
 
+// SUB-MENU TOGGLE
     subMenuToggles.forEach(function (toggle) {
-        toggle.addEventListener('click', function () {
-            toggle.classList.toggle('sub-menu__toggle_active');
+        toggle.addEventListener('click', function (e) {
+            e.stopPropagation()
+            console.log('Toggle clicked:', toggle);
+
+            const isActive = toggle.classList.contains('sub-menu__toggle_active');
+
+            document.querySelectorAll('.sub-menu__toggle_active').forEach(function (activeToggle) {
+                if (activeToggle !== toggle) {
+                    activeToggle.classList.remove('sub-menu__toggle_active');
+                }
+            });
+
+            if (isActive) {
+                toggle.classList.remove('sub-menu__toggle_active');
+                toggle.nextElementSibling.style.display = 'none';
+            } else {
+                toggle.classList.add('sub-menu__toggle_active');
+                toggle.nextElementSibling.style.display = 'block';
+            }
         });
     });
-    subMenuLinks.forEach(function (el) {
-        el.addEventListener('click', function () {
+
+    subMenuLinks.forEach(function (link) {
+        link.addEventListener('click', function (e) {
+            e.stopPropagation(); // Зупиняємо спливання події
+            console.log('Submenu link clicked:', link);
+
             nav.classList.remove('open');
             backdrop.style.display = 'none';
             body.classList.remove('disable-scroll');
-            document.querySelector('.sub-menu__toggle').classList.remove('sub-menu__toggle_active');
+
+            document.querySelectorAll('.sub-menu__toggle_active').forEach(function (activeToggle) {
+                activeToggle.classList.remove('sub-menu__toggle_active');
+            });
         });
     });
+
+    menuItems.forEach(function (item) {
+        item.addEventListener('click', function (e) {
+            console.log('Menu item clicked:', item);
+
+            const toggle = item.querySelector('.sub-menu__toggle');
+            if (toggle) {
+                e.preventDefault();
+                toggle.click();
+            }
+        });
+    });
+
 
 // SCROLL TO ANCHOR
     function smoothScrollToAnchor(selector) {
@@ -110,7 +150,7 @@ document.addEventListener('DOMContentLoaded', function () {
 // HEADER AND DISCLAIMER SCROLL
 
     const header = document.querySelector('.header');
-    const bannerHeight =document.querySelector('.section-banner').offsetHeight;
+    const bannerHeight = document.querySelector('.section-banner').offsetHeight;
     const fixedBlock = document.querySelector('.disclaimer_main');
 
     const targetSection = document.querySelector('#sectionHotBg');
