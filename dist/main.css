@@ -1035,6 +1035,12 @@ body.disable-scroll {
   margin-right: auto;
 }
 
+.block-note {
+  padding: 40px 0 20px;
+  font-size: 16px;
+  color: #647362;
+}
+
 sup {
   font-size: 0.51em;
 }
@@ -3322,6 +3328,10 @@ sup {
   .disclaimer_main .container {
     padding-top: 0;
     padding-bottom: 0;
+  }
+
+  .block-note {
+    font-size: 14px;
   }
 
   .container {

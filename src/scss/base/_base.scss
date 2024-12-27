@@ -9,7 +9,8 @@ body {
   font-size: 24px;
   color: #20261F;
   scroll-behavior: smooth;
-  &.disable-scroll{
+
+  &.disable-scroll {
     overflow: hidden;
     height: 100vh;
   }
@@ -44,12 +45,15 @@ body {
 .color_green {
   color: #46B600;
 }
-.color_hot{
+
+.color_hot {
   color: #FF7436;
 }
-.color_white{
+
+.color_white {
   color: #FFFFFF;
 }
+
 .section {
   padding: 88px 0 80px;
 
@@ -188,15 +192,23 @@ body {
   }
 }
 
+.block-note {
+  padding: 40px 0 20px;
+  font-size: 16px;
+  color: #647362
+}
+
 @media screen and (max-width: 1920px) {
 
 }
-@include mixins.respond-to(variables.$xl){
+
+@include mixins.respond-to(variables.$xl) {
   .disclaimer_main .container {
     padding-top: 15px;
     padding-bottom: 15px;
   }
 }
+
 @include mixins.respond-to(variables.$lg) {
   .section {
     padding: 76px 0 64px;
@@ -208,9 +220,12 @@ body {
   .dscl-img_desk {
     display: none !important;
   }
-  .disclaimer_main .container{
+  .disclaimer_main .container {
     padding-top: 0;
     padding-bottom: 0;
+  }
+  .block-note{
+    font-size: 14px;
   }
 }
 
@@ -221,7 +236,7 @@ body {
   .dscl-img_desk {
     display: none !important;
   }
-  .disclaimer_main{
+  .disclaimer_main {
     padding-top: 16px;
     padding-bottom: 16px;
   }
