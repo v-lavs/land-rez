@@ -239,13 +239,12 @@
       left: 0;
       width: 100%;
       top: 0;
+      bottom: 0;
       background: #ffffff;
       padding: 0;
       transform: translateX(-100%);
       transition: .35s;
       z-index: 600;
-      height: 100vh;
-      overflow: hidden;
 
       &.open {
         transform: translateX(0);

@@ -2389,7 +2389,7 @@ body.disable-scroll {
   top: 0;
   bottom: 0;
   opacity: 0.35;
-  background-image: linear-gradient(90deg, #46B600 0%, rgba(70, 182, 0, 0.45) 100%);
+  background-color: rgba(0, 0, 0, 0.45);
   z-index: 1;
 }
 
@@ -3347,13 +3347,12 @@ body.disable-scroll {
     left: 0;
     width: 100%;
     top: 0;
+    bottom: 0;
     background: #ffffff;
     padding: 0;
     transform: translateX(-100%);
     transition: 0.35s;
     z-index: 600;
-    height: 100vh;
-    overflow: hidden;
   }
 
   .header__nav.open {
