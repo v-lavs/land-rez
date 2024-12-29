@@ -3101,6 +3101,7 @@ sup {
   transform: perspective(1200px);
   position: sticky;
   top: 120px;
+  border-radius: 16px;
 }
 
 .composition__item:last-child {
@@ -4127,6 +4128,7 @@ sup {
 
   .sub-menu {
     min-width: 0;
+    padding-bottom: 14px !important;
   }
 
   .sub-menu .sub-menu__item {
@@ -4135,7 +4137,7 @@ sup {
     line-height: 25.2px;
     letter-spacing: 0.04em;
     padding-top: 14px;
-    padding-bottom: 14px;
+    padding-bottom: 0;
     padding-right: 0;
   }
 
@@ -4183,6 +4185,7 @@ sup {
 
   .slider-features {
     padding-bottom: 74px;
+    min-height: 0;
   }
 
   .card-features__content .hide-text {
@@ -4472,8 +4475,13 @@ sup {
     padding-right: 20px;
   }
 
+  .app-list-hot {
+    gap: 0;
+  }
+
   .app-list-hot .swiper-slide {
     max-width: 100%;
+    width: 100%;
   }
 
   .app-carts-hot {
@@ -4486,7 +4494,6 @@ sup {
 
   .app-slider {
     padding-bottom: 34px;
-    overflow: hidden;
   }
 
   .composition-list {
@@ -4507,6 +4514,10 @@ sup {
 
   .section-hot-bg .card__thumb {
     height: 250px;
+  }
+
+  .main_hot .slider-features {
+    padding-bottom: 74px;
   }
 }
 

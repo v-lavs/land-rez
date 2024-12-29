@@ -342,6 +342,7 @@
 @include mixins.respond-to(variables.$sm) {
   .sub-menu {
     min-width: 0;
+    padding-bottom: 14px!important;
   }
   .sub-menu .sub-menu__item {
     font-size: 18px;
@@ -349,7 +350,7 @@
     line-height: 25.2px;
     letter-spacing: 0.04em;
     padding-top: 14px;
-    padding-bottom: 14px;
+    padding-bottom: 0;
     padding-right: 0;
   }
   .menu .sub-menu__toggle {

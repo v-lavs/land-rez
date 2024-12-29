@@ -273,7 +273,7 @@
   transform: perspective(1200px);
   position: sticky;
   top: 120px;
-
+  border-radius: 16px;
   &:last-child {
     margin-bottom: 0;
   }
@@ -760,8 +760,12 @@
       padding-right: 20px;
     }
   }
-  .app-list-hot .swiper-slide {
-    max-width: 100%;
+  .app-list-hot {
+    gap:0;
+    .swiper-slide {
+      max-width: 100%;
+      width: 100%;
+    }
   }
   .app-carts-hot {
     max-width: 100%;
@@ -772,7 +776,6 @@
   }
   .app-slider {
     padding-bottom: 34px;
-    overflow: hidden;
   }
   .composition-list {
     margin-bottom: 48px;
@@ -796,6 +799,9 @@
     .card__thumb {
       height: 250px;
     }
+  }
+  .main_hot .slider-features {
+    padding-bottom: 74px;
   }
 }
 

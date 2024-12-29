@@ -169,7 +169,7 @@
 @include mixins.respond-to(variables.$sm) {
   .slider-features {
     padding-bottom: 74px;
-
+    min-height: 0;
   }
   .card-features {
     &__content .hide-text {
