@@ -1834,6 +1834,12 @@ sup {
   right: 16px;
   bottom: 30%;
   z-index: 100;
+  opacity: 0;
+  transition: 0.35s;
+}
+
+.btn_up.show {
+  opacity: 1;
 }
 
 .btn-hot {

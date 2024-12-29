@@ -35,6 +35,11 @@
   right:16px;
   bottom: 30%;
   z-index: 100;
+  opacity: 0;
+  transition: .35s;
+  &.show{
+    opacity: 1;
+  }
 }
 .btn-hot {
   background-image: url('../assets/img/hot.svg'), linear-gradient(270deg, #FF4F00 0%, #FF7436 100%);
