@@ -342,15 +342,16 @@
 @include mixins.respond-to(variables.$sm) {
   .sub-menu {
     min-width: 0;
-    padding-bottom: 14px!important;
+    padding-bottom: 7px!important;
+    padding-top: 7px!important;
   }
   .sub-menu .sub-menu__item {
     font-size: 18px;
     font-weight: 450;
     line-height: 25.2px;
     letter-spacing: 0.04em;
-    padding-top: 14px;
-    padding-bottom: 0;
+    padding-top: 7px;
+    padding-bottom: 7px;
     padding-right: 0;
   }
   .menu .sub-menu__toggle {

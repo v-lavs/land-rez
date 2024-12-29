@@ -1046,9 +1046,9 @@ sup {
 }
 
 .title {
-  font-size: 72px;
+  font-size: 50px;
   font-weight: 600;
-  line-height: 70.4px;
+  line-height: 0.98;
   letter-spacing: -0.02em;
   text-align: center;
 }
@@ -2459,7 +2459,6 @@ sup {
 
 .med-purpose .section__title {
   font-weight: 400;
-  font-size: 64px;
 }
 
 .med-purpose .section__title sup {
@@ -2604,7 +2603,7 @@ sup {
   box-shadow: 0px -16px 48px 0px rgba(32, 38, 31, 0.1019607843);
   transform: perspective(1200px);
   position: sticky;
-  top: 90px;
+  top: 70px;
 }
 
 .app-carts:last-child {
@@ -4128,7 +4127,8 @@ sup {
 
   .sub-menu {
     min-width: 0;
-    padding-bottom: 14px !important;
+    padding-bottom: 7px !important;
+    padding-top: 7px !important;
   }
 
   .sub-menu .sub-menu__item {
@@ -4136,8 +4136,8 @@ sup {
     font-weight: 450;
     line-height: 25.2px;
     letter-spacing: 0.04em;
-    padding-top: 14px;
-    padding-bottom: 0;
+    padding-top: 7px;
+    padding-bottom: 7px;
     padding-right: 0;
   }
 
