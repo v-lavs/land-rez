@@ -146,7 +146,13 @@ document.addEventListener('DOMContentLoaded', function () {
 // Виклик для елементів із атрибутом data-scroll
     smoothScrollToAnchorCard('[data-scroll]', 90);
 
-
+// VIDEO IPHONE
+    const video = document.querySelector(".background-video");
+    if (video) {
+        video.play().catch((error) => {
+            console.error("Автовідтворення не вдалося:", error);
+        });
+    }
 // HEADER AND DISCLAIMER SCROLL
 
     const header = document.querySelector('.header');
