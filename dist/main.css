@@ -1084,8 +1084,6 @@ sup {
 
 .btn_up,
 .btn-hot {
-  box-shadow: 0 8px 12px 0 rgba(255, 116, 54, 0.15);
-  border: 4px solid #FFFFFF;
   border-radius: 50%;
   width: 96px;
   height: 96px;
@@ -1095,13 +1093,15 @@ sup {
 }
 
 .btn_up {
-  background-image: url("../assets/img/to-top.svg"), linear-gradient(270deg, #FF4F00 0%, #FF7436 100%);
+  background-image: url("../assets/img/up.svg");
+  background-color: transparent;
   position: fixed;
-  right: 16px;
-  bottom: 30%;
+  right: 0;
+  bottom: 16vh;
   z-index: 100;
   opacity: 0;
   transition: 0.35s;
+  border: none;
 }
 
 .btn_up.show {
@@ -1109,6 +1109,8 @@ sup {
 }
 
 .btn-hot {
+  box-shadow: 0 8px 12px 0 rgba(255, 116, 54, 0.15);
+  border: 4px solid #FFFFFF;
   background-image: url("../assets/img/hot.svg"), linear-gradient(270deg, #FF4F00 0%, #FF7436 100%);
   position: absolute;
   top: 50%;
@@ -3465,6 +3467,12 @@ sup {
 
   .card-product__link-wrap {
     right: 16px;
+  }
+
+  .btn_up {
+    width: 60px;
+    height: 60px;
+    background-size: cover;
   }
 
   .slider-features {

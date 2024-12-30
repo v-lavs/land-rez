@@ -1,9 +1,10 @@
 @use "../../utils/mixins";
 @use "../../utils/variables";
 
-.product-line{
+.product-line {
   overflow: hidden;
 }
+
 .cards-line {
   position: relative;
   display: flex;
@@ -12,44 +13,46 @@
 .slider-products {
   overflow: visible;
 }
+
 .btn_up,
 .btn-hot {
-  box-shadow: 0 8px 12px 0 rgba(255, 116, 54, .15);
-  border: 4px solid #FFFFFF;
   border-radius: 50%;
   width: 96px;
   height: 96px;
   padding: 0;
   background-repeat: no-repeat, no-repeat;
   background-position: center, center;
-  //position: absolute;
-  //top: 50%;
-  //right: 0;
-  //transform: translate(100%, -50%);
-  //z-index: 2;
-  //animation: pulse 1.5s infinite;
 }
-.btn_up{
-  background-image: url('../assets/img/to-top.svg'), linear-gradient(270deg, #FF4F00 0%, #FF7436 100%);
+
+.btn_up {
+  background-image: url('../assets/img/up.svg');
+  background-color: transparent;
   position: fixed;
-  right:16px;
-  bottom: 30%;
+  right: 0;
+  bottom: 16vh;
   z-index: 100;
   opacity: 0;
   transition: .35s;
-  &.show{
+  border: none;
+
+  &.show {
     opacity: 1;
   }
 }
+
 .btn-hot {
+  box-shadow: 0 8px 12px 0 rgba(255, 116, 54, .15);
+  border: 4px solid #FFFFFF;
   background-image: url('../assets/img/hot.svg'), linear-gradient(270deg, #FF4F00 0%, #FF7436 100%);
   position: absolute;
   top: 50%;
   right: 0;
+
   transform: translate(100%, -50%);
   z-index: 2;
   animation: pulse 1.5s infinite;
 }
+
 @keyframes pulse {
   0% {
     transform: scale(1) translate(100%, -50%);
@@ -157,6 +160,7 @@
     top: 32px;
     right: 32px;
     z-index: 2;
+
     .link__icon {
       border: 1px solid #46B600;
       background-color: #FFFFFF;
@@ -459,9 +463,10 @@
   .card-product__link-wrap {
     right: 16px;
   }
-  .btn_up{
-    //width: 60px;
-    //height: 60px;
+  .btn_up {
+    width: 60px;
+    height: 60px;
+    background-size: cover;
   }
 }
 
