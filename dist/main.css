@@ -1909,7 +1909,7 @@ sup {
   top: 70px;
 }
 
-.app-carts:last-child {
+.app-carts:last-of-type {
   margin-bottom: 0;
 }
 
@@ -1981,22 +1981,22 @@ sup {
   text-transform: uppercase;
 }
 
-.app-carts:nth-child(2) .dosage {
+.app-carts:nth-of-type(2) .dosage {
   order: 1;
   padding-right: 0;
   padding-left: 32px;
 }
 
-.app-carts:nth-child(2) .app-carts__col {
+.app-carts:nth-of-type(2) .app-carts__col {
   padding-left: 0;
   padding-right: 164px;
 }
 
-.app-carts:nth-child(2) .app-carts__heading {
+.app-carts:nth-of-type(2) .app-carts__heading {
   justify-content: flex-start;
 }
 
-.app-carts:nth-child(2) .app-carts__img {
+.app-carts:nth-of-type(2) .app-carts__img {
   right: 0;
   left: auto;
 }
