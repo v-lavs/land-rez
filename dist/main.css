@@ -518,6 +518,8 @@ sup {
 
 .header_green .sub-menu__link:before {
   background-image: url(../assets/img/arrow-down-green.svg);
+  filter: grayscale(1) brightness(1000%);
+  opacity: 1;
 }
 
 .header_green .sub-menu__item:hover,
@@ -554,7 +556,8 @@ sup {
   background-position: center;
   -webkit-transform: translateY(-50%) rotate(180deg);
   transform: translateY(-50%) rotate(90deg);
-  opacity: 0.25;
+  filter: grayscale(1) brightness(1000%);
+  opacity: 0.5;
 }
 
 .header_hot .sub-menu__item:hover,
@@ -869,15 +872,20 @@ sup {
 }
 
 .header_green.active .menu__link:hover,
-.header_green.active .sub-menu__link:hover,
+.header_green.active .dropdown .sub-menu__link:hover,
 .header_green.scroll .menu__link:hover,
-.header_green.scroll .sub-menu__link:hover {
+.header_green.scroll .dropdown .sub-menu__link:hover {
   color: #46B600;
 }
 
 .header_green.active .header__logo,
 .header_green.scroll .header__logo {
   color: #46B600;
+}
+
+.header_green.active .sub-menu__item:hover .sub-menu__link:before,
+.header_green.scroll .sub-menu__item:hover .sub-menu__link:before {
+  filter: none;
 }
 
 .header_hot {
@@ -941,6 +949,11 @@ sup {
 .header_hot.scroll .menu__link,
 .header_hot.scroll .sub-menu__link {
   color: #20261F;
+}
+
+.header_hot.active .sub-menu__item:hover .sub-menu__link:before,
+.header_hot.scroll .sub-menu__item:hover .sub-menu__link:before {
+  filter: none;
 }
 
 .header_hot.active .menu__link:hover,

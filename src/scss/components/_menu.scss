@@ -263,6 +263,8 @@
 
     &__link:before {
       background-image: url(../assets/img/arrow-down-green.svg);
+      filter: grayscale(1) brightness(1000%);
+      opacity: 1;
     }
 
     &__item {
@@ -302,7 +304,8 @@
       background-position: center;
       -webkit-transform: translateY(-50%) rotate(180deg);
       transform: translateY(-50%) rotate(90deg);
-      opacity: .25;
+      filter: grayscale(1) brightness(1000%);
+      opacity: .5;
     }
 
     &__item {

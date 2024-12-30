@@ -19,12 +19,15 @@
       }
 
       .menu__link:hover,
-      .sub-menu__link:hover {
+     .dropdown .sub-menu__link:hover {
         color: #46B600;
       }
 
       .header__logo {
         color: #46B600;
+      }
+      .sub-menu__item:hover .sub-menu__link:before {
+        filter: none;
       }
     }
   }
@@ -37,12 +40,14 @@
       padding-left: 32px;
       padding-right: 32px;
       margin-left: 8px;
-      &_burger{
+
+      &_burger {
         border-color: #ffffff;
         background-color: rgba(255, 255, 255, 0.15);
         color: #ffffff;
       }
-      &_close{
+
+      &_close {
         border: 1px solid #46B600;
         color: #46B600;
       }
@@ -50,7 +55,7 @@
 
     .header__logo {
       color: #FFFFFF;
-     }
+    }
 
     .header__logo-wrapper:after {
       background-color: #ffb18e;
@@ -59,6 +64,7 @@
     .header_intro:after {
       background-color: #ffb18e;
     }
+
     &.active,
     &.scroll {
       .btn {
@@ -80,6 +86,10 @@
       .menu__link,
       .sub-menu__link {
         color: #20261F;
+      }
+
+      .sub-menu__item:hover .sub-menu__link:before {
+        filter: none;
       }
 
       .menu__link:hover,
