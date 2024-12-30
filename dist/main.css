@@ -2350,9 +2350,12 @@ sup {
   width: 178px;
   height: 180px;
   margin: 0 auto 58px;
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-position: center;
+}
+
+.app-carts-hot__icon svg {
+  width: 100%;
+  height: auto;
+  display: block;
 }
 
 .app-carts-hot__text {
