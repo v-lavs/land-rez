@@ -43,8 +43,9 @@
 .btn-hot {
   box-shadow: 0 8px 12px 0 rgba(255, 116, 54, .15);
   border: 4px solid #FFFFFF;
-  background-image: url('../assets/img/hot.svg'), linear-gradient(270deg, #FF4F00 0%, #FF7436 100%);
+  background-image: url('../assets/img/fire.png'), linear-gradient(270deg, #FF4F00 0%, #FF7436 100%);
   position: absolute;
+  background-size: 86px 86px, cover;
   top: 50%;
   right: 0;
 
