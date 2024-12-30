@@ -2519,7 +2519,7 @@ sup {
   position: absolute;
   background-size: 86px 86px, cover;
   top: 0;
-  right: 0;
+  right: 90px;
   z-index: 2;
   animation: pulse 1.5s infinite;
 }
@@ -3267,6 +3267,11 @@ sup {
     padding: 45px 24px;
   }
 
+  .btn_back {
+    top: 40px;
+    right: 112px;
+  }
+
   .slider-features .swiper-button-next,
   .slider-features .swiper-button-prev {
     display: none;
@@ -3517,6 +3522,13 @@ sup {
     width: 60px;
     height: 60px;
     background-size: cover;
+  }
+
+  .btn_back {
+    width: 86px;
+    height: 86px;
+    top: -10px;
+    right: 100px;
   }
 
   .slider-features {
@@ -3867,5 +3879,17 @@ sup {
 
   .card-product_hot .label {
     left: -104px;
+  }
+
+  .main_hot .section-banner {
+    overflow: hidden;
+  }
+
+  .main_hot .section-banner .title_lg {
+    font-size: 42px;
+  }
+
+  .main_hot .text_big {
+    font-size: 80px;
   }
 }

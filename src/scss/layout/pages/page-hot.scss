@@ -394,7 +394,7 @@
   position: absolute;
   background-size: 86px 86px, cover;
   top: 0;
-  right: 0;
+  right: 90px;
   z-index: 2;
   animation: pulse 1.5s infinite;
 }
@@ -711,6 +711,9 @@
         justify-content: center;
       }
     }
+  }
+  .btn_back{
+
   }
 }
 
