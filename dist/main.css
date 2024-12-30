@@ -2171,6 +2171,7 @@ sup {
   padding-top: 97px;
   min-height: 100vh;
   justify-content: flex-end;
+  overflow: hidden;
 }
 
 .main_hot .section-banner:before {
@@ -3879,10 +3880,6 @@ sup {
 
   .card-product_hot .label {
     left: -104px;
-  }
-
-  .main_hot .section-banner {
-    overflow: hidden;
   }
 
   .main_hot .section-banner .title_lg {
