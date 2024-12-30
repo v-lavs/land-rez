@@ -1783,7 +1783,7 @@ sup {
   line-height: 1.2;
   text-align: center;
   display: flex;
-  padding: 32px 24px;
+  padding: 32px 10px;
   color: #647362;
   border-radius: 16px;
   box-shadow: 16px 8px 32px 0 rgba(0, 0, 0, 0.06);
@@ -1796,6 +1796,8 @@ sup {
   flex: 100 1;
   text-align: left;
   gap: 24px;
+  padding-left: 24px;
+  padding-right: 24px;
 }
 
 .slide-purpose.expanded .slide-purpose__title {
