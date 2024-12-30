@@ -1558,6 +1558,7 @@ sup {
   border-bottom: 1px dashed #46B600;
   background-color: transparent;
   font-family: "Futura PT", sans-serif;
+  padding: 0;
 }
 
 .card-features__content .see-more.open-text {
