@@ -1305,7 +1305,7 @@ sup {
   color: #20261F;
   border: none;
   border-radius: 16px;
-  box-shadow: 16px 8px 32px 0 rgba(0, 0, 0, 0.06);
+  box-shadow: 0px -16px 48px 0px rgba(32, 38, 31, 0.1019607843);
   background-color: #FFFFFF;
   margin: 0;
   min-height: 0;
@@ -2405,6 +2405,11 @@ sup {
 
 .composition__item:last-child {
   margin-bottom: 0;
+}
+
+.composition__item:last-child .composition__card,
+.composition__item:first-child .composition__card {
+  box-shadow: 16px 8px 32px 0 rgba(0, 0, 0, 0.06);
 }
 
 .composition__item .more-btn {
@@ -3804,10 +3809,6 @@ sup {
 
   .composition-list {
     margin-bottom: 48px;
-  }
-
-  .composition__item:first-child {
-    box-shadow: 16px 8px 32px 0 rgba(0, 0, 0, 0.06);
   }
 
   .section-hot-bg .card-slider {

@@ -274,8 +274,16 @@
   position: sticky;
   top: 120px;
   border-radius: 16px;
+
   &:last-child {
     margin-bottom: 0;
+  }
+
+  &:last-child,
+  &:first-child {
+    .composition__card {
+      box-shadow: 16px 8px 32px 0 rgba(0, 0, 0, .06);
+    }
   }
 
   .more-btn {
@@ -761,7 +769,8 @@
     }
   }
   .app-list-hot {
-    gap:0;
+    gap: 0;
+
     .swiper-slide {
       max-width: 100%;
       width: 100%;
@@ -779,12 +788,6 @@
   }
   .composition-list {
     margin-bottom: 48px;
-  }
-
-  .composition__item {
-    &:first-child {
-      box-shadow: 16px 8px 32px 0 rgba(0, 0, 0, .06);
-    }
   }
 
   .section-hot-bg {
