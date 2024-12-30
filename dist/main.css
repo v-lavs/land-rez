@@ -2521,6 +2521,7 @@ sup {
   top: 0;
   right: 0;
   z-index: 2;
+  animation: pulse 1.5s infinite;
 }
 
 @media only screen and (max-width: 1440px) {
