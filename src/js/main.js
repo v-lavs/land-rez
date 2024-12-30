@@ -172,7 +172,6 @@ document.addEventListener('DOMContentLoaded', function () {
 
     window.addEventListener('scroll', function () {
         const scrollPosition = window.scrollY;
-        let lastScrollY = window.scrollY > 200 ? window.scrollY : 200;
 
         if (scrollPosition > lastScrollY && !isHeaderHidden) {
             header.classList.add('hidden');
