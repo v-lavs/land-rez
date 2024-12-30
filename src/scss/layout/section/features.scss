@@ -1,7 +1,7 @@
 @use "../../utils/mixins";
 @use "../../utils/variables";
 
-.features{
+.features {
   overflow: hidden;
 }
 
@@ -20,15 +20,18 @@
   .swiper-pagination {
     display: block;
   }
+
   &_hot {
     .swiper-button-next,
     .swiper-button-prev {
       border: 1px solid #FF7436;
     }
+
     .swiper-button-prev:before,
-    .swiper-button-next:before{
+    .swiper-button-next:before {
       background-image: url(../assets/img/rez-hot/triangle-hot.svg);
     }
+
     .swiper-pagination-bullet {
       background-color: #FF7436;
     }
