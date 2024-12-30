@@ -3802,7 +3802,7 @@ sup {
   .section-banner__thumb-hot {
     padding-top: 0;
     position: initial;
-    max-width: 100%;
+    max-width: 80%;
   }
 
   .application-hot .block-btns {
