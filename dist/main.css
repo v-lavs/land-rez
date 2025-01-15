@@ -2214,23 +2214,6 @@ sup {
   height: 100%;
 }
 
-.section-banner__video-hot {
-  position: relative;
-  padding-bottom: 56.25%;
-  flex-grow: 1;
-}
-
-.section-banner__video-hot .video {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  all: unset;
-  pointer-events: auto;
-  z-index: 10;
-}
-
 .section-hot-bg {
   background-color: #FF7436;
 }
@@ -2977,10 +2960,6 @@ sup {
     margin-top: 60px;
   }
 
-  .section-banner__thumb-hot {
-    width: 45%;
-  }
-
   .app-list-hot .card-list,
   .section-hot-bg .card-list {
     gap: 0;
@@ -3365,11 +3344,6 @@ sup {
     height: 100%;
     object-fit: cover;
     z-index: 1;
-  }
-
-  .section-banner__thumb-hot {
-    order: -1;
-    width: 100%;
   }
 
   .main_hot .section-banner {
@@ -3803,12 +3777,6 @@ sup {
   .main_hot .swiper-horizontal > .swiper-pagination-bullets,
   .main_hot .swiper-pagination-bullets.swiper-pagination-horizontal {
     bottom: -6px;
-  }
-
-  .section-banner__thumb-hot {
-    padding-top: 0;
-    position: initial;
-    max-width: 90%;
   }
 
   .application-hot .block-btns {
